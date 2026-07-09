@@ -16,7 +16,7 @@
 ## 阅读入口
 
 - [在线阅读网页](https://vink567.github.io/agent-orange-book/)
-- [下载 PDF](./Agent橙皮书.pdf)
+- [下载 PDF](https://raw.githubusercontent.com/Vink567/agent-orange-book/main/Agent%E6%A9%99%E7%9A%AE%E4%B9%A6.pdf)
 
 ## 本地生成
 
