@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_MARKDOWN = ROOT / "Agent橙皮书.md"
 DEFAULT_OUTPUT_DIR = ROOT
 MARKDOWN_NAME = "Agent橙皮书.md"
-PAGES_URL = "https://codex.bozhouai.com/"
+PAGES_URL = "https://vink567.github.io/agent-orange-book/"
 
 
 @dataclass(frozen=True)
