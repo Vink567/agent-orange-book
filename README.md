@@ -6,6 +6,11 @@
 
 ![从提问 AI 到让 Agent 完成一件事](图片和附件/image%202.png)
 
+## 阅读入口
+
+- [在线阅读](https://vink567.github.io/agent-orange-book/)
+- [下载 PDF](https://raw.githubusercontent.com/Vink567/agent-orange-book/main/Agent%E6%A9%99%E7%9A%AE%E4%B9%A6.pdf)
+
 ## 这本书讲什么
 
 这本书围绕一个核心变化展开：
@@ -35,10 +40,7 @@
 - 第五篇：Agent 风险与进阶
 - 附录：常用模板、检查清单与学习路线
 
-## 阅读入口
 
-- [在线阅读](https://vink567.github.io/agent-orange-book/)
-- [下载 PDF](https://raw.githubusercontent.com/Vink567/agent-orange-book/main/Agent%E6%A9%99%E7%9A%AE%E4%B9%A6.pdf)
 
 ## 声明
 
