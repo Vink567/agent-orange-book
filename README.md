@@ -1,10 +1,32 @@
 # Agent 橙皮书
 
-《Agent 橙皮书》是一份写给普通人、AI 工具重度用户和独立开发者的 AI Agent 入门与实战指南。它用尽量少的黑话，讲清楚 Agent 是什么、怎么用、如何验收结果，以及怎样把好用流程沉淀成自己的工作系统。
+《Agent 橙皮书》是一份写给普通人的 AI Agent 入门手册。
 
-在线阅读：<https://vink567.github.io/agent-orange-book/>
+它不是一本堆术语的技术说明书，而是从真实使用场景出发，帮助你理解：Agent 到底是什么，它和 ChatGPT 有什么区别，为什么现在的 AI 正在从“回答问题”走向“完成任务”，以及普通人应该如何安全、清晰、可验证地使用 Agent。
 
-## 主要内容
+![从提问 AI 到让 Agent 完成一件事](图片和附件/image%202.png)
+
+## 这本书讲什么
+
+这本书围绕一个核心变化展开：
+
+> AI 的使用方式，正在从“我问你答”，变成“我设定目标，你帮我完成任务”。
+
+因此，《Agent 橙皮书》重点讲三件事：
+
+- 怎么理解 Agent：从基础概念、工作流、自动化、Skill、MCP 到 AI 编程工具。
+- 怎么使用 Agent：如何描述目标、设定边界、拆解任务、检查结果和沉淀模板。
+- 怎么用得更稳：用实战案例理解 Agent 的能力边界、风险控制和验收方法。
+
+## 适合谁读
+
+- 刚开始接触 AI Agent，不知道它到底能做什么的人。
+- 想用 AI 写文章、整理资料、做知识库、做复盘的内容创作者。
+- 正在使用 Codex、Cursor、Claude Code、ChatGPT 等工具的 AI 编程入门用户。
+- 想让 AI 参与真实项目、GitHub 协作、自动化流程的独立开发者。
+- 想把 AI 放进个人或团队工作流，但担心不可控、乱改、误删的人。
+
+## 内容结构
 
 - 第一篇：先搞懂 Agent 是什么
 - 第二篇：Agent 相关概念
@@ -15,38 +37,8 @@
 
 ## 阅读入口
 
-- [在线阅读网页](https://vink567.github.io/agent-orange-book/)
+- [在线阅读](https://vink567.github.io/agent-orange-book/)
 - [下载 PDF](https://raw.githubusercontent.com/Vink567/agent-orange-book/main/Agent%E6%A9%99%E7%9A%AE%E4%B9%A6.pdf)
-
-## 本地生成
-
-生成静态网页：
-
-```bash
-python tools/build_site.py
-```
-
-生成 PDF：
-
-```bash
-python tools/build_pdf.py
-```
-
-运行测试：
-
-```bash
-python -m unittest tools.test_build_site
-```
-
-## 部署方式
-
-本仓库使用 GitHub Pages 部署，来源为 `main` 分支根目录。
-
-发布地址：
-
-```text
-https://vink567.github.io/agent-orange-book/
-```
 
 ## 声明
 
