@@ -12,6 +12,7 @@
 
 ## 阅读入口
 
+- [在线阅读](https://vink567.github.io/agent-orange-book/)
 - [GitHub 仓库](https://github.com/Vink567/agent-orange-book)
 - [完整 Markdown 原稿](https://github.com/Vink567/agent-orange-book/blob/main/Agent%E6%A9%99%E7%9A%AE%E4%B9%A6.md)
 - [下载 PDF](https://raw.githubusercontent.com/Vink567/agent-orange-book/main/Agent%E6%A9%99%E7%9A%AE%E4%B9%A6.pdf)
@@ -4542,5 +4543,4 @@ Agent 不是一个可以完全放手的黑箱，
 最后慢慢形成自己的 Agent 工作系统。
 
 ## 附录
-
 

@@ -302,7 +302,7 @@ def markdown_to_flowables(markdown_path: Path) -> list:
     code_lines: list[str] = []
     in_code = False
 
-    raw_lines = markdown_path.read_text(encoding="utf-8").splitlines()
+    raw_lines = markdown_path.read_text(encoding="utf-8-sig").splitlines()
     i = 0
     while i < len(raw_lines):
         raw_line = raw_lines[i]

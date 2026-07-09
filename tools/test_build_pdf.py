@@ -14,7 +14,7 @@ class BuildPdfTest(unittest.TestCase):
             markdown_path = root / "sample.md"
             output_pdf = root / "sample.pdf"
             markdown_path.write_text(
-                "# 正文标题\n\n这是正文第一页。\n\n## 小节\n\n- 第一项\n- 第二项\n",
+                "\ufeff# 正文标题\n\n这是正文第一页。\n\n## 小节\n\n- 第一项\n- 第二项\n",
                 encoding="utf-8",
             )
 

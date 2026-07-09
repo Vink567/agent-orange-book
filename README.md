@@ -15,6 +15,7 @@
 
 ## 阅读入口
 
+- [在线阅读](https://vink567.github.io/agent-orange-book/)
 - [完整 Markdown 原稿](./Agent橙皮书.md)
 - [下载 PDF](./Agent橙皮书.pdf)
 
@@ -30,13 +31,14 @@
 - PPT / 图文发布实战：把文章拆成 PPT、长图、封面和发布文案。
 - 风险提醒：账号、文件、数据库、部署和重要操作都需要人工确认。
 
-## 重新生成 PDF
+## 重新生成网页和 PDF
 
 ```powershell
+python tools/build_site.py
 python tools/build_pdf.py
 ```
 
-生成的 `Agent橙皮书.pdf` 首页包含《Agent 橙皮书》封面，后续页面为正文内容。
+生成的 `index.html` 是在线阅读页；生成的 `Agent橙皮书.pdf` 首页包含《Agent 橙皮书》封面，后续页面为正文内容。
 
 ## 说明
 
