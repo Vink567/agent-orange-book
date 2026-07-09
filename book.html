@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Agent 橙皮书：给普通人的 AI Agent 入门与实战指南</title>
-  <meta name="description" content="给普通人的 AI Agent 入门与实战指南，覆盖基础认知、标准工作流、实战案例、风险防护与学习路线。">
+  <title>Agent 橙皮书：从入门到实战案例的全链路使用指南</title>
+  <meta name="description" content="一份给普通人的 AI Agent 入门手册，从会聊天到会指挥，帮助你理解、使用并验收 Agent。">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Agent 橙皮书：给普通人的 AI Agent 入门与实战指南">
-  <meta property="og:description" content="给普通人的 AI Agent 入门与实战指南，覆盖基础认知、标准工作流、实战案例、风险防护与学习路线。">
+  <meta property="og:title" content="Agent 橙皮书：从入门到实战案例的全链路使用指南">
+  <meta property="og:description" content="一份给普通人的 AI Agent 入门手册，从会聊天到会指挥，帮助你理解、使用并验收 Agent。">
   <meta name="theme-color" content="#f2660a">
-  <link rel="canonical" href="https://vink567.github.io/agent-orange-book/book.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://codex.bozhouai.com/book.html">
   <link rel="stylesheet" href="assets/site.css">
   <script defer src="assets/site.js"></script>
 </head>
-<body data-pdf-url="Agent%E6%A9%99%E7%9A%AE%E4%B9%A6.pdf">
+<body>
   <div class="progress" aria-hidden="true"><span></span></div>
 
   <header class="topbar">
@@ -24,8 +25,7 @@
     <nav class="topnav" aria-label="主导航">
       <a href="#online-book">在线阅读</a>
       <a href="#toc">目录</a>
-      <a href="Agent%E6%A9%99%E7%9A%AE%E4%B9%A6.pdf" data-download-link>下载 PDF</a>
-      <a href="https://github.com/Vink567/agent-orange-book">GitHub</a>
+      <a href="Agent%E6%A9%99%E7%9A%AE%E4%B9%A6.md">查看 Markdown</a>
     </nav>
   </header>
 
@@ -34,19 +34,19 @@
       <div class="hero-copy">
         <p class="eyebrow">NON-OFFICIAL GUIDE · 持续更新版</p>
         <h1 id="hero-title">Agent 橙皮书</h1>
-        <p class="hero-lede">给普通人的 AI Agent 入门与实战指南，覆盖基础认知、标准工作流、实战案例、风险防护与学习路线。</p>
+        <p class="hero-lede">一份给普通人的 AI Agent 入门手册，从会聊天到会指挥，帮助你理解、使用并验收 Agent。</p>
         <div class="hero-actions" aria-label="主要操作">
           <a class="button button-primary" href="#online-book">开始阅读</a>
-          <a class="button button-secondary" href="Agent%E6%A9%99%E7%9A%AE%E4%B9%A6.pdf" data-download-link>下载 PDF</a>
-          <a class="button button-ghost" href="Agent%E6%A9%99%E7%9A%AE%E4%B9%A6.md">查看 Markdown</a>
+          <a class="button button-secondary" href="Agent%E6%A9%99%E7%9A%AE%E4%B9%A6.md">查看 Markdown</a>
+          <a class="button button-ghost" href="#toc">浏览目录</a>
         </div>
       </div>
       <div class="hero-side">
-        <img class="hero-preview" src="assets/images/image%2016.png" alt="Agent 橙皮书内容预览">
+        <img class="hero-preview" src="图片和附件/image%202.png" alt="Agent 橙皮书内容预览">
         <div class="hero-panel" aria-label="书籍信息">
           <div>
             <span class="panel-label">版本</span>
-            <strong>v0.1.0</strong>
+            <strong>持续更新版</strong>
           </div>
           <div>
             <span class="panel-label">最后校验</span>
@@ -54,7 +54,7 @@
           </div>
           <div>
             <span class="panel-label">内容范围</span>
-            <strong>认知 · 工作流 · 实战案例 · 风险验收</strong>
+            <strong>认知 · 概念 · 使用方法 · 实战案例 · 风险进阶</strong>
           </div>
         </div>
       </div>
@@ -64,43 +64,198 @@
       <aside class="toc-panel" id="toc" aria-label="文章目录">
         <div class="toc-heading">目录</div>
         <nav class="toc-list">
-<a class="toc-link" href="#阅读入口">阅读入口</a>
-<a class="toc-link" href="#0-使用说明">0. 使用说明</a>
-<a class="toc-link toc-link--sub" href="#01-重要声明">0.1 重要声明</a>
-<a class="toc-link toc-link--sub" href="#02-这份-pdf-适合谁">0.2 这份 PDF 适合谁</a>
-<a class="toc-link toc-link--sub" href="#03-阅读路线">0.3 阅读路线</a>
-<a class="toc-link" href="#第一篇先搞懂-agent-是什么">第一篇：先搞懂 Agent 是什么</a>
-<a class="toc-link toc-link--sub" href="#为什么现在要懂-agent">为什么现在要懂 Agent？</a>
-<a class="toc-link toc-link--sub" href="#agent-的基础认知">Agent 的基础认知</a>
-<a class="toc-link toc-link--sub" href="#agent-和-chatgpt-有什么区别">Agent 和 ChatGPT 有什么区别？</a>
-<a class="toc-link toc-link--sub" href="#agent-的核心组成">Agent 的核心组成</a>
-<a class="toc-link" href="#第二篇agent-相关概念">第二篇：Agent 相关概念</a>
-<a class="toc-link toc-link--sub" href="#agentworkflowautomation-的区别">Agent、Workflow、Automation 的区别</a>
-<a class="toc-link toc-link--sub" href="#agentskillmcp-的关系">Agent、Skill、MCP 的关系</a>
-<a class="toc-link toc-link--sub" href="#agent-和-ai-编程工具的关系">Agent 和 AI 编程工具的关系</a>
-<a class="toc-link toc-link--sub" href="#agent-和-github-的关系">Agent 和 GitHub 的关系</a>
-<a class="toc-link" href="#第三篇agent-如何使用">第三篇：Agent 如何使用</a>
-<a class="toc-link toc-link--sub" href="#如何正确指挥-agent">如何正确指挥 Agent</a>
-<a class="toc-link toc-link--sub" href="#agent-标准工作流">Agent 标准工作流</a>
-<a class="toc-link toc-link--sub" href="#agent-prompt-模板库">Agent Prompt 模板库</a>
-<a class="toc-link toc-link--sub" href="#agent-使用中的常见错误">Agent 使用中的常见错误</a>
-<a class="toc-link" href="#第四篇agent-实战案例">第四篇：Agent 实战案例</a>
-<a class="toc-link toc-link--sub" href="#资料整理-agent">资料整理 Agent</a>
-<a class="toc-link toc-link--sub" href="#自动复盘-agent">自动复盘 Agent</a>
-<a class="toc-link" href="#第五篇agent-风险与进阶">第五篇：Agent 风险与进阶</a>
-<a class="toc-link toc-link--sub" href="#agent-的风险与防护">Agent 的风险与防护</a>
-<a class="toc-link toc-link--sub" href="#如何验收-agent-的结果">如何验收 Agent 的结果</a>
-<a class="toc-link toc-link--sub" href="#如何把好用流程沉淀成-skill">如何把好用流程沉淀成 Skill</a>
-<a class="toc-link toc-link--sub" href="#普通人的-agent-学习路线图">普通人的 Agent 学习路线图</a>
-<a class="toc-link toc-link--sub" href="#第五篇总结">第五篇总结</a>
-<a class="toc-link" href="#附录">附录</a>
+<a class="toc-link" href="#使用说明">使用说明</a>
+<a class="toc-link" href="#这份-pdf-适合谁">这份 PDF 适合谁</a>
+<a class="toc-link" href="#阅读路线">阅读路线</a>
+<a class="toc-link" href="#为什么现在要懂-agent">为什么现在要懂 Agent？</a>
+<a class="toc-link toc-link--sub" href="#ai-正在从问答时代进入执行时代">AI 正在从“问答时代”进入“执行时代”</a>
+<a class="toc-link toc-link--sub" href="#为什么这件事很重要">为什么这件事很重要？</a>
+<a class="toc-link toc-link--sub" href="#agent-对普通人的意义">Agent 对普通人的意义</a>
+<a class="toc-link toc-link--sub" href="#未来更重要的能力是什么">未来更重要的能力是什么？</a>
+<a class="toc-link toc-link--sub" href="#本章小结">本章小结</a>
+<a class="toc-link" href="#agent-的基础认知">Agent 的基础认知</a>
+<a class="toc-link toc-link--sub" href="#agent-的演变">Agent 的演变</a>
+<a class="toc-link toc-link--sub" href="#用生活化比喻理解-agent">用生活化比喻理解 Agent</a>
+<a class="toc-link toc-link--sub" href="#agent-的基本工作方式">Agent 的基本工作方式</a>
+<a class="toc-link toc-link--sub" href="#本章小结_1">本章小结</a>
+<a class="toc-link" href="#agent-和-chatgpt-有什么区别">Agent 和 ChatGPT 有什么区别？</a>
+<a class="toc-link toc-link--sub" href="#为什么要区分这两个概念">为什么要区分这两个概念？</a>
+<a class="toc-link toc-link--sub" href="#chatgpt-和-agent-对比表">ChatGPT 和 Agent 对比表</a>
+<a class="toc-link toc-link--sub" href="#举一个具体例子">举一个具体例子</a>
+<a class="toc-link toc-link--sub" href="#本章小结_2">本章小结</a>
+<a class="toc-link" href="#agent-的核心组成">Agent 的核心组成</a>
+<a class="toc-link toc-link--sub" href="#agent-不是只有一个模型">Agent 不是只有一个模型</a>
+<a class="toc-link toc-link--sub" href="#agent-的-6-个核心组成">Agent 的 6 个核心组成</a>
+<a class="toc-link toc-link--sub" href="#modelagent-的大脑">Model：Agent 的大脑</a>
+<a class="toc-link toc-link--sub" href="#promptagent-的任务说明书">Prompt：Agent 的任务说明书</a>
+<a class="toc-link toc-link--sub" href="#toolsagent-的手和脚">Tools：Agent 的手和脚</a>
+<a class="toc-link toc-link--sub" href="#memoryagent-的记事本">Memory：Agent 的记事本</a>
+<a class="toc-link toc-link--sub" href="#workflowagent-的-sop">Workflow：Agent 的 SOP</a>
+<a class="toc-link toc-link--sub" href="#guardrailsagent-的刹车系统">Guardrails：Agent 的刹车系统</a>
+<a class="toc-link toc-link--sub" href="#本章小结_3">本章小结</a>
+<a class="toc-link" href="#agentworkflowautomation-的区别">Agent、Workflow、Automation 的区别</a>
+<a class="toc-link toc-link--sub" href="#三者一句话解释">三者一句话解释</a>
+<a class="toc-link toc-link--sub" href="#workflow-是什么">Workflow 是什么？</a>
+<a class="toc-link toc-link--sub" href="#automation-是什么">Automation 是什么？</a>
+<a class="toc-link toc-link--sub" href="#agent-是什么">Agent 是什么？</a>
+<a class="toc-link toc-link--sub" href="#三者核心区别">三者核心区别</a>
+<a class="toc-link" href="#agentskillmcp-的关系">Agent、Skill、MCP 的关系</a>
+<a class="toc-link toc-link--sub" href="#一句话讲清楚三者关系">一句话讲清楚三者关系</a>
+<a class="toc-link toc-link--sub" href="#agent-是核心执行者">Agent 是核心执行者</a>
+<a class="toc-link toc-link--sub" href="#skill-是什么">Skill 是什么？</a>
+<a class="toc-link toc-link--sub" href="#mcp-是什么">MCP 是什么？</a>
+<a class="toc-link toc-link--sub" href="#skill-和-mcp-怎么增强-agent">Skill 和 MCP 怎么增强 Agent？</a>
+<a class="toc-link toc-link--sub" href="#用-ai-编程举例">用 AI 编程举例</a>
+<a class="toc-link toc-link--sub" href="#三者关系图">三者关系图</a>
+<a class="toc-link toc-link--sub" href="#最容易混淆的地方">最容易混淆的地方</a>
+<a class="toc-link toc-link--sub" href="#总结一下">总结一下</a>
+<a class="toc-link" href="#agent-和-ai-编程工具的关系">Agent 和 AI 编程工具的关系</a>
+<a class="toc-link toc-link--sub" href="#ai-编程工具的本质变化">AI 编程工具的本质变化</a>
+<a class="toc-link toc-link--sub" href="#codexcursorclaude-code-的区别">Codex、Cursor、Claude Code 的区别</a>
+<a class="toc-link toc-link--sub" href="#它们不是谁取代谁而是适合不同位置">它们不是谁取代谁，而是适合不同位置</a>
+<a class="toc-link toc-link--sub" href="#对新手来说怎么选">对新手来说怎么选？</a>
+<a class="toc-link toc-link--sub" href="#本章总结">本章总结</a>
+<a class="toc-link" href="#agent-和-github-的关系">Agent 和 GitHub 的关系</a>
+<a class="toc-link toc-link--sub" href="#github-不只是代码仓库">GitHub 不只是代码仓库</a>
+<a class="toc-link toc-link--sub" href="#agent-在-github-里能做什么">Agent 在 GitHub 里能做什么？</a>
+<a class="toc-link toc-link--sub" href="#从写代码到参与协作">从“写代码”到“参与协作”</a>
+<a class="toc-link toc-link--sub" href="#agent-如何使用仓库">Agent 如何使用仓库？</a>
+<a class="toc-link toc-link--sub" href="#agent-如何处理-issue">Agent 如何处理 Issue？</a>
+<a class="toc-link toc-link--sub" href="#agent-如何开分支">Agent 如何开分支？</a>
+<a class="toc-link toc-link--sub" href="#agent-如何提交-commit">Agent 如何提交 Commit？</a>
+<a class="toc-link toc-link--sub" href="#agent-如何创建-pr">Agent 如何创建 PR？</a>
+<a class="toc-link toc-link--sub" href="#agent-如何参与-code-review">Agent 如何参与 Code Review？</a>
+<a class="toc-link toc-link--sub" href="#agent-和-github-actions-的关系">Agent 和 GitHub Actions 的关系</a>
+<a class="toc-link toc-link--sub" href="#一个完整的-agent-github-工作流">一个完整的 Agent + GitHub 工作流</a>
+<a class="toc-link toc-link--sub" href="#新手最应该记住的-github-概念">新手最应该记住的 GitHub 概念</a>
+<a class="toc-link toc-link--sub" href="#本章总结_1">本章总结</a>
+<a class="toc-link" href="#如何正确指挥-agent">如何正确指挥 Agent</a>
+<a class="toc-link toc-link--sub" href="#为什么不能只丢一句话">为什么不能只丢一句话？</a>
+<a class="toc-link toc-link--sub" href="#一个好任务应该包含什么">一个好任务应该包含什么？</a>
+<a class="toc-link toc-link--sub" href="#怎么给-agent-下任务">怎么给 Agent 下任务</a>
+<a class="toc-link toc-link--sub" href="#指挥-agent-的基本公式">指挥 Agent 的基本公式</a>
+<a class="toc-link" href="#agent-标准工作流">Agent 标准工作流</a>
+<a class="toc-link toc-link--sub" href="#agent-标准工作流是什么">Agent 标准工作流是什么？</a>
+<a class="toc-link toc-link--sub" href="#第一步读背景">第一步：读背景</a>
+<a class="toc-link toc-link--sub" href="#第二步定目标">第二步：定目标</a>
+<a class="toc-link toc-link--sub" href="#第三步拆任务">第三步：拆任务</a>
+<a class="toc-link toc-link--sub" href="#第四步小步执行">第四步：小步执行</a>
+<a class="toc-link toc-link--sub" href="#第五步检查结果">第五步：检查结果</a>
+<a class="toc-link toc-link--sub" href="#第六步验收复盘">第六步：验收复盘</a>
+<a class="toc-link toc-link--sub" href="#一个完整的-agent-工作流模板">一个完整的 Agent 工作流模板</a>
+<a class="toc-link toc-link--sub" href="#简单来说">简单来说</a>
+<a class="toc-link" href="#agent-prompt-模板库">Agent Prompt 模板库</a>
+<a class="toc-link toc-link--sub" href="#为什么需要-prompt-模板">为什么需要 Prompt 模板？</a>
+<a class="toc-link toc-link--sub" href="#常见-prompt-使用场景">常见 Prompt 使用场景</a>
+<a class="toc-link toc-link--sub" href="#模板一读项目-prompt">模板一：读项目 Prompt</a>
+<a class="toc-link toc-link--sub" href="#模板二加功能-prompt">模板二：加功能 Prompt</a>
+<a class="toc-link toc-link--sub" href="#模板三修-bug-prompt">模板三：修 bug Prompt</a>
+<a class="toc-link toc-link--sub" href="#模板四重构代码-prompt">模板四：重构代码 Prompt</a>
+<a class="toc-link toc-link--sub" href="#模板五写文档-prompt">模板五：写文档 Prompt</a>
+<a class="toc-link toc-link--sub" href="#模板六提交代码-prompt">模板六：提交代码 Prompt</a>
+<a class="toc-link toc-link--sub" href="#模板七复盘任务-prompt">模板七：复盘任务 Prompt</a>
+<a class="toc-link toc-link--sub" href="#通用万能-prompt">通用万能 Prompt</a>
+<a class="toc-link toc-link--sub" href="#简单来说_1">简单来说</a>
+<a class="toc-link" href="#agent-使用中的常见错误">Agent 使用中的常见错误</a>
+<a class="toc-link toc-link--sub" href="#常见错误总览">常见错误总览</a>
+<a class="toc-link toc-link--sub" href="#错误一任务太模糊">错误一：任务太模糊</a>
+<a class="toc-link toc-link--sub" href="#错误二一次要求太多">错误二：一次要求太多</a>
+<a class="toc-link toc-link--sub" href="#错误三不给背景">错误三：不给背景</a>
+<a class="toc-link toc-link--sub" href="#错误四不设限制">错误四：不设限制</a>
+<a class="toc-link toc-link--sub" href="#错误五不检查结果">错误五：不检查结果</a>
+<a class="toc-link toc-link--sub" href="#错误六完全放手">错误六：完全放手</a>
+<a class="toc-link toc-link--sub" href="#更稳妥的使用方式">更稳妥的使用方式</a>
+<a class="toc-link toc-link--sub" href="#使用-agent-前的检查清单">使用 Agent 前的检查清单</a>
+<a class="toc-link toc-link--sub" href="#简单来说_2">简单来说</a>
+<a class="toc-link" href="#资料整理-agent">资料整理 Agent</a>
+<a class="toc-link toc-link--sub" href="#为什么需要资料整理-agent">为什么需要资料整理 Agent？</a>
+<a class="toc-link toc-link--sub" href="#如何配置资料整理-agent">如何配置资料整理 Agent ？</a>
+<a class="toc-link toc-link--sub" href="#常见资料整理场景">常见资料整理场景</a>
+<a class="toc-link toc-link--sub" href="#资料整理-agent-的使用场景">资料整理 Agent 的使用场景</a>
+<a class="toc-link toc-link--sub" href="#使用资料整理-agent-的注意事项">使用资料整理 Agent 的注意事项</a>
+<a class="toc-link toc-link--sub" href="#总结一下_1">总结一下</a>
+<a class="toc-link" href="#自动复盘-agent">自动复盘 Agent</a>
+<a class="toc-link toc-link--sub" href="#为什么需要自动复盘-agent">为什么需要自动复盘 Agent？</a>
+<a class="toc-link toc-link--sub" href="#如何配置自动复盘-agent">如何配置自动复盘 Agent ？</a>
+<a class="toc-link toc-link--sub" href="#自动复盘-agent-适合哪些场景">自动复盘 Agent 适合哪些场景？</a>
+<a class="toc-link toc-link--sub" href="#正确用法给复盘一个固定结构">正确用法：给复盘一个固定结构</a>
+<a class="toc-link toc-link--sub" href="#自动复盘-agent-的常见错误">自动复盘 Agent 的常见错误</a>
+<a class="toc-link toc-link--sub" href="#简单来说_3">简单来说</a>
+<a class="toc-link" href="#agent-的风险与防护">Agent 的风险与防护</a>
+<a class="toc-link toc-link--sub" href="#常见风险总览">常见风险总览</a>
+<a class="toc-link toc-link--sub" href="#风险一幻觉">风险一：幻觉</a>
+<a class="toc-link toc-link--sub" href="#风险二误删和误改">风险二：误删和误改</a>
+<a class="toc-link toc-link--sub" href="#风险三权限过大">风险三：权限过大</a>
+<a class="toc-link toc-link--sub" href="#风险四隐私泄露">风险四：隐私泄露</a>
+<a class="toc-link toc-link--sub" href="#风险五任务跑偏">风险五：任务跑偏</a>
+<a class="toc-link toc-link--sub" href="#风险六自动化失控">风险六：自动化失控</a>
+<a class="toc-link toc-link--sub" href="#使用-agent-前的风险检查清单">使用 Agent 前的风险检查清单</a>
+<a class="toc-link toc-link--sub" href="#一个通用防护-prompt">一个通用防护 Prompt</a>
+<a class="toc-link toc-link--sub" href="#总结一下_2">总结一下</a>
+<a class="toc-link" href="#如何验收-agent-的结果">如何验收 Agent 的结果</a>
+<a class="toc-link toc-link--sub" href="#为什么一定要验收">为什么一定要验收？</a>
+<a class="toc-link toc-link--sub" href="#不同任务的验收方式">不同任务的验收方式</a>
+<a class="toc-link toc-link--sub" href="#验收一文章结果">验收一：文章结果</a>
+<a class="toc-link toc-link--sub" href="#验收二资料总结">验收二：资料总结</a>
+<a class="toc-link toc-link--sub" href="#验收三代码修改">验收三：代码修改</a>
+<a class="toc-link toc-link--sub" href="#验收四github-解读">验收四：GitHub 解读</a>
+<a class="toc-link toc-link--sub" href="#验收五ppt-图文结果">验收五：PPT / 图文结果</a>
+<a class="toc-link toc-link--sub" href="#验收六自动化任务">验收六：自动化任务</a>
+<a class="toc-link toc-link--sub" href="#通用验收清单">通用验收清单</a>
+<a class="toc-link toc-link--sub" href="#人和-agent-的分工">人和 Agent 的分工</a>
+<a class="toc-link toc-link--sub" href="#一个完整的验收-prompt">一个完整的验收 Prompt</a>
+<a class="toc-link toc-link--sub" href="#总结一下_3">总结一下</a>
+<a class="toc-link" href="#如何把好用流程沉淀成-skill">如何把好用流程沉淀成 Skill</a>
+<a class="toc-link toc-link--sub" href="#为什么需要-skill">为什么需要 Skill？</a>
+<a class="toc-link toc-link--sub" href="#prompt-和-skill-的区别">Prompt 和 Skill 的区别</a>
+<a class="toc-link toc-link--sub" href="#什么样的任务适合做成-skill">什么样的任务适合做成 Skill？</a>
+<a class="toc-link toc-link--sub" href="#一个-skill-应该包含什么">一个 Skill 应该包含什么？</a>
+<a class="toc-link toc-link--sub" href="#从-prompt-到-skill-的-4-个步骤">从 Prompt 到 Skill 的 4 个步骤</a>
+<a class="toc-link toc-link--sub" href="#第一步找到重复任务">第一步：找到重复任务</a>
+<a class="toc-link toc-link--sub" href="#第二步总结固定流程">第二步：总结固定流程</a>
+<a class="toc-link toc-link--sub" href="#第三步固定输出格式">第三步：固定输出格式</a>
+<a class="toc-link toc-link--sub" href="#第四步加上风险和验收规则">第四步：加上风险和验收规则</a>
+<a class="toc-link toc-link--sub" href="#skill-示例一资料整理-skill">Skill 示例一：资料整理 Skill</a>
+<a class="toc-link toc-link--sub" href="#如何判断一个-skill-是否好用">如何判断一个 Skill 是否好用？</a>
+<a class="toc-link toc-link--sub" href="#从个人-prompt-库到-skill-库">从个人 Prompt 库到 Skill 库</a>
+<a class="toc-link toc-link--sub" href="#总结一下_4">总结一下</a>
+<a class="toc-link" href="#普通人的-agent-学习路线图">普通人的 Agent 学习路线图</a>
+<a class="toc-link toc-link--sub" href="#agent-学习路线可以分成三个阶段">Agent 学习路线可以分成三个阶段</a>
+<a class="toc-link toc-link--sub" href="#第一阶段7-天入门">第一阶段：7 天入门</a>
+<a class="toc-link toc-link--sub" href="#第-1-天理解-agent-和-chatgpt-的区别">第 1 天：理解 Agent 和 ChatGPT 的区别</a>
+<a class="toc-link toc-link--sub" href="#第-2-天学会写清楚任务">第 2 天：学会写清楚任务</a>
+<a class="toc-link toc-link--sub" href="#第-3-天用-agent-总结一篇文章">第 3 天：用 Agent 总结一篇文章</a>
+<a class="toc-link toc-link--sub" href="#第-4-天用-agent-写一个内容大纲">第 4 天：用 Agent 写一个内容大纲</a>
+<a class="toc-link toc-link--sub" href="#第-5-天用-agent-做一次资料整理">第 5 天：用 Agent 做一次资料整理</a>
+<a class="toc-link toc-link--sub" href="#第-6-天用-agent-做一次任务复盘">第 6 天：用 Agent 做一次任务复盘</a>
+<a class="toc-link toc-link--sub" href="#第-7-天整理自己的-prompt-模板">第 7 天：整理自己的 Prompt 模板</a>
+<a class="toc-link toc-link--sub" href="#第二阶段30-天进阶">第二阶段：30 天进阶</a>
+<a class="toc-link toc-link--sub" href="#第-1-周资料整理-写作">第 1 周：资料整理 + 写作</a>
+<a class="toc-link toc-link--sub" href="#第-2-周ai-编程-github">第 2 周：AI 编程 + GitHub</a>
+<a class="toc-link toc-link--sub" href="#第-3-周ppt-图文-发布">第 3 周：PPT / 图文 + 发布</a>
+<a class="toc-link toc-link--sub" href="#第-4-周复盘-模板沉淀">第 4 周：复盘 + 模板沉淀</a>
+<a class="toc-link toc-link--sub" href="#第三阶段长期进阶">第三阶段：长期进阶</a>
+<a class="toc-link toc-link--sub" href="#长期进阶一建立-prompt-模板库">长期进阶一：建立 Prompt 模板库</a>
+<a class="toc-link toc-link--sub" href="#长期进阶二把模板升级成-skill">长期进阶二：把模板升级成 Skill</a>
+<a class="toc-link toc-link--sub" href="#长期进阶三使用自动化">长期进阶三：使用自动化</a>
+<a class="toc-link toc-link--sub" href="#长期进阶四项目化使用-agent">长期进阶四：项目化使用 Agent</a>
+<a class="toc-link toc-link--sub" href="#长期进阶五团队协作">长期进阶五：团队协作</a>
+<a class="toc-link toc-link--sub" href="#普通人学习-agent-的常见误区">普通人学习 Agent 的常见误区</a>
+<a class="toc-link toc-link--sub" href="#一句话路线图">一句话路线图</a>
+<a class="toc-link toc-link--sub" href="#简单来说_4">简单来说</a>
+<a class="toc-link" href="#第五篇总结">第五篇总结</a>
+<a class="toc-link toc-link--sub" href="#第五部分核心能力">第五部分核心能力</a>
+<a class="toc-link toc-link--sub" href="#为什么用稳比会用更重要">为什么“用稳”比“会用”更重要？</a>
+<a class="toc-link toc-link--sub" href="#本部分最重要的四句话">本部分最重要的四句话</a>
+<a class="toc-link toc-link--sub" href="#最终总结">最终总结</a>
         </nav>
       </aside>
 
       <article class="book-content">
-<h1 id="agent-橙皮书给普通人的-ai-agent-入门与实战指南">Agent 橙皮书：给普通人的 AI Agent 入门与实战指南</h1>
+<h1 id="agent-橙皮书从入门到实战案例的全链路使用指南">Agent 橙皮书：从入门到实战案例的全链路使用指南</h1>
 <blockquote><p>非官方开源指南 · 持续更新版<br>
-从会聊天，到会指挥。写给普通人、内容创作者、独立开发者和 AI 工具重度用户的 Agent 使用手册。</p></blockquote>
+写给普通人、AI 工具重度用户和独立开发者的 Agent 使用手册。</p></blockquote>
+<div class="table-scroll">
 <table>
 <thead>
 <tr>
@@ -113,77 +268,96 @@
 <tr>
 <td>v0.1.0</td>
 <td>2026-07-09</td>
-<td>非官方指南，不代表任何官方文档、产品承诺或商业建议</td>
+<td>非官方指南，不代表 OpenAI、Anthropic、GitHub 等任何官方文档或产品承诺</td>
 </tr>
 </tbody>
 </table>
-<blockquote><p>本文以 2026-07-09 可访问的 ChatGPT、Codex、Claude Code、Cursor、GitHub、Obsidian、X/Twitter 等公开能力和实测工作流为参考。AI 工具更新很快，界面、功能、价格、权限和使用方式都可能变化；涉及具体功能、账号能力和重要操作时，请以官方文档、产品当前版本和你账号实际显示为准。<br>
-文中的 Agent、Skill、MCP、自动化、资料整理、GitHub 工作流等示例仅作为学习和实践记录，不构成技术承诺、法律建议、投资建议或商业建议。</p></blockquote>
-<h2 id="阅读入口">阅读入口</h2>
-<ul>
-<li><a href="https://vink567.github.io/agent-orange-book/">在线阅读</a></li>
-<li><a href="https://github.com/Vink567/agent-orange-book">GitHub 仓库</a></li>
-<li><a href="https://github.com/Vink567/agent-orange-book/blob/main/Agent%E6%A9%99%E7%9A%AE%E4%B9%A6.md">完整 Markdown 原稿</a></li>
-<li><a href="https://raw.githubusercontent.com/Vink567/agent-orange-book/main/Agent%E6%A9%99%E7%9A%AE%E4%B9%A6.pdf">下载 PDF</a></li>
-</ul>
+</div>
+<blockquote><p>本文以 2026-07-09 可访问的 Codex App、Codex CLI、ChatGPT、Claude Code、Cursor、GitHub、Obsidian 等工具能力和实际界面为参考。AI 工具更新很快，安装方式、模型名称、额度、入口位置、命令参数、价格和权限都可能变化；涉及具体功能和价格时，请以对应产品官方文档、当前版本和账号实际显示为准。<br>
+本文记录的是普通人理解和使用 Agent 的方法，不构成技术承诺、商业建议、法律建议或投资建议。使用 Agent 处理代码、文件、邮件、账号、数据库、部署等重要操作时，请务必人工确认。</p></blockquote>
 <h2 id="目录">目录</h2>
 <ul>
-<li><a href="#0-使用说明">0. 使用说明</a></li>
-<li><a href="#01-重要声明">0.1 重要声明</a></li>
-<li><a href="#02-这份-pdf-适合谁">0.2 这份 PDF 适合谁</a></li>
-<li><a href="#03-阅读路线">0.3 阅读路线</a></li>
+<li><a href="#使用说明">使用说明</a></li>
+<li><a href="#这份-pdf-适合谁">这份 PDF 适合谁</a></li>
+<li><a href="#阅读路线">阅读路线</a></li>
 <li><a href="#第一篇先搞懂-agent-是什么">第一篇：先搞懂 Agent 是什么</a></li>
-<li><a href="#为什么现在要懂-agent">为什么现在要懂 Agent？</a></li>
-<li><a href="#agent-的基础认知">Agent 的基础认知</a></li>
-<li><a href="#agent-和-chatgpt-有什么区别">Agent 和 ChatGPT 有什么区别？</a></li>
-<li><a href="#agent-的核心组成">Agent 的核心组成</a></li>
 <li><a href="#第二篇agent-相关概念">第二篇：Agent 相关概念</a></li>
-<li><a href="#agentworkflowautomation-的区别">Agent、Workflow、Automation 的区别</a></li>
-<li><a href="#agentskillmcp-的关系">Agent、Skill、MCP 的关系</a></li>
-<li><a href="#agent-和-ai-编程工具的关系">Agent 和 AI 编程工具的关系</a></li>
-<li><a href="#agent-和-github-的关系">Agent 和 GitHub 的关系</a></li>
 <li><a href="#第三篇agent-如何使用">第三篇：Agent 如何使用</a></li>
-<li><a href="#如何正确指挥-agent">如何正确指挥 Agent</a></li>
-<li><a href="#agent-标准工作流">Agent 标准工作流</a></li>
-<li><a href="#agent-prompt-模板库">Agent Prompt 模板库</a></li>
-<li><a href="#agent-使用中的常见错误">Agent 使用中的常见错误</a></li>
 <li><a href="#第四篇agent-实战案例">第四篇：Agent 实战案例</a></li>
-<li><a href="#资料整理-agent">资料整理 Agent</a></li>
-<li><a href="#自动复盘-agent">自动复盘 Agent</a></li>
 <li><a href="#第五篇agent-风险与进阶">第五篇：Agent 风险与进阶</a></li>
-<li><a href="#agent-的风险与防护">Agent 的风险与防护</a></li>
-<li><a href="#如何验收-agent-的结果">如何验收 Agent 的结果</a></li>
-<li><a href="#如何把好用流程沉淀成-skill">如何把好用流程沉淀成 Skill</a></li>
-<li><a href="#普通人的-agent-学习路线图">普通人的 Agent 学习路线图</a></li>
-<li><a href="#第五篇总结">第五篇总结</a></li>
 <li><a href="#附录">附录</a></li>
 </ul>
-<h2 id="0-使用说明">0. 使用说明</h2>
-<h3 id="01-重要声明">0.1 重要声明</h3>
+<h2 id="使用说明">使用说明</h2>
 <ul>
 <li>本资料为非官方指南，不代表任何官方文档或官方立场。</li>
-<li>文中涉及的 Agent、Codex、ChatGPT、Claude Code、Cursor、GitHub、Obsidian、X/Twitter 等产品功能，均以官方文档和实际版本为准。</li>
+<li>文中涉及的 Agent、Codex、ChatGPT、Claude Code、Cursor、GitHub 等产品功能，均以官方文档和实际版本为准。</li>
 <li>由于 AI 工具更新频繁，本文档中的界面、功能、价格、权限和使用方式可能会发生变化。</li>
 <li>本资料仅用于学习和实践参考，不构成技术承诺、商业建议、法律建议或投资建议。</li>
 <li>使用 Agent 处理代码、文件、邮件、账号、数据库、部署等重要操作时，请务必人工确认。</li>
-<li>本 PDF 会随着 Agent 工具和真实工作流变化持续维护，建议优先查看 GitHub 仓库中的最新版 Markdown 原稿。</li>
+<li>本资料会持续更新维护，建议优先查看 GitHub 仓库中的最新版 Markdown 原稿。</li>
 </ul>
-<h3 id="02-这份-pdf-适合谁">0.2 这份 PDF 适合谁</h3>
+<h2 id="这份-pdf-适合谁">这份 PDF 适合谁</h2>
+<p>适合下面这些人：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>适合人群</th>
+<th>你可能遇到的问题</th>
+<th>这份 PDF 能帮你什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI 新手</td>
+<td>听说过 Agent，但不知道它到底是什么</td>
+<td>用简单的话理解 Agent、工具、工作流和自动化</td>
+</tr>
+<tr>
+<td>非程序员</td>
+<td>想用 AI 做事，但不懂代码、不懂技术名词</td>
+<td>学会如何把任务讲清楚、让 AI 帮你执行</td>
+</tr>
+<tr>
+<td>内容创作者</td>
+<td>想用 AI 做选题、写文章、整理资料、生成配图描述</td>
+<td>搭建自己的内容创作 Agent 工作流</td>
+</tr>
+<tr>
+<td>自媒体博主</td>
+<td>想系统讲清楚 Agent、Codex、GitHub、AI 编程这些概念</td>
+<td>获得可复用的文章结构、表格和案例</td>
+</tr>
+<tr>
+<td>独立开发者</td>
+<td>想用 Agent 辅助做项目、修 Bug、写 README、部署网站</td>
+<td>理解 Agent 如何参与真实项目流程</td>
+</tr>
+<tr>
+<td>AI 编程入门用户</td>
+<td>正在使用 Codex、Cursor、Claude Code、Cline 等工具</td>
+<td>搞懂这些工具背后的 Agent 思维</td>
+</tr>
+<tr>
+<td>小团队负责人</td>
+<td>想把 AI 放进团队流程，但担心乱改、误删、不可控</td>
+<td>学会设置边界、验收标准和协作流程</td>
+</tr>
+<tr>
+<td>想做个人知识库的人</td>
+<td>有很多资料、链接、文章、项目不知道怎么整理</td>
+<td>学会用 Agent 做资料整理和知识沉淀</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="阅读路线">阅读路线</h2>
 <ul>
-<li>完全没用过 Agent，但想用普通人能懂的方式系统入门的人。</li>
-<li>已经会用 ChatGPT，但不知道 Agent 和聊天 AI 有什么区别的人。</li>
-<li>想让 AI 帮自己整理资料、总结文章、生成选题、做复盘和推进项目的人。</li>
-<li>想理解 Codex、Cursor、Claude Code、GitHub 等工具如何放进真实工作流的人。</li>
-<li>内容创作者、独立开发者、AI 工具博主、知识库重度用户和想搭建个人自动化流程的人。</li>
+<li><strong>想了解 AI 怎么在现实世界中帮助我们干活的：</strong>第 1 章 → 第 2 章 → 第 4 章 → 第 9 章 → 第 10 章 → 第 11 章 → 第 13 章 → 第 14 章 → 第 18 章</li>
+<li><strong>想知道 Agent 是怎么工作的：</strong>第 2章 → 第 3 章 → 第 4 章 → 第 5 章 → 第 6 章 → 第 7 章 → 第 8 章 → 第 9 章 → 第 10 章 → 第 16 章</li>
+<li><strong>想让 Agent 真的帮助自己工作的：</strong>第 2 章 → 第 4 章 → 第 6 章 → 第 8 章 → 第 9 章 → 第 10 章 → 第 11 章 → 第 12 章 → 第 13 章 → 第 14 章 → 第 15 章 → 第 16 章 → 第 17章 → 第 18 章</li>
 </ul>
-<h3 id="03-阅读路线">0.3 阅读路线</h3>
-<ul>
-<li><strong>快速入门路线</strong>：0. 使用说明 → 第一篇：先搞懂 Agent 是什么 → 第三篇：Agent 如何使用 → 第四篇：Agent 实战案例</li>
-<li><strong>真实工作路线</strong>：第一篇：先搞懂 Agent 是什么 → 第二篇：Agent 相关概念 → 第三篇：Agent 如何使用 → 第五篇：Agent 风险与进阶</li>
-<li><strong>进阶沉淀路线</strong>：第三篇：Agent 如何使用 → 第四篇：Agent 实战案例 → 如何把好用流程沉淀成 Skill → 普通人的 Agent 学习路线图</li>
-</ul>
-<hr>
-<h2 id="第一篇先搞懂-agent-是什么">第一篇：先搞懂 Agent 是什么</h2>
+<h1 id="第一篇先搞懂-agent-是什么">第一篇：先搞懂 Agent 是什么</h1>
 <p>在正式学习 Agent 怎么用之前，我们需要先把几个最基础的问题讲清楚：</p>
 <pre><code class="language-plain-text">Agent 到底是什么？
 它和 ChatGPT 有什么区别？
@@ -192,11 +366,11 @@
 <p>很多人第一次听到 Agent，会以为它只是“更聪明的 ChatGPT”。</p>
 <p>但其实 Agent 的重点不只是“更会回答”，而是开始具备了 <strong>围绕目标执行任务</strong> 的能力。</p>
 <p>也就是说，AI 的使用方式正在从：提问 AI，到让 Agent 完成一件事</p>
-<figure class="book-figure"><img src="assets/images/image%2016.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure class="book-figure"><img src="图片和附件/image%202.png" alt="图片展示了使用方式从“提问AI”到“让Agent完成一件事”的变化。左侧“以前”部分，用户提问“帮我写一篇小红书爆款标题”，AI回复多个标题，用户需一步步提问、一步步做。右侧“现在”部分，用户说“帮我写一篇小红书爆款标题，并给出封面建议”，Agent完成分析爆款标题类型、生成标题、给出封面建议、输出成品文案及封面描述，用户只需设定目标。图片强调从“问答”到“交付”，Agent是真正生产力工具，与上下文关于Agent具备围绕目标执行任务能力，从提问到完成任务的阐述相呼应。" loading="lazy"><figcaption>图片展示了使用方式从“提问AI”到“让Agent完成一件事”的变化。左侧“以前”部分，用户提问“帮我写一篇小红书爆款标题”，AI回复多个标题，用户需一步步提问、一步步做。右侧“现在”部分，用户说“帮我写一篇小红书爆款标题，并给出封面建议”，Agent完成分析爆款标题类型、生成标题、给出封面建议、输出成品文案及封面描述，用户只需设定目标。图片强调从“问答”到“交付”，Agent是真正生产力工具，与上下文关于Agent具备围绕目标执行任务能力，从提问到完成任务的阐述相呼应。</figcaption></figure>
 <p>这一部分不讲复杂技术架构，也不讲晦涩术语。</p>
 <p>我们先用普通人能理解的方式，把 Agent 的底层认知建立起来。</p>
-<h3 id="为什么现在要懂-agent">为什么现在要懂 Agent？</h3>
-<h4 id="ai-正在从问答时代进入执行时代">AI 正在从“问答时代”进入“执行时代”</h4>
+<h2 id="为什么现在要懂-agent">为什么现在要懂 Agent？</h2>
+<h3 id="ai-正在从问答时代进入执行时代">AI 正在从“问答时代”进入“执行时代”</h3>
 <p>过去，我们使用 AI 的方式大多是：</p>
 <pre><code class="language-plain-text">我问你答
 我说你写
@@ -213,58 +387,122 @@
 处理重复任务</code></pre>
 <p>这意味着 AI 不再只是帮你“想一想”，而是开始帮你“做一做”。</p>
 <hr>
-<h4 id="为什么这件事很重要">为什么这件事很重要？</h4>
+<h3 id="为什么这件事很重要">为什么这件事很重要？</h3>
 <p>因为很多普通人真正需要的，不是 AI 给一段解释，而是 AI 帮自己把事情做完。</p>
 <p>比如：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>你真正想要的</th>
+<th>不是</th>
+<th>而是</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>学 GitHub</td>
+<td>不是听一堆概念</td>
+<td>而是知道怎么创建仓库、提交代码、回滚</td>
+</tr>
+<tr>
+<td>写文章</td>
+<td>不是一句标题建议</td>
+<td>而是选题、大纲、正文、配图、发布检查</td>
+</tr>
+<tr>
+<td>做网站</td>
+<td>不是解释 HTML 是什么</td>
+<td>而是生成页面、运行项目、部署上线</td>
+</tr>
+<tr>
+<td>看资料</td>
+<td>不是复制一段摘要</td>
+<td>而是整理成表格、提炼观点、生成可发布内容</td>
+</tr>
+<tr>
+<td>做复盘</td>
+<td>不是随便总结两句</td>
+<td>而是沉淀成下一步计划和模板</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
-<h4 id="agent-对普通人的意义">Agent 对普通人的意义</h4>
+<h3 id="agent-对普通人的意义">Agent 对普通人的意义</h3>
 <p>Agent 最大的意义，不是让普通人马上变成程序员，也不是让 AI 完全替代人。</p>
 <p>它真正降低的是：</p>
 <pre><code class="language-plain-text">从想法到执行的门槛</code></pre>
 <p>以前你可能会卡在这些地方：</p>
 <ul>
 <li>不知道怎么开始</li>
-</ul>
-<ul>
 <li>不知道任务怎么拆</li>
-</ul>
-<ul>
 <li>不知道该用什么工具</li>
-</ul>
-<ul>
 <li>不知道结果怎么整理</li>
-</ul>
-<ul>
 <li>不知道做错了怎么回滚</li>
-</ul>
-<ul>
 <li>不知道如何把经验复用</li>
 </ul>
 <p>Agent 可以帮助你把这些过程拆出来，并且一步步推进。</p>
 <hr>
-<h4 id="未来更重要的能力是什么">未来更重要的能力是什么？</h4>
+<h3 id="未来更重要的能力是什么">未来更重要的能力是什么？</h3>
 <p>在 Agent 时代，最重要的能力不只是会不会写代码，而是：</p>
-<h4 id="本章小结">本章小结</h4>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>能力</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>目标描述能力</td>
+<td>能不能说清楚最终要什么</td>
+</tr>
+<tr>
+<td>任务拆解能力</td>
+<td>能不能把大任务拆成小步骤</td>
+</tr>
+<tr>
+<td>工具选择能力</td>
+<td>知道什么时候该用什么工具</td>
+</tr>
+<tr>
+<td>结果验收能力</td>
+<td>能不能判断 AI 做得对不对</td>
+</tr>
+<tr>
+<td>流程沉淀能力</td>
+<td>能不能把一次经验变成模板</td>
+</tr>
+<tr>
+<td>风险控制能力</td>
+<td>知道哪些事情不能让 AI 直接做</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="本章小结">本章小结</h3>
 <p>学习 Agent，不是为了追热点，而是为了适应 AI 使用方式的变化。</p>
-<figure class="book-figure"><img src="assets/images/image%2026.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure class="book-figure"><img src="图片和附件/image%208.png" alt="这张图是《Agent橙皮书》中对应“未来更重要的能力”部分的内容，核心呈现了从“学会问AI”到“学会指挥AI做事”的转变。图中左侧标注“过去”，内容为“学会怎么问AI”，核心是把问题问清楚，对应文档中提及的旧有认知；右侧标注“现在”，内容为“学会怎么指挥AI做事”，核心是把目标、要求和结果说明白，对应文档里强调的Agent时代核心能力相关内容，明确了能力模式的转变。图底部标注了从“会提问”到“会指挥”的核心转变，呼应文档中Agent时代能力要求变化的内容。" loading="lazy"><figcaption>这张图是《Agent橙皮书》中对应“未来更重要的能力”部分的内容，核心呈现了从“学会问AI”到“学会指挥AI做事”的转变。图中左侧标注“过去”，内容为“学会怎么问AI”，核心是把问题问清楚，对应文档中提及的旧有认知；右侧标注“现在”，内容为“学会怎么指挥AI做事”，核心是把目标、要求和结果说明白，对应文档里强调的Agent时代核心能力相关内容，明确了能力模式的转变。图底部标注了从“会提问”到“会指挥”的核心转变，呼应文档中Agent时代能力要求变化的内容。</figcaption></figure>
 <p>本章最重要的一句话是：</p>
 <blockquote><p><strong>Agent 时代，普通人的核心能力不是写代码，而是描述目标、拆解任务和验收结果。</strong></p></blockquote>
-<h3 id="agent-的基础认知">Agent 的基础认知</h3>
-<h4 id="agent-的演变">Agent 的演变</h4>
+<h2 id="agent-的基础认知">Agent 的基础认知</h2>
+<h3 id="agent-的演变">Agent 的演变</h3>
 <p>在理解 Agent 之前，我们可以先看一条简单的演变路线：</p>
-<figure class="book-figure"><img src="assets/images/image%2012.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure class="book-figure"><img src="图片和附件/image%2015.png" alt="这张图展示了Agent的演变过程，用横向箭头串联起四个阶段：第一阶段是搜索引擎，代表工具为Google、百度，对应输入关键词后提供相关网页链接；第二阶段是聊天AI，代表工具为ChatGPT，以对话交互为核心；第三阶段是工具型AI，代表工具包含Cursor、Claude、ChatGPT工具模式；第四阶段是Agent，代表工具为Codex、Claude Code。图片底部还总结了这一演变的核心变化，即从帮用户找答案，转向帮用户完成任务，与文档中对Agent演变的说明内容相呼应。" loading="lazy"><figcaption>这张图展示了Agent的演变过程，用横向箭头串联起四个阶段：第一阶段是搜索引擎，代表工具为Google、百度，对应输入关键词后提供相关网页链接；第二阶段是聊天AI，代表工具为ChatGPT，以对话交互为核心；第三阶段是工具型AI，代表工具包含Cursor、Claude、ChatGPT工具模式；第四阶段是Agent，代表工具为Codex、Claude Code。图片底部还总结了这一演变的核心变化，即从帮用户找答案，转向帮用户完成任务，与文档中对Agent演变的说明内容相呼应。</figcaption></figure>
 <p>这条路线背后，其实是 AI 使用方式的变化。</p>
 <p>以前，我们使用互联网和 AI，更多是在“找答案”。</p>
 <p>现在，Agent 开始帮我们“完成任务”。</p>
 <hr>
-<h5 id="第一阶段搜索引擎">第一阶段：搜索引擎</h5>
+<h4 id="第一阶段搜索引擎">第一阶段：搜索引擎</h4>
 <p>代表工具：</p>
 <pre><code class="language-plain-text">Google / 百度</code></pre>
 <p>你输入关键词，搜索引擎给你网页链接。</p>
 <p>比如你想知道：</p>
 <pre><code class="language-plain-text">GitHub 是什么？</code></pre>
 <p>搜索引擎会给你很多网页，但你需要自己点开、筛选、阅读和整理。</p>
-<h5 id="第二阶段聊天-ai">第二阶段：聊天 AI</h5>
+<h4 id="第二阶段聊天-ai">第二阶段：聊天 AI</h4>
 <p>代表工具：</p>
 <pre><code class="language-plain-text">ChatGPT</code></pre>
 <p>你可以直接提问，AI 会生成答案。</p>
@@ -272,7 +510,7 @@
 <pre><code class="language-plain-text">请用普通人能懂的话解释 GitHub。</code></pre>
 <p>ChatGPT 可以直接帮你解释清楚。</p>
 <hr>
-<h5 id="第三阶段工具型-ai">第三阶段：工具型 AI</h5>
+<h4 id="第三阶段工具型-ai">第三阶段：工具型 AI</h4>
 <p>对人来说一部手机、一把锤子、一颗钉子都是工具</p>
 <p>对 AI 来说一个浏览器、一个文件夹、一个app都是工具</p>
 <p>所以可数据化的软件本质上来说都能成为 AI 的工具</p>
@@ -282,25 +520,15 @@
 <p>比如：</p>
 <ul>
 <li>读文件</li>
-</ul>
-<ul>
 <li>分析表格</li>
-</ul>
-<ul>
 <li>看代码</li>
-</ul>
-<ul>
 <li>生成图片</li>
-</ul>
-<ul>
 <li>搜索网页</li>
-</ul>
-<ul>
 <li>整理资料</li>
 </ul>
 <p>如果你把一个项目交给 Cursor，它可以帮你看代码、改代码、解释报错。</p>
 <hr>
-<h5 id="第四阶段agent">第四阶段：Agent</h5>
+<h4 id="第四阶段agent">第四阶段：Agent</h4>
 <p>代表工具：</p>
 <pre><code class="language-plain-text">Codex / Claude Code </code></pre>
 <p>Agent 不只是回答你，也不再只是用工具，而是可以围绕目标推进任务。</p>
@@ -313,14 +541,93 @@
 <p>所以，Agent 的演变可以用一句话概括：</p>
 <blockquote><p><strong>AI 正在从“回答问题的工具”，变成“执行任务的助手”。</strong></p></blockquote>
 <hr>
-<h4 id="用生活化比喻理解-agent">用生活化比喻理解 Agent</h4>
+<h3 id="用生活化比喻理解-agent">用生活化比喻理解 Agent</h3>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>像什么</th>
+<th>简单来说</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>普通 ChatGPT</td>
+<td>老师</td>
+<td>你问它，它回答</td>
+</tr>
+<tr>
+<td>Agent</td>
+<td>助理</td>
+<td>你给目标，它帮你办事</td>
+</tr>
+<tr>
+<td>编程 Agent</td>
+<td>AI 工程师</td>
+<td>能读项目、改代码、跑测试</td>
+</tr>
+<tr>
+<td>写作 Agent</td>
+<td>编辑助理</td>
+<td>能做选题、大纲、正文、标题</td>
+</tr>
+<tr>
+<td>资料整理 Agent</td>
+<td>研究助理</td>
+<td>能读资料、提炼重点、做表格</td>
+</tr>
+<tr>
+<td>自动化 Agent</td>
+<td>定时执行员</td>
+<td>能按时间或条件帮你处理重复任务</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
-<h4 id="agent-的基本工作方式">Agent 的基本工作方式</h4>
+<h3 id="agent-的基本工作方式">Agent 的基本工作方式</h3>
 <p>一个 Agent 完成任务，通常会经历下面几个步骤：</p>
-<figure class="book-figure"><img src="assets/images/image%203.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure class="book-figure"><img src="图片和附件/image%203.png" alt="图片展示了Agent的基本工作方式，共经历六个步骤。首先，理解目标，明确要完成什么；其次，拆解任务，把大任务拆成可执行步骤；接着，调用工具，选择并使用合适的工具；然后，执行操作，开始处理、生成或修改内容；再者，检查结果，确认是否正确、完整、可用；最后，输出交付物，给出最终结果或成品。图片与上下文紧密相关，直观呈现了Agent完成任务的流程，帮助读者更好地理解其工作方式。" loading="lazy"><figcaption>图片展示了Agent的基本工作方式，共经历六个步骤。首先，理解目标，明确要完成什么；其次，拆解任务，把大任务拆成可执行步骤；接着，调用工具，选择并使用合适的工具；然后，执行操作，开始处理、生成或修改内容；再者，检查结果，确认是否正确、完整、可用；最后，输出交付物，给出最终结果或成品。图片与上下文紧密相关，直观呈现了Agent完成任务的流程，帮助读者更好地理解其工作方式。</figcaption></figure>
 <p>比如你让 Agent 帮你写一篇文章，它可能会这样做：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>Agent 会做什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>理解目标</td>
+<td>判断你要写什么主题、给谁看、发在哪个平台</td>
+</tr>
+<tr>
+<td>拆解任务</td>
+<td>先做选题、再列大纲、再写正文、最后改标题</td>
+</tr>
+<tr>
+<td>调用工具</td>
+<td>可能搜索资料、读取文档、整理表格</td>
+</tr>
+<tr>
+<td>执行操作</td>
+<td>生成正文、优化结构、调整表达</td>
+</tr>
+<tr>
+<td>检查结果</td>
+<td>看有没有遗漏、事实是否不确定</td>
+</tr>
+<tr>
+<td>输出交付物</td>
+<td>给你一版可直接复制使用的内容</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
-<h4 id="本章小结_1">本章小结</h4>
+<h3 id="本章小结_1">本章小结</h3>
 <p>Agent 不是一个单纯的聊天机器人。</p>
 <p>它更像一个可以帮你执行任务的 AI 助手。</p>
 <p>你可以这样记：</p>
@@ -328,16 +635,69 @@
 Agent 更像任务执行系统。</code></pre>
 <p>这一章最重要的一句话是：</p>
 <blockquote><p><strong>Agent 的核心不是“更会说”，而是“更会做”。</strong></p></blockquote>
-<h3 id="agent-和-chatgpt-有什么区别">Agent 和 ChatGPT 有什么区别？</h3>
-<h4 id="为什么要区分这两个概念">为什么要区分这两个概念？</h4>
+<h2 id="agent-和-chatgpt-有什么区别">Agent 和 ChatGPT 有什么区别？</h2>
+<h3 id="为什么要区分这两个概念">为什么要区分这两个概念？</h3>
 <p>很多人会把 ChatGPT 和 Agent 混在一起。</p>
 <p>这很正常，因为我们最早接触 AI，大多都是从聊天窗口开始的。</p>
 <p>但随着 AI 工具不断升级，聊天逐渐变成了一个 Agent 的入口。</p>
-<figure class="book-figure"><img src="assets/images/image%207.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure class="book-figure"><img src="图片和附件/image%2026.png" alt="图片展示了ChatGPT和Agent在适合场景上的对比。左侧介绍ChatGPT，适合处理简单、直接的语言类任务，如写文案、改表达等，任务特点为短、少步骤、主要靠语言、不一定需工具。右侧介绍Agent，适合处理复杂、需执行的任务，如读资料、整理信息等，任务特点为明确目标、步骤多、需执行、需检查、可优化。底部强调“简单问答找ChatGPT，复杂任务交给Agent”。该图与上下文紧密相关，直观呈现了两者在任务处理上的差异。" loading="lazy"><figcaption>图片展示了ChatGPT和Agent在适合场景上的对比。左侧介绍ChatGPT，适合处理简单、直接的语言类任务，如写文案、改表达等，任务特点为短、少步骤、主要靠语言、不一定需工具。右侧介绍Agent，适合处理复杂、需执行的任务，如读资料、整理信息等，任务特点为明确目标、步骤多、需执行、需检查、可优化。底部强调“简单问答找ChatGPT，复杂任务交给Agent”。该图与上下文紧密相关，直观呈现了两者在任务处理上的差异。</figcaption></figure>
 <hr>
-<h4 id="chatgpt-和-agent-对比表">ChatGPT 和 Agent 对比表</h4>
+<h3 id="chatgpt-和-agent-对比表">ChatGPT 和 Agent 对比表</h3>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>ChatGPT</th>
+<th>Agent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核心能力</td>
+<td>回答问题</td>
+<td>完成任务</td>
+</tr>
+<tr>
+<td>工作方式</td>
+<td>一问一答</td>
+<td>多步骤执行</td>
+</tr>
+<tr>
+<td>是否会规划</td>
+<td>通常需要你一步步问</td>
+<td>可以先拆任务计划</td>
+</tr>
+<tr>
+<td>是否调用工具</td>
+<td>不一定</td>
+<td>通常可以调用工具</td>
+</tr>
+<tr>
+<td>输出结果</td>
+<td>文字、建议、解释</td>
+<td>文件、代码、报告、网页、自动化结果</td>
+</tr>
+<tr>
+<td>适合任务</td>
+<td>短问题、单次生成</td>
+<td>长任务、复杂任务、项目任务</td>
+</tr>
+<tr>
+<td>人的角色</td>
+<td>提问者</td>
+<td>目标设定者 + 审核者</td>
+</tr>
+<tr>
+<td>简单来说</td>
+<td>像老师</td>
+<td>像助理</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
-<h4 id="举一个具体例子">举一个具体例子</h4>
+<h3 id="举一个具体例子">举一个具体例子</h3>
 <p>如果你只是想知道：</p>
 <pre><code class="language-plain-text">今年的西瓜是什么价格？</code></pre>
 <p>那用 ChatGPT 就够了。</p>
@@ -349,40 +709,75 @@ Agent 更像任务执行系统。</code></pre>
 <p>这就更像是 Agent 任务。</p>
 <p>因为它不只是解释概念，而是要围绕一个目标完成一系列操作。</p>
 <hr>
-<h4 id="本章小结_2">本章小结</h4>
+<h3 id="本章小结_2">本章小结</h3>
 <p>ChatGPT 和 Agent 不是谁替代谁，而是适合不同场景。</p>
 <p>你可以这样理解：</p>
 <pre><code class="language-plain-text">想问清楚一个问题，用 ChatGPT。
 想完成一件事情，用 Agent。</code></pre>
-<h3 id="agent-的核心组成">Agent 的核心组成</h3>
-<h4 id="agent-不是只有一个模型">Agent 不是只有一个模型</h4>
+<h2 id="agent-的核心组成">Agent 的核心组成</h2>
+<h3 id="agent-不是只有一个模型">Agent 不是只有一个模型</h3>
 <p>很多人以为 Agent 就是一个更强的模型。</p>
 <p>但实际上，一个真正好用的 Agent，往往是一套系统。</p>
 <p>它通常包括：</p>
-<figure class="book-figure"><img src="assets/images/image%2011.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure class="book-figure"><img src="图片和附件/image%2025.png" alt="图片展示了“一个真正好用的Agent，往往是一套系统”的内容，强调其通常包括6个部分。分别为：模型，负责理解、推理、判断；指令，告诉Agent目标、规则和边界；工具，让它可以搜索、写代码、操作文件；记忆，记住长期背景和用户偏好；工作流，把任务拆成步骤，一步步推进；权限，控制它能做什么、不能做什么。底部还强调“模型只是‘大脑’，系统才是真正的Agent”。该图与上下文紧密相关，是对Agent核心组成中6个组成部分的直观呈现。" loading="lazy"><figcaption>图片展示了“一个真正好用的Agent，往往是一套系统”的内容，强调其通常包括6个部分。分别为：模型，负责理解、推理、判断；指令，告诉Agent目标、规则和边界；工具，让它可以搜索、写代码、操作文件；记忆，记住长期背景和用户偏好；工作流，把任务拆成步骤，一步步推进；权限，控制它能做什么、不能做什么。底部还强调“模型只是‘大脑’，系统才是真正的Agent”。该图与上下文紧密相关，是对Agent核心组成中6个组成部分的直观呈现。</figcaption></figure>
 <p>如果只靠模型，AI 只能回答和生成。</p>
 <p>如果加上工具、记忆和工作流，Agent 才能真正开始执行任务。</p>
 <hr>
-<h4 id="agent-的-6-个核心组成">Agent 的 6 个核心组成</h4>
+<h3 id="agent-的-6-个核心组成">Agent 的 6 个核心组成</h3>
 <p>这个我们后面的章节会详细讲解</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>组成部分</th>
+<th>作用</th>
+<th>简单来说</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Model 模型</td>
+<td>理解任务、推理、生成内容</td>
+<td>大脑</td>
+</tr>
+<tr>
+<td>Prompt 指令</td>
+<td>告诉 Agent 要做什么、怎么做</td>
+<td>任务说明书</td>
+</tr>
+<tr>
+<td>Tools 工具</td>
+<td>搜索、读文件、写代码、操作软件</td>
+<td>手和脚</td>
+</tr>
+<tr>
+<td>Memory 记忆</td>
+<td>记住你的偏好、项目背景、历史信息</td>
+<td>笔记本</td>
+</tr>
+<tr>
+<td>Workflow 工作流</td>
+<td>固定的执行步骤和流程</td>
+<td>SOP</td>
+</tr>
+<tr>
+<td>Guardrails 防护栏</td>
+<td>权限控制、人工确认、安全限制</td>
+<td>刹车系统</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
-<h4 id="modelagent-的大脑">Model：Agent 的大脑</h4>
+<h3 id="modelagent-的大脑">Model：Agent 的大脑</h3>
 <p>如我们所说的GPT5.4、 GPT5.5、Claude Opus、Claude Sonnet、Claude Haiku等等这些都是不同的模型</p>
 <p>模型决定了 Agent 的理解、推理和生成能力。</p>
 <p>比如：</p>
 <ul>
 <li>能不能理解复杂任务</li>
-</ul>
-<ul>
 <li>能不能写出清楚的内容</li>
-</ul>
-<ul>
 <li>能不能发现逻辑问题</li>
-</ul>
-<ul>
 <li>能不能根据反馈继续修改</li>
-</ul>
-<ul>
 <li>能不能处理长上下文</li>
 </ul>
 <p>但模型再强，也不是万能的。</p>
@@ -390,37 +785,68 @@ Agent 更像任务执行系统。</code></pre>
 <p>如果没有清晰指令，它容易理解错任务。</p>
 <p>如果没有防护栏，它可能会做出不该做的操作。</p>
 <hr>
-<h4 id="promptagent-的任务说明书">Prompt：Agent 的任务说明书</h4>
+<h3 id="promptagent-的任务说明书">Prompt：Agent 的任务说明书</h3>
 <p>以前我们用 ChatGPT，更多是在“提问”：</p>
 <blockquote><p>帮我写一篇文章。<br>
 帮我总结一下。<br>
 帮我翻译这段话。</p></blockquote>
 <p>但到了 Agent 时代，Prompt 更像是一个完整的任务说明书。</p>
 <p>它不只是告诉 AI “做什么”，还要告诉它：</p>
-<h5 id="为什么-prompt-很重要">为什么 Prompt 很重要？</h5>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>内容</th>
+<th>作用</th>
+<th>简单来说</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>目标</td>
+<td>告诉 Agent 最后要完成什么</td>
+<td>你要它交付什么结果</td>
+</tr>
+<tr>
+<td>背景</td>
+<td>告诉 Agent 为什么要做这件事</td>
+<td>让它理解上下文</td>
+</tr>
+<tr>
+<td>角色</td>
+<td>告诉 Agent 站在什么身份处理任务</td>
+<td>让它知道用什么视角</td>
+</tr>
+<tr>
+<td>要求</td>
+<td>告诉 Agent 有哪些限制</td>
+<td>避免跑偏</td>
+</tr>
+<tr>
+<td>步骤</td>
+<td>告诉 Agent 先做什么、后做什么</td>
+<td>让它按流程执行</td>
+</tr>
+<tr>
+<td>输出格式</td>
+<td>告诉 Agent 最后怎么交付</td>
+<td>方便你直接使用</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="为什么-prompt-很重要">为什么 Prompt 很重要？</h4>
 <p>因为 Agent 不是只负责回答问题，它经常会帮你完成一整件事。</p>
 <p>比如你只说：</p>
 <blockquote><p>帮我写一篇 GitHub 教程。</p></blockquote>
 <p>Agent 可能不知道：</p>
 <ul>
 <li>写给谁看？</li>
-</ul>
-<ul>
 <li>要写多长？</li>
-</ul>
-<ul>
 <li>是发公众号，还是发推特？</li>
-</ul>
-<ul>
 <li>要不要用表格？</li>
-</ul>
-<ul>
 <li>要不要适合小白？</li>
-</ul>
-<ul>
 <li>要不要结合 AI 编程？</li>
-</ul>
-<ul>
 <li>最后输出成文章、图片文案，还是 Markdown？</li>
 </ul>
 <p>所以更好的 Prompt 应该是：</p>
@@ -433,31 +859,61 @@ Agent 更像任务执行系统。</code></pre>
 最后输出一篇可以直接发布的文章。</p></blockquote>
 <p>这时候，Agent 才知道你真正要什么。</p>
 <hr>
-<h4 id="toolsagent-的手和脚">Tools：Agent 的手和脚</h4>
+<h3 id="toolsagent-的手和脚">Tools：Agent 的手和脚</h3>
 <p>工具让 Agent 不只是“说”，还可以“做”。</p>
 <p>常见工具包括：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>工具类型</th>
+<th>Agent 可以做什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>浏览器</td>
+<td>搜索资料、查看网页</td>
+</tr>
+<tr>
+<td>文件工具</td>
+<td>读取 PDF、Word、表格、图片</td>
+</tr>
+<tr>
+<td>代码工具</td>
+<td>修改代码、运行脚本、测试项目</td>
+</tr>
+<tr>
+<td>GitHub 工具</td>
+<td>读取仓库、提交代码、写 Issue、做 PR</td>
+</tr>
+<tr>
+<td>邮件工具</td>
+<td>总结邮件、起草回复</td>
+</tr>
+<tr>
+<td>日历工具</td>
+<td>创建日程、查看安排</td>
+</tr>
+<tr>
+<td>数据工具</td>
+<td>查询数据、整理报表</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>没有工具的 AI，更像顾问。</p>
 <p>有工具的 Agent，才像真正的执行助理。</p>
 <hr>
-<h4 id="memoryagent-的记事本">Memory：Agent 的记事本</h4>
+<h3 id="memoryagent-的记事本">Memory：Agent 的记事本</h3>
 <p>Memory 可以帮助 Agent 记住长期信息。</p>
 <p>比如：</p>
 <ul>
 <li>你的写作偏好</li>
-</ul>
-<ul>
 <li>你的常用格式</li>
-</ul>
-<ul>
 <li>你的项目背景</li>
-</ul>
-<ul>
 <li>你的教程风格</li>
-</ul>
-<ul>
 <li>你的固定术语</li>
-</ul>
-<ul>
 <li>你的常用工作流</li>
 </ul>
 <p>举个例子。</p>
@@ -466,34 +922,22 @@ Agent 更像任务执行系统。</code></pre>
 <p>那么这个偏好就适合被记住。</p>
 <p>这样以后再写类似内容时，Agent 就不用每次重新问。</p>
 <hr>
-<h4 id="workflowagent-的-sop">Workflow：Agent 的 SOP</h4>
+<h3 id="workflowagent-的-sop">Workflow：Agent 的 SOP</h3>
 <p>Workflow 是一套固定流程。</p>
-<figure class="book-figure"><img src="assets/images/image%2022.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure class="book-figure"><img src="图片和附件/image%205.png" alt="图片展示了不同任务对应的不同Workflow，包括写文章、AI编程、资料整理的Workflow。写文章的Workflow依次为选题、大纲、正文、标题、配图描述、发布检查；AI编程的Workflow为读项目、写计划、小步修改、跑测试、看diff、总结改动；资料整理的Workflow为阅读资料、提炼观点、生成表格、判断适合平台、输出标题、标注风险。图片强调Workflow的价值是让任务按步骤稳定交付，与上下文介绍的Workflow是一套固定流程，有Workflow的Agent会更稳定相呼应。" loading="lazy"><figcaption>图片展示了不同任务对应的不同Workflow，包括写文章、AI编程、资料整理的Workflow。写文章的Workflow依次为选题、大纲、正文、标题、配图描述、发布检查；AI编程的Workflow为读项目、写计划、小步修改、跑测试、看diff、总结改动；资料整理的Workflow为阅读资料、提炼观点、生成表格、判断适合平台、输出标题、标注风险。图片强调Workflow的价值是让任务按步骤稳定交付，与上下文介绍的Workflow是一套固定流程，有Workflow的Agent会更稳定相呼应。</figcaption></figure>
 <p>有 Workflow 的 Agent，会更稳定。</p>
 <p>没有 Workflow 的 Agent，容易想到哪写到哪。</p>
 <hr>
-<h4 id="guardrailsagent-的刹车系统">Guardrails：Agent 的刹车系统</h4>
+<h3 id="guardrailsagent-的刹车系统">Guardrails：Agent 的刹车系统</h3>
 <p>Agent 越强，越需要防护栏。</p>
 <p>因为它一旦能操作工具，就可能出现这些风险：</p>
 <ul>
 <li>误删文件</li>
-</ul>
-<ul>
 <li>误发邮件</li>
-</ul>
-<ul>
 <li>修改错代码</li>
-</ul>
-<ul>
 <li>编造信息</li>
-</ul>
-<ul>
 <li>泄露隐私</li>
-</ul>
-<ul>
 <li>操作超出权限</li>
-</ul>
-<ul>
 <li>把小问题改成大重构</li>
 </ul>
 <p>所以你需要给 Agent 设置边界。</p>
@@ -507,7 +951,7 @@ Agent 更像任务执行系统。</code></pre>
 是否可以恢复
 然后等待用户确认，确认后才能继续操作。</code></pre>
 <hr>
-<h4 id="本章小结_3">本章小结</h4>
+<h3 id="本章小结_3">本章小结</h3>
 <p>一个完整 Agent，可以这样理解：</p>
 <pre><code class="language-plain-text">模型 = 大脑
 Prompt = 任务说明书
@@ -519,13 +963,73 @@ Prompt = 任务说明书
 <p>本章最重要的一句话是：</p>
 <blockquote><p><strong>Agent 不是单个模型，而是一套由模型、工具、记忆、工作流和权限组成的任务执行系统。</strong></p></blockquote>
 <hr>
-<h2 id="第二篇agent-相关概念">第二篇：Agent 相关概念</h2>
-<h3 id="agentworkflowautomation-的区别">Agent、Workflow、Automation 的区别</h3>
+<h1 id="第二篇agent-相关概念">第二篇：Agent 相关概念</h1>
+<h2 id="agentworkflowautomation-的区别">Agent、Workflow、Automation 的区别</h2>
 <p>本章重点是先帮读者拆掉一个误区：</p>
 <blockquote><p>不是所有“自动执行”的东西都叫 Agent。</p></blockquote>
-<h4 id="三者一句话解释">三者一句话解释</h4>
-<h5 id="举个简单的例子">举个简单的例子</h5>
-<h4 id="workflow-是什么">Workflow 是什么？</h4>
+<h3 id="三者一句话解释">三者一句话解释</h3>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>一句话解释</th>
+<th>简单来说</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Workflow</td>
+<td>一套固定的工作流程</td>
+<td>规定事情应该怎么一步步做</td>
+</tr>
+<tr>
+<td>Automation</td>
+<td>按条件或时间自动执行某个动作</td>
+<td>到点了、触发了，就自动做</td>
+</tr>
+<tr>
+<td>Agent</td>
+<td>能理解目标，并自己规划和执行任务</td>
+<td>你给目标，它自己想办法完成</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="举个简单的例子">举个简单的例子</h4>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>Workflow</th>
+<th>Automation</th>
+<th>Agent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>做饭</td>
+<td>菜谱步骤：洗菜 → 切菜 → 炒菜 → 装盘</td>
+<td>电饭煲定时煮饭</td>
+<td>你说“今晚做一顿清淡晚餐”，它自己选菜、下单、安排步骤</td>
+</tr>
+<tr>
+<td>写文章</td>
+<td>选题 → 大纲 → 正文 → 标题 → 配图</td>
+<td>每天 9 点自动发布文章</td>
+<td>你说“帮我写一篇适合推特的 Agent 科普”，它自己拆结构、写内容、优化表达</td>
+</tr>
+<tr>
+<td>写代码</td>
+<td>读项目 → 写计划 → 改代码 → 测试 → 提交</td>
+<td>代码提交后自动跑测试</td>
+<td>你说“帮我修复登录失败的问题”，它自己读代码、找 bug、修改、测试</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="workflow-是什么">Workflow 是什么？</h3>
 <p>Workflow 可以理解成：</p>
 <blockquote><p><strong>一套提前设计好的工作步骤。</strong></p></blockquote>
 <p>它不一定自动执行，也不一定会思考。它更像一张操作说明书。</p>
@@ -545,15 +1049,76 @@ Prompt = 任务说明书
 提交代码</code></pre>
 <p>简单来说：</p>
 <blockquote><p><strong>Workflow 是“怎么做事”的路线图。</strong></p></blockquote>
-<h4 id="automation-是什么">Automation 是什么？</h4>
+<h3 id="automation-是什么">Automation 是什么？</h3>
 <p>Automation 可以理解成：</p>
 <blockquote><p><strong>满足条件后，自动执行某个动作。</strong></p></blockquote>
 <p>它的重点是“自动触发”，但不一定有真正的理解能力。</p>
 <p>比如：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>自动化场景</th>
+<th>触发条件</th>
+<th>自动执行</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定时发日报</td>
+<td>每天 9 点</td>
+<td>自动发送邮件</td>
+</tr>
+<tr>
+<td>自动跑测试</td>
+<td>代码提交后</td>
+<td>自动运行测试</td>
+</tr>
+<tr>
+<td>自动提醒</td>
+<td>日程开始前 10 分钟</td>
+<td>弹出提醒</td>
+</tr>
+<tr>
+<td>自动备份</td>
+<td>每晚 12 点</td>
+<td>自动备份文件</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>Automation 的特点是：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>特点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>规则明确</td>
+<td>什么时候触发，做什么动作，提前设定好</td>
+</tr>
+<tr>
+<td>不太会变通</td>
+<td>超出规则后通常处理不了</td>
+</tr>
+<tr>
+<td>适合重复任务</td>
+<td>定时、批量、固定条件任务</td>
+</tr>
+<tr>
+<td>执行效率高</td>
+<td>不需要人每次手动操作</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <blockquote><p><strong>Automation 是“到点自动干活”的机器。</strong></p></blockquote>
-<h4 id="agent-是什么">Agent 是什么？</h4>
+<h3 id="agent-是什么">Agent 是什么？</h3>
 <p>Agent 可以理解成：</p>
 <blockquote><p><strong>一个能理解目标、拆解任务、调用工具、检查结果的 AI 执行者。</strong></p></blockquote>
 <p>它和 Workflow、Automation 最大的区别是：</p>
@@ -561,63 +1126,367 @@ Prompt = 任务说明书
 <p>比如你对 Agent 说：</p>
 <pre><code class="language-plain-text">帮我把这个网站的登录问题修好。</code></pre>
 <p>它可能会自己完成：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>Agent 会做什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>理解目标</td>
+<td>判断你要修的是登录功能</td>
+</tr>
+<tr>
+<td>读取项目</td>
+<td>查看前端、后端、接口、配置文件</td>
+</tr>
+<tr>
+<td>定位问题</td>
+<td>找到可能出错的代码位置</td>
+</tr>
+<tr>
+<td>修改代码</td>
+<td>修复逻辑或接口问题</td>
+</tr>
+<tr>
+<td>运行测试</td>
+<td>检查是否修好</td>
+</tr>
+<tr>
+<td>输出结果</td>
+<td>告诉你改了哪里、怎么验证</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <blockquote><p><strong>Agent 是“你给它目标，它自己想办法完成任务”的 AI 助手。</strong></p></blockquote>
-<h4 id="三者核心区别">三者核心区别</h4>
+<h3 id="三者核心区别">三者核心区别</h3>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>对比维度</th>
+<th>Workflow</th>
+<th>Automation</th>
+<th>Agent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核心作用</td>
+<td>定义流程</td>
+<td>自动执行</td>
+<td>完成目标</td>
+</tr>
+<tr>
+<td>是否会思考</td>
+<td>不会</td>
+<td>基本不会</td>
+<td>会进行一定规划和判断</td>
+</tr>
+<tr>
+<td>是否需要固定步骤</td>
+<td>需要</td>
+<td>需要</td>
+<td>不一定，可以动态调整</td>
+</tr>
+<tr>
+<td>是否能处理变化</td>
+<td>较弱</td>
+<td>较弱</td>
+<td>更强</td>
+</tr>
+<tr>
+<td>适合任务</td>
+<td>标准流程任务</td>
+<td>重复触发任务</td>
+<td>复杂目标型任务</td>
+</tr>
+<tr>
+<td>典型例子</td>
+<td>写作流程、开发流程</td>
+<td>定时任务、自动测试</td>
+<td>Codex 修 bug、AI 自动改项目</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
-<h5 id="它们之间的关系">它们之间的关系</h5>
+<h4 id="它们之间的关系">它们之间的关系</h4>
 <p>三者不是互相替代，而是可以组合使用。</p>
 <pre><code class="language-plain-text">比如你让 Agent 帮你写一篇文章， Agent 会自动找到对应的写文章 Workflow 来执行写文章的流程
 比如你让 Agent 每天帮你整理当天的新闻 ， Agent 就会变成 Automation 模式，每天到点固定帮你整理当天的新闻</code></pre>
 <hr>
-<h5 id="总结以下">总结以下</h5>
+<h4 id="总结以下">总结以下</h4>
 <blockquote><p>Workflow 是流程，Automation 是自动化，Agent 是执行者。<br>
 Workflow 解决“应该怎么做”，Automation 解决“什么时候自动做”，Agent 解决“要怎么去做”。<br>
 所以 Agent 不是简单的自动化脚本，而是一个能理解目标、拆解任务、调用工具并检查结果的 AI 工作单元。</p></blockquote>
 <hr>
-<h3 id="agentskillmcp-的关系">Agent、Skill、MCP 的关系</h3>
+<h2 id="agentskillmcp-的关系">Agent、Skill、MCP 的关系</h2>
 <p>这一章我们需要知道的是：</p>
 <blockquote><p><strong>Agent 本身负责理解目标和执行任务，但它需要 Skill 来变得更专业，也需要 MCP 来连接更多外部工具。</strong></p></blockquote>
 <p>简单来说：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>它是什么</th>
+<th>简单来说</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agent</td>
+<td>能理解目标、拆解任务、执行任务的 AI 执行者</td>
+<td>干活的人</td>
+</tr>
+<tr>
+<td>Skill</td>
+<td>一套固定的工作方法、经验和流程</td>
+<td>工作套路 / 操作手册</td>
+</tr>
+<tr>
+<td>MCP</td>
+<td>让 Agent 连接外部工具和数据的接口</td>
+<td>外接工具箱</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
-<h4 id="一句话讲清楚三者关系">一句话讲清楚三者关系</h4>
+<h3 id="一句话讲清楚三者关系">一句话讲清楚三者关系</h3>
 <blockquote><p><strong>Agent 负责做事，Skill 让它知道怎么专业地做，MCP 让它能调用更多工具去做。</strong></p></blockquote>
 <p>可以用一个生活类比：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>角色</th>
+<th>类比</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agent</td>
+<td>员工</td>
+<td>你给他目标，他负责完成任务</td>
+</tr>
+<tr>
+<td>Skill</td>
+<td>培训手册</td>
+<td>告诉他遇到某类任务时应该怎么做</td>
+</tr>
+<tr>
+<td>MCP</td>
+<td>操作工具</td>
+<td>让他能使用电脑、数据库、浏览器、GitHub 等工具</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
-<h4 id="agent-是核心执行者">Agent 是核心执行者</h4>
+<h3 id="agent-是核心执行者">Agent 是核心执行者</h3>
 <p>Agent 的作用是：</p>
 <blockquote><p><strong>把一个模糊目标，变成可以执行的任务步骤。</strong></p></blockquote>
 <p>比如你说：</p>
 <pre><code class="language-plain-text">帮我做一个宠物零食网站。</code></pre>
 <p>Agent 不是只回答你几句话，而是可能会继续做这些事情：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>Agent 会做什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>理解目标</td>
+<td>判断你要做的是一个电商前端页面</td>
+</tr>
+<tr>
+<td>拆解任务</td>
+<td>首页、商品列表、购物车、筛选功能</td>
+</tr>
+<tr>
+<td>选择方法</td>
+<td>决定先做页面，再做交互，再测试</td>
+</tr>
+<tr>
+<td>调用工具</td>
+<td>修改代码、运行项目、检查页面</td>
+</tr>
+<tr>
+<td>输出结果</td>
+<td>告诉你做了哪些功能，怎么查看</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <blockquote><p><strong>Agent 是那个真正把事情往前推进的人。</strong></p></blockquote>
 <hr>
-<h4 id="skill-是什么">Skill 是什么？</h4>
+<h3 id="skill-是什么">Skill 是什么？</h3>
 <p>Skill 可以理解成：</p>
 <blockquote><p><strong>给 Agent 准备好的一套固定工作套路。</strong></p></blockquote>
 <p>它不是一个外部工具，而更像是一份“做事方法”。</p>
 <p>比如你想让 Agent 写推特文章，可以给它一个推特写作 Skill：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>Skill 内容</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>标题怎么写</td>
+<td>让开头更有吸引力</td>
+</tr>
+<tr>
+<td>正文怎么拆</td>
+<td>让结构更清晰</td>
+</tr>
+<tr>
+<td>案例怎么放</td>
+<td>让内容更容易理解</td>
+</tr>
+<tr>
+<td>结尾怎么收</td>
+<td>让读者更愿意互动</td>
+</tr>
+<tr>
+<td>哪些词不要用</td>
+<td>减少 AI 味和营销感</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <blockquote><p><strong>Skill 不是帮 Agent 多拿一个工具，而是让 Agent 做事更有章法。</strong></p></blockquote>
 <hr>
-<h4 id="mcp-是什么">MCP 是什么？</h4>
+<h3 id="mcp-是什么">MCP 是什么？</h3>
 <p>MCP 可以理解成：</p>
 <blockquote><p><strong>让 Agent 连接外部工具和数据的标准接口。</strong></p></blockquote>
 <p>没有 MCP 的时候，Agent 可能只能在当前对话里回答你。</p>
 <p>有 MCP 之后，Agent 可以连接更多东西，比如：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>MCP 连接对象</th>
+<th>Agent 可以做什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GitHub</td>
+<td>读取仓库、查看 issue、分析代码</td>
+</tr>
+<tr>
+<td>文件系统</td>
+<td>读取本地文件、整理项目资料</td>
+</tr>
+<tr>
+<td>数据库</td>
+<td>查询数据、分析记录</td>
+</tr>
+<tr>
+<td>浏览器</td>
+<td>打开网页、操作页面、测试功能</td>
+</tr>
+<tr>
+<td>设计工具</td>
+<td>读取设计稿、生成页面结构</td>
+</tr>
+<tr>
+<td>日历 / 邮箱</td>
+<td>读取日程、整理邮件、自动处理任务</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <blockquote><p><strong>MCP 解决的是 Agent “能用什么工具、能访问什么数据”的问题。</strong></p></blockquote>
 <hr>
-<h4 id="skill-和-mcp-怎么增强-agent">Skill 和 MCP 怎么增强 Agent？</h4>
+<h3 id="skill-和-mcp-怎么增强-agent">Skill 和 MCP 怎么增强 Agent？</h3>
 <p>它们增强 Agent 的方式不一样。</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>增强方式</th>
+<th>Skill</th>
+<th>MCP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>解决的问题</td>
+<td>怎么做得更专业</td>
+<td>能调用什么工具</td>
+</tr>
+<tr>
+<td>主要作用</td>
+<td>提供方法、流程、经验</td>
+<td>提供外部能力、数据、接口</td>
+</tr>
+<tr>
+<td>更像什么</td>
+<td>工作手册</td>
+<td>工具箱</td>
+</tr>
+<tr>
+<td>是否直接连接外部服务</td>
+<td>通常不直接连接</td>
+<td>通常会连接</td>
+</tr>
+<tr>
+<td>对 Agent 的提升</td>
+<td>让输出更稳定、更专业</td>
+<td>让任务能真正执行到外部系统里</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>一句话总结：</p>
 <blockquote><p><strong>Skill 提升 Agent 的“做事方法”，MCP 扩展 Agent 的“做事范围”。</strong></p></blockquote>
 <hr>
-<h4 id="用-ai-编程举例">用 AI 编程举例</h4>
+<h3 id="用-ai-编程举例">用 AI 编程举例</h3>
 <p>假设你让 Agent 完成这个任务：</p>
 <pre><code class="language-plain-text">帮我给宠物零食网站增加购物车和筛选功能。</code></pre>
 <p>三者的分工可以这样理解：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>部分</th>
+<th>做什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agent</td>
+<td>理解需求，拆解任务，修改代码，检查结果</td>
+</tr>
+<tr>
+<td>Skill</td>
+<td>提供标准开发流程：先读项目、再写计划、小步修改、最后测试</td>
+</tr>
+<tr>
+<td>MCP</td>
+<td>连接 GitHub、本地文件、浏览器、终端等外部工具</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>完整过程可能是：</p>
 <pre><code class="language-plain-text">你提出目标
 ↓
@@ -631,20 +1500,52 @@ Agent 修改代码并测试结果
 ↓
 输出最终交付物</code></pre>
 <hr>
-<h4 id="三者关系图">三者关系图</h4>
+<h3 id="三者关系图">三者关系图</h3>
 <p>可以理解为：</p>
-<figure class="book-figure"><img src="assets/images/image%2010.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure class="book-figure"><img src="图片和附件/image%2021.png" alt="图片展示了Agent、Skill、MCP三者在Agent工作方式中的关系。用户目标明确后，Agent通过Skill（工作方法/流程）和MCP（外部工具/数据接口）来执行任务，最终产出高质量的可交付成果。Skill决定怎么做，MCP决定能调用什么，Agent负责把目标变成交付。该图与上下文紧密相关，直观呈现了三者在Agent工作中的分工与协作，帮助理解Agent、Skill、MCP三者之间的关系及Agent的工作流程。" loading="lazy"><figcaption>图片展示了Agent、Skill、MCP三者在Agent工作方式中的关系。用户目标明确后，Agent通过Skill（工作方法/流程）和MCP（外部工具/数据接口）来执行任务，最终产出高质量的可交付成果。Skill决定怎么做，MCP决定能调用什么，Agent负责把目标变成交付。该图与上下文紧密相关，直观呈现了三者在Agent工作中的分工与协作，帮助理解Agent、Skill、MCP三者之间的关系及Agent的工作流程。</figcaption></figure>
 <blockquote><p><strong>用户给目标，Agent 负责执行，Skill 提供方法，MCP 提供工具，最后产出结果。</strong></p></blockquote>
 <hr>
-<h4 id="最容易混淆的地方">最容易混淆的地方</h4>
+<h3 id="最容易混淆的地方">最容易混淆的地方</h3>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>容易混淆点</th>
+<th>正确理解</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Skill 是不是工具？</td>
+<td>不完全是，它更像方法、流程、知识包</td>
+</tr>
+<tr>
+<td>MCP 是不是 Agent？</td>
+<td>不是，MCP 是让 Agent 调用工具的接口</td>
+</tr>
+<tr>
+<td>Agent 没有 Skill 能不能工作？</td>
+<td>可以，但可能不稳定、不专业</td>
+</tr>
+<tr>
+<td>Agent 没有 MCP 能不能工作？</td>
+<td>可以，但能做的事会受限</td>
+</tr>
+<tr>
+<td>Skill 和 MCP 谁更重要？</td>
+<td>不冲突，一个管方法，一个管工具</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
-<h4 id="总结一下">总结一下</h4>
+<h3 id="总结一下">总结一下</h3>
 <blockquote><p>Agent 是执行者，Skill 是工作套路，MCP 是外部工具接口。<br>
 Skill 让 Agent 做事更专业，MCP 让 Agent 能连接更多真实工具。<br>
 没有 Skill，Agent 可能会做得不稳定；没有 MCP，Agent 可能只能停留在对话里。<br>
 真正强大的 Agent，往往是“Agent + Skill + MCP”的组合：既知道怎么做，也真的能去做。</p></blockquote>
 <hr>
-<h3 id="agent-和-ai-编程工具的关系">Agent 和 AI 编程工具的关系</h3>
+<h2 id="agent-和-ai-编程工具的关系">Agent 和 AI 编程工具的关系</h2>
 <blockquote><p><strong>AI 编程工具不是简单的“代码聊天框”，而是在不同位置放入了 Agent 能力。</strong></p></blockquote>
 <p>以前我们理解 AI 编程，可能会觉得它只是一个更聪明的代码补全工具。</p>
 <p>你写一半代码，它帮你补全。</p>
@@ -654,7 +1555,7 @@ Skill 让 Agent 做事更专业，MCP 让 Agent 能连接更多真实工具。<b
 <p>它们不再只是“回答代码问题”，而是开始参与完整的软件开发过程：</p>
 <p>读项目、理解需求、拆解任务、修改代码、运行命令、测试结果、生成提交、创建 PR，甚至协助 Code Review。</p>
 <hr>
-<h4 id="ai-编程工具的本质变化">AI 编程工具的本质变化</h4>
+<h3 id="ai-编程工具的本质变化">AI 编程工具的本质变化</h3>
 <p>过去的 AI 编程工具，更像是：</p>
 <blockquote><p><strong>你问一句，它答一句。</strong></p></blockquote>
 <p>比如：</p>
@@ -665,26 +1566,158 @@ Skill 让 Agent 做事更专业，MCP 让 Agent 能连接更多真实工具。<b
 <p>比如：</p>
 <pre><code class="language-plain-text">帮我修复登录失败的问题，并检查是否影响注册功能。</code></pre>
 <p>一个具备 Agent 能力的工具，可能会自己做这些事：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>它会做什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>读项目</td>
+<td>查看目录结构、代码文件、配置文件</td>
+</tr>
+<tr>
+<td>理解问题</td>
+<td>判断登录失败可能和接口、状态管理、权限校验有关</td>
+</tr>
+<tr>
+<td>制定计划</td>
+<td>先定位问题，再修改代码，最后测试</td>
+</tr>
+<tr>
+<td>修改代码</td>
+<td>直接改相关文件</td>
+</tr>
+<tr>
+<td>运行测试</td>
+<td>执行测试命令或启动项目检查</td>
+</tr>
+<tr>
+<td>检查结果</td>
+<td>判断问题是否真正解决</td>
+</tr>
+<tr>
+<td>输出总结</td>
+<td>告诉你改了哪里、为什么这样改</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>这就是普通 AI 编程助手和 Agent 型编程工具的区别。</p>
 <p>简单来说：</p>
 <blockquote><p><strong>普通 AI 编程助手帮你写代码，Agent 型编程工具帮你推进工程任务。</strong></p></blockquote>
 <hr>
-<h4 id="codexcursorclaude-code-的区别">Codex、Cursor、Claude Code 的区别</h4>
+<h3 id="codexcursorclaude-code-的区别">Codex、Cursor、Claude Code 的区别</h3>
 <p>这几个工具都和 AI 编程有关，但它们的位置不一样。</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>更像什么</th>
+<th>适合场景</th>
+<th>简单来说</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Codex</td>
+<td>工程任务 Agent</td>
+<td>读项目、改代码、跑测试、提 PR</td>
+<td>更像远程工程师</td>
+</tr>
+<tr>
+<td>Cursor</td>
+<td>AI 代码编辑器</td>
+<td>边写边改、快速补全、项目内开发</td>
+<td>更像带 AI 的 VS Code</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td>终端里的编程 Agent</td>
+<td>命令行开发、读仓库、改代码</td>
+<td>更像会用终端的程序员</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>它们的区别，不只是“谁的模型更聪明”，而是：</p>
 <blockquote><p><strong>Agent 被放在了不同的工作位置上。</strong></p></blockquote>
 <hr>
-<h4 id="它们不是谁取代谁而是适合不同位置">它们不是谁取代谁，而是适合不同位置</h4>
+<h3 id="它们不是谁取代谁而是适合不同位置">它们不是谁取代谁，而是适合不同位置</h3>
 <p>很多人会问：</p>
 <blockquote><p>Codex、Cursor、Claude Code 到底应该选哪个？</p></blockquote>
 <p>这个问题不能只看“哪个更强”。</p>
 <p>更准确的问法是：</p>
 <blockquote><p>我现在的任务发生在哪个位置？</p></blockquote>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>你的需求</th>
+<th>更适合的工具</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>我想让 AI 接一个完整工程任务，希望 AI 做出来的产品，更加符合工业逻辑</td>
+<td>Codex</td>
+</tr>
+<tr>
+<td>我想边写代码边让 AI 辅助</td>
+<td>Cursor</td>
+</tr>
+<tr>
+<td>我习惯用终端，希望 AI 帮我执行命令，希望 AI 做出来的产品更加符合人类的审美</td>
+<td>Claude Code</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <blockquote><p><strong>Cursor 更适合陪你写，Codex 更适合替你做，Claude Code 更适合在终端里干活</strong></p></blockquote>
 <hr>
-<h4 id="对新手来说怎么选">对新手来说怎么选？</h4>
+<h3 id="对新手来说怎么选">对新手来说怎么选？</h3>
 <p>如果你是非程序员，刚开始学 AI 编程，可以这样理解：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>你现在的状态</th>
+<th>推荐理解方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>完全零基础</td>
+<td>先用 Cursor ，看得见代码怎么变</td>
+</tr>
+<tr>
+<td>想做一个小网页</td>
+<td>Cursor 更直观</td>
+</tr>
+<tr>
+<td>想让 AI 帮你完成一个明确任务</td>
+<td>Codex 更适合</td>
+</tr>
+<tr>
+<td>已经会一点命令行</td>
+<td>Claude Code 会更顺手</td>
+</tr>
+<tr>
+<td>想学习完整工程流程</td>
+<td>Codex + GitHub 更适合</td>
+</tr>
+<tr>
+<td>想边学边改</td>
+<td>Cursor 更适合</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>不建议新手一开始就纠结“哪个最强”。</p>
 <p>更重要的是先搞清楚：</p>
 <blockquote><p><strong>你是想让 AI 陪你写，还是想让 AI 帮你完成任务？</strong></p></blockquote>
@@ -692,14 +1725,14 @@ Skill 让 Agent 做事更专业，MCP 让 Agent 能连接更多真实工具。<b
 <p>如果你想把任务交给 AI，让它完成修改并整理结果，Codex 更适合。</p>
 <p>如果你已经熟悉终端，Claude Code 会很自然。</p>
 <hr>
-<h4 id="本章总结">本章总结</h4>
+<h3 id="本章总结">本章总结</h3>
 <p>AI 编程工具已经不只是“代码聊天框”。</p>
 <p>一个真正有用的 AI 编程 Agent，不只是会写代码，还要能：</p>
 <p>读项目、理解需求、拆解任务、修改文件、运行测试、检查结果、生成总结。</p>
 <p>最后可以用一句话总结本章：</p>
 <blockquote><p><strong>不同 AI 编程工具的区别，不只是模型不同，而是 Agent 被放在了不同工作位置上。</strong></p></blockquote>
 <hr>
-<h3 id="agent-和-github-的关系">Agent 和 GitHub 的关系</h3>
+<h2 id="agent-和-github-的关系">Agent 和 GitHub 的关系</h2>
 <p>这一章要讲清楚一个核心观点：</p>
 <blockquote><p><strong>Agent 不只是写代码，还能进入 GitHub 工作流，参与真实的软件协作。</strong></p></blockquote>
 <p>以前我们理解 AI 写代码，更多是停留在本地：</p>
@@ -715,76 +1748,250 @@ Skill 让 Agent 做事更专业，MCP 让 Agent 能连接更多真实工具。<b
 <p>简单来说：</p>
 <blockquote><p><strong>GitHub 是代码协作的地方，Agent 是可以参与协作的执行者。</strong></p></blockquote>
 <hr>
-<h4 id="github-不只是代码仓库">GitHub 不只是代码仓库</h4>
+<h3 id="github-不只是代码仓库">GitHub 不只是代码仓库</h3>
 <p>很多新手会把 GitHub 理解成：</p>
 <blockquote><p><strong>一个放代码的网站。</strong></p></blockquote>
 <p>这个理解没错，但不完整。</p>
 <p>GitHub 不只是存放代码，它更像一个项目协作中心。</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>GitHub 功能</th>
+<th>作用</th>
+<th>简单来说</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Repository</td>
+<td>存放项目代码</td>
+<td>项目仓库</td>
+</tr>
+<tr>
+<td>Issue</td>
+<td>记录问题和需求</td>
+<td>任务清单</td>
+</tr>
+<tr>
+<td>Branch</td>
+<td>分开开发不同功能</td>
+<td>临时施工区</td>
+</tr>
+<tr>
+<td>Commit</td>
+<td>保存一次代码修改</td>
+<td>存档记录</td>
+</tr>
+<tr>
+<td>Pull Request</td>
+<td>请求合并代码</td>
+<td>交作业并等待检查</td>
+</tr>
+<tr>
+<td>Code Review</td>
+<td>检查代码质量</td>
+<td>同事帮你看代码</td>
+</tr>
+<tr>
+<td>GitHub Actions</td>
+<td>自动测试、构建、部署</td>
+<td>自动流水线</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>所以，GitHub 不是单纯的“网盘”，而是一个完整的代码协作系统。</p>
 <p>Agent 如果要真正参与软件开发，就不能只会写代码，还要理解 GitHub 里的这些协作动作。</p>
 <hr>
-<h4 id="agent-在-github-里能做什么">Agent 在 GitHub 里能做什么？</h4>
+<h3 id="agent-在-github-里能做什么">Agent 在 GitHub 里能做什么？</h3>
 <p>Agent 进入 GitHub 之后，可以参与很多开发环节。</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>GitHub 环节</th>
+<th>传统做法</th>
+<th>Agent 参与后</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>读仓库</td>
+<td>人自己看目录和代码</td>
+<td>Agent 自动理解项目结构</td>
+</tr>
+<tr>
+<td>看 Issue</td>
+<td>人自己分析需求</td>
+<td>Agent 总结问题和任务目标</td>
+</tr>
+<tr>
+<td>建分支</td>
+<td>人手动创建分支</td>
+<td>Agent 按任务创建工作分支</td>
+</tr>
+<tr>
+<td>改代码</td>
+<td>人自己写和调试</td>
+<td>Agent 根据需求修改代码</td>
+</tr>
+<tr>
+<td>提交 Commit</td>
+<td>人自己总结改动</td>
+<td>Agent 生成提交说明</td>
+</tr>
+<tr>
+<td>创建 PR</td>
+<td>人自己写 PR 描述</td>
+<td>Agent 生成 PR 内容和测试说明</td>
+</tr>
+<tr>
+<td>Code Review</td>
+<td>人检查代码</td>
+<td>Agent 先做一轮自检</td>
+</tr>
+<tr>
+<td>修复反馈</td>
+<td>人根据评论修改</td>
+<td>Agent 根据评论继续调整</td>
+</tr>
+<tr>
+<td>跑测试</td>
+<td>人手动执行命令</td>
+<td>Agent 或 CI 自动检查结果</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>这就是 Agent 和普通代码生成工具最大的区别。</p>
 <p>普通 AI 工具更多是在“写代码”这个点上帮你。</p>
 <p>Agent 则可以进入“完整工程流程”里帮你。</p>
 <hr>
-<h4 id="从写代码到参与协作">从“写代码”到“参与协作”</h4>
+<h3 id="从写代码到参与协作">从“写代码”到“参与协作”</h3>
 <p>以前你让 AI 写代码，通常是这样的：</p>
-<figure class="book-figure"><img src="assets/images/image%2019.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure class="book-figure"><img src="图片和附件/image%2017.png" alt="图片展示了从让AI写代码到让Agent参与GitHub任务的变化。左侧“以前：让AI写代码”部分，AI根据指令生成代码，后续需手动复制、测试、提交等。右侧“现在：让Agent参与GitHub”部分，Agent能阅读仓库、理解代码结构，定位并修复问题，创建分支提交PR等，只需描述目标。图片与上下文紧密相关，直观呈现了Agent在GitHub任务处理上的优势，强调其更像真正的工程协作者。" loading="lazy"><figcaption>图片展示了从让AI写代码到让Agent参与GitHub任务的变化。左侧“以前：让AI写代码”部分，AI根据指令生成代码，后续需手动复制、测试、提交等。右侧“现在：让Agent参与GitHub”部分，Agent能阅读仓库、理解代码结构，定位并修复问题，创建分支提交PR等，只需描述目标。图片与上下文紧密相关，直观呈现了Agent在GitHub任务处理上的优势，强调其更像真正的工程协作者。</figcaption></figure>
 <p>这时候 Agent 不只是写代码，而是可能会完成一整套流程：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>Agent 会做什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>阅读仓库</td>
+<td>查看项目目录、依赖、关键文件</td>
+</tr>
+<tr>
+<td>理解任务</td>
+<td>判断登录失败可能涉及哪些模块</td>
+</tr>
+<tr>
+<td>创建分支</td>
+<td>新建一个用于修复问题的分支</td>
+</tr>
+<tr>
+<td>修改代码</td>
+<td>修改前端、后端或配置文件</td>
+</tr>
+<tr>
+<td>运行测试</td>
+<td>检查修复是否有效</td>
+</tr>
+<tr>
+<td>生成 Commit</td>
+<td>保存修改并写清楚提交说明</td>
+</tr>
+<tr>
+<td>创建 PR</td>
+<td>把改动提交给项目等待审核</td>
+</tr>
+<tr>
+<td>输出总结</td>
+<td>说明改了哪里、如何验证</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <blockquote><p><strong>过去 AI 帮你写代码，现在 Agent 可以帮你完成一次代码协作。</strong></p></blockquote>
 <hr>
-<h4 id="agent-如何使用仓库">Agent 如何使用仓库？</h4>
+<h3 id="agent-如何使用仓库">Agent 如何使用仓库？</h3>
 <p>Agent 参与 GitHub 的第一步，不是直接改代码，而是先建立连接。</p>
-<h5 id="这里还是以-codex-为例首先在插件当中安装-github-插件">这里还是以 Codex 为例，首先在插件当中，安装 github 插件，</h5>
+<h4 id="这里还是以-codex-为例首先在插件当中安装-github-插件">这里还是以 Codex 为例，首先在插件当中，安装 github 插件，</h4>
 <p>安装好过后，第一次使用会提示登录自己的 github 账号</p>
-<figure class="book-figure"><img src="assets/images/image%2020.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
-<h5 id="登录好账号过后还需要下载-git-软件">登录好账号过后，还需要下载 Git 软件</h5>
-<figure class="book-figure"><img src="assets/images/image%2027.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
-<h5 id="将-git-和github建立联系">将 Git 和GitHub建立联系</h5>
+<figure class="book-figure"><img src="图片和附件/image%209.png" alt="图片展示的是Codex插件界面，标题为“插件，在你常用的工具中使用 Codex”。搜索框内显示“github”。下方“Developer Tools”区域中，有一个名为“GitHub”的插件，其图标为黑色头像，旁边有文字“Try in chat”，并有三个点的图标。该图片与文档中“从‘写代码’到‘参与协作’”部分内容相关，用于说明在插件中安装github插件的操作，是安装github插件后的界面展示。" loading="lazy"><figcaption>图片展示的是Codex插件界面，标题为“插件，在你常用的工具中使用 Codex”。搜索框内显示“github”。下方“Developer Tools”区域中，有一个名为“GitHub”的插件，其图标为黑色头像，旁边有文字“Try in chat”，并有三个点的图标。该图片与文档中“从‘写代码’到‘参与协作’”部分内容相关，用于说明在插件中安装github插件的操作，是安装github插件后的界面展示。</figcaption></figure>
+<h4 id="登录好账号过后还需要下载-git-软件">登录好账号过后，还需要下载 Git 软件</h4>
+<figure class="book-figure"><img src="图片和附件/image%2018.png" alt="图片展示的是Git官方网站的安装页面。页面左侧有导航栏，如About、Learn、Tools等。右侧“Install”部分有Windows、macOS、Linux选项，其中Windows选项被红色框突出显示。下方有“Click here to download...”的下载链接，以及“Latest version is 2.34.0”等信息。页面底部有“Read the Book”“Download a Git”“Get Involved”三个图标。该图片与文档中“将Git和GitHub建立联系”部分相关，用于指导用户下载Git软件。" loading="lazy"><figcaption>图片展示的是Git官方网站的安装页面。页面左侧有导航栏，如About、Learn、Tools等。右侧“Install”部分有Windows、macOS、Linux选项，其中Windows选项被红色框突出显示。下方有“Click here to download...”的下载链接，以及“Latest version is 2.34.0”等信息。页面底部有“Read the Book”“Download a Git”“Get Involved”三个图标。该图片与文档中“将Git和GitHub建立联系”部分相关，用于指导用户下载Git软件。</figcaption></figure>
+<h4 id="将-git-和github建立联系">将 Git 和GitHub建立联系</h4>
 <p>在桌面新建一个文件夹</p>
-<figure class="book-figure"><img src="assets/images/image%209.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure class="book-figure"><img src="图片和附件/image%2022.png" alt="这张图片展示了电脑的文件资源管理器界面，路径为“此电脑&gt;文档(D:)&gt;12076&gt;桌面&gt;cli”，界面中红框标注了一个名为“7days-build-claude-code-cli”的文件夹，该文件夹的修改日期为2026年6月29日11:09，类型为文件夹。结合上下文可知，这个文件夹是在完成GitHub账号登录、Git软件下载并将Git与GitHub建立联系后，于桌面新建的用于后续相关操作的文件夹。" loading="lazy"><figcaption>这张图片展示了电脑的文件资源管理器界面，路径为“此电脑&gt;文档(D:)&gt;12076&gt;桌面&gt;cli”，界面中红框标注了一个名为“7days-build-claude-code-cli”的文件夹，该文件夹的修改日期为2026年6月29日11:09，类型为文件夹。结合上下文可知，这个文件夹是在完成GitHub账号登录、Git软件下载并将Git与GitHub建立联系后，于桌面新建的用于后续相关操作的文件夹。</figcaption></figure>
 <p>输入提示词：</p>
-<pre><code class="language-plain-text">**把这个文件夹初始化成Git项目**</code></pre>
-<figure class="book-figure"><img src="assets/images/image%208.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
-<h5 id="将创建的好的仓库上传到-github">将创建的好的仓库，上传到 github</h5>
-<figure class="book-figure"><img src="assets/images/image%2018.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
-<h5 id="下载-github-上面的仓库到本地">下载 github 上面的仓库到本地</h5>
+<pre><code class="language-plain-text">把这个文件夹初始化成Git项目</code></pre>
+<figure class="book-figure"><img src="图片和附件/image%2014.png" alt="图片展示了Codex在GitHub操作中遇到的问题及解决步骤。内容显示本地Git仓库已初始化，分支是main，还差两件事才能推到GitHub：一是提交身份，需提供user.name和user.email；二是GitHub远端仓库地址，示例为https://github.com/用户名/仓库名.git。此外，因本机未安装gh命令，无法直接创建GitHub仓库，建议先在GitHub上创建空仓库，把地址发给Codex，后续设置remote、创建初始提交并push。该图片与上下文紧密相关，是Codex在GitHub操作中遇到问题及解决思路的呈现。" loading="lazy"><figcaption>图片展示了Codex在GitHub操作中遇到的问题及解决步骤。内容显示本地Git仓库已初始化，分支是main，还差两件事才能推到GitHub：一是提交身份，需提供user.name和user.email；二是GitHub远端仓库地址，示例为https://github.com/用户名/仓库名.git。此外，因本机未安装gh命令，无法直接创建GitHub仓库，建议先在GitHub上创建空仓库，把地址发给Codex，后续设置remote、创建初始提交并push。该图片与上下文紧密相关，是Codex在GitHub操作中遇到问题及解决思路的呈现。</figcaption></figure>
+<h4 id="将创建的好的仓库上传到-github">将创建的好的仓库，上传到 github</h4>
+<figure class="book-figure"><img src="图片和附件/image%2012.png" alt="图片展示了Codex将创建好的仓库上传到GitHub后的处理结果。内容显示已处理6分钟10秒，已推送到“Vink567/7days - build - claude - code - cli”仓库，提交信息为“Add Day 10 - 14 tutorial docs”，Commit链接为对应代码哈希值。还验证了远端main和本地HEAD都是对应代码哈希值，当前工作区干净，origin也只指向“7days - build - claude - code - cli”。该图片与上文“将创建好的仓库上传到GitHub”内容对应，直观呈现了上传结果。" loading="lazy"><figcaption>图片展示了Codex将创建好的仓库上传到GitHub后的处理结果。内容显示已处理6分钟10秒，已推送到“Vink567/7days - build - claude - code - cli”仓库，提交信息为“Add Day 10 - 14 tutorial docs”，Commit链接为对应代码哈希值。还验证了远端main和本地HEAD都是对应代码哈希值，当前工作区干净，origin也只指向“7days - build - claude - code - cli”。该图片与上文“将创建好的仓库上传到GitHub”内容对应，直观呈现了上传结果。</figcaption></figure>
+<h4 id="下载-github-上面的仓库到本地">下载 github 上面的仓库到本地</h4>
 <p>直接复制对应的仓库网页地址，给 Codex 让其帮忙下载即可</p>
-<figure class="book-figure"><img src="assets/images/image%2021.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure class="book-figure"><img src="图片和附件/image%2024.png" alt="Agent 橙皮书配图" loading="lazy"><figcaption>Agent 橙皮书配图</figcaption></figure>
 <p>Skill 也是同理安装的，直接告诉 Codex：</p>
 <pre><code class="language-plain-text">帮我安装https://github.com/Vink567/twitter-clipper-vink这个skill到codex当中，并且加载使用</code></pre>
 <hr>
-<h4 id="agent-如何处理-issue">Agent 如何处理 Issue？</h4>
+<h3 id="agent-如何处理-issue">Agent 如何处理 Issue？</h3>
 <p>Issue 可以理解成 GitHub 里的任务卡片。</p>
 <p>它可能是一个 Bug，也可能是一个新功能需求。</p>
-<figure class="book-figure"><img src="assets/images/image%2013.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure class="book-figure"><img src="图片和附件/image.png" alt="图片展示的是Codex在GitHub上创建的Issue列表。列表中包含多个Issue，如“作者们称赞我理解，增加越多越理解，gpt5.4的价格能不能更新一下？”“max_output_tokens更新错误”等，每个Issue后有数字序号标识，如#1554、#1553等。部分Issue有红色“BUG”标识，如“Codex切片时response模型后原来合适记录会看不到”“codex批量查询时出错两个结果”等。图片与上下文紧密相关，直观呈现了Agent处理Issue时所面对的各类问题。" loading="lazy"><figcaption>图片展示的是Codex在GitHub上创建的Issue列表。列表中包含多个Issue，如“作者们称赞我理解，增加越多越理解，gpt5.4的价格能不能更新一下？”“max_output_tokens更新错误”等，每个Issue后有数字序号标识，如#1554、#1553等。部分Issue有红色“BUG”标识，如“Codex切片时response模型后原来合适记录会看不到”“codex批量查询时出错两个结果”等。图片与上下文紧密相关，直观呈现了Agent处理Issue时所面对的各类问题。</figcaption></figure>
 <p>比如一个 Issue 写着：</p>
 <pre><code class="language-plain-text">用户点击登录按钮后没有反应，请修复这个问题。</code></pre>
 <p>普通人看到这个 Issue，需要自己去判断：</p>
 <ul>
 <li>是按钮没有绑定事件？</li>
-</ul>
-<ul>
 <li>是接口请求失败？</li>
-</ul>
-<ul>
 <li>是登录状态没有更新？</li>
-</ul>
-<ul>
 <li>是后端返回格式变了？</li>
-</ul>
-<ul>
 <li>还是页面报错了？</li>
 </ul>
 <p>现在 Agent 可以先帮你做一轮分析：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>Agent 动作</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>读取 Issue 内容</td>
+<td>理解问题描述</td>
+</tr>
+<tr>
+<td>查找相关代码</td>
+<td>定位登录模块</td>
+</tr>
+<tr>
+<td>分析可能原因</td>
+<td>给出排查方向</td>
+</tr>
+<tr>
+<td>制定修改计划</td>
+<td>避免盲目改代码</td>
+</tr>
+<tr>
+<td>输出任务拆解</td>
+<td>让人知道它准备怎么做</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>一个成熟的 Agent，不是看到 Issue 就直接改，而是先把任务拆清楚。</p>
 <p>简单来说：</p>
 <blockquote><p><strong>Issue 给 Agent 一个任务入口，Agent 把这个任务变成可执行步骤。</strong></p></blockquote>
 <hr>
-<h4 id="agent-如何开分支">Agent 如何开分支？</h4>
+<h3 id="agent-如何开分支">Agent 如何开分支？</h3>
 <p>在 GitHub 协作里，通常不会直接在主分支上修改代码，防止把项目写坏了。</p>
 <p>更常见的方式是：</p>
 <pre><code class="language-plain-text">先开一个新分支
@@ -798,24 +2005,56 @@ Skill 让 Agent 做事更专业，MCP 让 Agent 能连接更多真实工具。<b
 <blockquote><p><strong>把当前任务和主项目隔离开，避免直接影响正式代码。</strong></p></blockquote>
 <p>Agent 也应该遵守这个流程，可以直接选择手动开启一个新的分支，或者直接告诉 Agent 。</p>
 <pre><code class="language-plain-text">不要在我的主分支上面直接修改代码，新创建一个分支叫做xxx，然后在这个分支当中帮我完成xxx功能，后面我验证好过后再帮我推送到主分支上</code></pre>
-<figure class="book-figure"><img src="assets/images/image%2015.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure class="book-figure"><img src="图片和附件/image%204.png" alt="这张图片是一款代码管理工具的界面，左侧为功能菜单，在Git初始化项的下拉菜单中，“创建永久工作树”选项被红色框线重点标注。界面右侧的输入区域上方，显示着标题“我们应该在Yao Meta Skill中做些什么？”，下方有任务输入相关区域及操作提示文本，该界面呈现了Git协作中创建工作树的操作入口，和文档中Agent需通过开分支隔离任务、安全修改代码的内容相呼应，对应Agent开启分支操作的相关工具界面展示。" loading="lazy"><figcaption>这张图片是一款代码管理工具的界面，左侧为功能菜单，在Git初始化项的下拉菜单中，“创建永久工作树”选项被红色框线重点标注。界面右侧的输入区域上方，显示着标题“我们应该在Yao Meta Skill中做些什么？”，下方有任务输入相关区域及操作提示文本，该界面呈现了Git协作中创建工作树的操作入口，和文档中Agent需通过开分支隔离任务、安全修改代码的内容相呼应，对应Agent开启分支操作的相关工具界面展示。</figcaption></figure>
 <p>简单来说：</p>
 <blockquote><p><strong>分支是 Agent 的临时工作区，让它可以安全地修改代码。</strong></p></blockquote>
 <hr>
-<h4 id="agent-如何提交-commit">Agent 如何提交 Commit？</h4>
+<h3 id="agent-如何提交-commit">Agent 如何提交 Commit？</h3>
 <p>Commit 可以理解成一次代码存档。</p>
 <p>每次完成一个小修改，就保存一次记录。可以手动提交，也可以让 Agent 帮你提交</p>
-<figure class="book-figure"><img src="assets/images/image%2025.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure class="book-figure"><img src="图片和附件/image%2028.png" alt="这张图片展示的是Agent提交代码相关操作的界面。界面右侧的“提交或推送”选项被红色框标注，左侧弹窗内有“提交信息（留空将自动生成）”的输入框，其上方显示当前代码变更数量为+53 -0，输入框内已有相关文本，弹窗内还设有“提交”“提交并推送”“推送”三个操作选项，界面整体围绕Agent的代码提交操作展开，对应文档中关于Agent提交Commit的说明内容，清晰呈现了提交代码时的信息填写与操作选择环节。" loading="lazy"><figcaption>这张图片展示的是Agent提交代码相关操作的界面。界面右侧的“提交或推送”选项被红色框标注，左侧弹窗内有“提交信息（留空将自动生成）”的输入框，其上方显示当前代码变更数量为+53 -0，输入框内已有相关文本，弹窗内还设有“提交”“提交并推送”“推送”三个操作选项，界面整体围绕Agent的代码提交操作展开，对应文档中关于Agent提交Commit的说明内容，清晰呈现了提交代码时的信息填写与操作选择环节。</figcaption></figure>
 <p>Agent 提交提示词：</p>
 <pre><code class="language-plain-text">帮我提交一下代码，并且简要说明修改的内容</code></pre>
 <p>这样团队成员一看就知道，这次修改的是什么了。</p>
 <p>简单来说：</p>
 <blockquote><p><strong>Commit 是 Agent 每完成一个阶段后留下的工作记录。</strong></p></blockquote>
 <hr>
-<h4 id="agent-如何创建-pr">Agent 如何创建 PR？</h4>
+<h3 id="agent-如何创建-pr">Agent 如何创建 PR？</h3>
 <p>PR，也就是 Pull Request，可以理解成：</p>
 <blockquote><p><strong>我已经在分支里改好了代码，现在请求合并到主项目。</strong></p></blockquote>
 <p>一个好的 PR 通常应该包含：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>内容</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>修改背景</td>
+<td>为什么要改</td>
+</tr>
+<tr>
+<td>修改内容</td>
+<td>改了哪些文件和功能</td>
+</tr>
+<tr>
+<td>测试方式</td>
+<td>怎么验证结果</td>
+</tr>
+<tr>
+<td>风险说明</td>
+<td>可能影响哪些地方</td>
+</tr>
+<tr>
+<td>截图或效果</td>
+<td>前端页面尤其需要</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>Agent 创建 PR 时，不应该只写一句：</p>
 <pre><code class="language-plain-text">fixed bug</code></pre>
 <p>更好的 PR 描述应该像这样：</p>
@@ -833,9 +2072,45 @@ Skill 让 Agent 做事更专业，MCP 让 Agent 能连接更多真实工具。<b
 <p>简单来说：</p>
 <blockquote><p><strong>PR 是 Agent 把工作成果交给人类审核的地方。</strong></p></blockquote>
 <hr>
-<h4 id="agent-如何参与-code-review">Agent 如何参与 Code Review？</h4>
+<h3 id="agent-如何参与-code-review">Agent 如何参与 Code Review？</h3>
 <p>Code Review 是 GitHub 协作中非常重要的一环。</p>
 <p>它不是为了挑毛病，而是为了确认：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>检查项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>代码是否能跑</td>
+<td>有没有明显错误</td>
+</tr>
+<tr>
+<td>逻辑是否正确</td>
+<td>是否真正解决问题</td>
+</tr>
+<tr>
+<td>风格是否统一</td>
+<td>是否符合项目规范</td>
+</tr>
+<tr>
+<td>影响范围是否可控</td>
+<td>有没有误伤其他功能</td>
+</tr>
+<tr>
+<td>安全性是否可靠</td>
+<td>有没有引入风险</td>
+</tr>
+<tr>
+<td>测试是否充分</td>
+<td>是否验证了关键路径</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>Agent 可以在 Code Review 中承担两种角色。</p>
 <p>第一种是：</p>
 <blockquote><p><strong>提交前自检。</strong></p></blockquote>
@@ -843,13 +2118,97 @@ Skill 让 Agent 做事更专业，MCP 让 Agent 能连接更多真实工具。<b
 <p>第二种是：</p>
 <blockquote><p><strong>协助人类 Review。</strong></p></blockquote>
 <p>它可以帮你总结 PR 变化、指出潜在风险、解释某段代码为什么这样写。</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>Review 场景</th>
+<th>Agent 可以做什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>看不懂 PR</td>
+<td>帮你总结改动</td>
+</tr>
+<tr>
+<td>担心风险</td>
+<td>帮你分析影响范围</td>
+</tr>
+<tr>
+<td>不知道怎么测</td>
+<td>帮你列测试步骤</td>
+</tr>
+<tr>
+<td>收到评论</td>
+<td>帮你根据评论继续修改</td>
+</tr>
+<tr>
+<td>多文件改动</td>
+<td>帮你梳理文件关系</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <blockquote><p><strong>Agent 不只是写代码的人，也可以成为代码审查助手。</strong></p></blockquote>
 <hr>
-<h4 id="agent-和-github-actions-的关系">Agent 和 GitHub Actions 的关系</h4>
+<h3 id="agent-和-github-actions-的关系">Agent 和 GitHub Actions 的关系</h3>
 <p>GitHub Actions 可以理解成 GitHub 里的自动流水线。</p>
 <p>比如：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>触发条件</th>
+<th>自动动作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>提交代码后</td>
+<td>自动运行测试</td>
+</tr>
+<tr>
+<td>创建 PR 后</td>
+<td>自动检查代码格式</td>
+</tr>
+<tr>
+<td>合并主分支后</td>
+<td>自动部署网站</td>
+</tr>
+<tr>
+<td>发布版本后</td>
+<td>自动打包构建</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>Agent 和 GitHub Actions 的关系，可以这样理解：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>角色</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agent</td>
+<td>理解任务、修改代码、创建 PR</td>
+</tr>
+<tr>
+<td>GitHub Actions</td>
+<td>自动测试、构建、部署</td>
+</tr>
+<tr>
+<td>人类开发者</td>
+<td>审核方向、确认结果、决定是否合并</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>Agent 可以根据 Actions 的结果继续调整。</p>
 <p>比如：</p>
 <pre><code class="language-plain-text">PR 创建后测试失败
@@ -866,27 +2225,75 @@ Agent 修改代码
 <p>简单来说：</p>
 <blockquote><p><strong>Agent 负责处理任务，GitHub Actions 负责自动检查，二者结合后更接近真实工程流程。</strong></p></blockquote>
 <hr>
-<h4 id="一个完整的-agent-github-工作流">一个完整的 Agent + GitHub 工作流</h4>
+<h3 id="一个完整的-agent-github-工作流">一个完整的 Agent + GitHub 工作流</h3>
 <p>可以把 Agent 参与 GitHub 的过程理解成下面这条链路：</p>
-<figure class="book-figure"><img src="assets/images/image%2014.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure class="book-figure"><img src="图片和附件/image%2011.png" alt="Agent 橙皮书配图" loading="lazy"><figcaption>Agent 橙皮书配图</figcaption></figure>
 <p>这就是 Agent 和 GitHub 结合后的核心价值：</p>
 <blockquote><p><strong>它让 AI 从“写一段代码”，变成“参与一次完整的软件协作”。</strong></p></blockquote>
 <hr>
-<h4 id="新手最应该记住的-github-概念">新手最应该记住的 GitHub 概念</h4>
+<h3 id="新手最应该记住的-github-概念">新手最应该记住的 GitHub 概念</h3>
 <p>如果你是刚接触 GitHub 和 Agent，不需要一开始就记住所有专业术语。</p>
 <p>先记住这几个就够了：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>简单来说</th>
+<th>Agent 相关作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Repository</td>
+<td>项目仓库</td>
+<td>Agent 读取和修改代码的地方</td>
+</tr>
+<tr>
+<td>Issue</td>
+<td>任务卡片</td>
+<td>Agent 接收任务的入口</td>
+</tr>
+<tr>
+<td>Branch</td>
+<td>临时分支</td>
+<td>Agent 安全修改代码的区域</td>
+</tr>
+<tr>
+<td>Commit</td>
+<td>保存记录</td>
+<td>Agent 记录每次修改</td>
+</tr>
+<tr>
+<td>Pull Request</td>
+<td>合并申请</td>
+<td>Agent 提交成果让人审核</td>
+</tr>
+<tr>
+<td>Review</td>
+<td>代码检查</td>
+<td>人和 Agent 一起确认质量</td>
+</tr>
+<tr>
+<td>Actions</td>
+<td>自动流水线</td>
+<td>自动测试和部署 Agent 的修改</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <blockquote><p><strong>Repository 是项目，Issue 是任务，Branch 是工作区，Commit 是存档，PR 是交作业，Review 是检查，Actions 是自动验收。</strong></p></blockquote>
 <hr>
-<h4 id="本章总结_1">本章总结</h4>
+<h3 id="本章总结_1">本章总结</h3>
 <p>Agent 不只是帮你写代码，它还能参与完整的软件协作流程</p>
 <p>这意味着，AI 编程正在从“代码生成”走向“工程协作”。</p>
 <p>过去我们用 AI，是让它帮我们写一段代码。</p>
 <p>现在我们用 Agent，是让它参与一个真实项目的推进。</p>
 <p>最后可以用一句话总结本章：</p>
 <blockquote><p><strong>Agent 不只是写代码的工具，而是可以进入 GitHub 工作流、参与代码协作的工程执行者。</strong></p></blockquote>
-<h2 id="第三篇agent-如何使用">第三篇：Agent 如何使用</h2>
-<h3 id="如何正确指挥-agent">如何正确指挥 Agent</h3>
+<h1 id="第三篇agent-如何使用">第三篇：Agent 如何使用</h1>
+<h2 id="如何正确指挥-agent">如何正确指挥 Agent</h2>
 <p>很多人第一次使用 Agent 时，容易把它当成一个“更聪明的聊天机器人”，随手丢一句：</p>
 <blockquote><p>帮我做一个网站。<br>
 帮我优化一下代码。<br>
@@ -896,21 +2303,91 @@ Agent 修改代码
 <p>如果你没有把目标、背景、限制和验收标准讲清楚，它就只能自己猜。</p>
 <p>一旦 Agent 开始“猜”，结果就很容易跑偏。</p>
 <hr>
-<h4 id="为什么不能只丢一句话">为什么不能只丢一句话？</h4>
+<h3 id="为什么不能只丢一句话">为什么不能只丢一句话？</h3>
 <p>普通聊天里，你问一句话，AI 回答一句话，出错了大不了重新问。</p>
 <p>但 Agent 不一样。</p>
 <p>Agent 往往会真的去执行任务，比如：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>行为</th>
+<th>可能带来的影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>修改代码</td>
+<td>可能改错文件、破坏原有功能</td>
+</tr>
+<tr>
+<td>创建文件</td>
+<td>可能生成一堆无用文件</td>
+</tr>
+<tr>
+<td>删除内容</td>
+<td>可能误删已有逻辑</td>
+</tr>
+<tr>
+<td>调整样式</td>
+<td>可能把原来的页面风格改乱</td>
+</tr>
+<tr>
+<td>执行命令</td>
+<td>可能引入新的依赖或报错</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>所以，指挥 Agent 的时候，不能只说“你帮我弄一下”。</p>
 <p>你要像给同事派活一样，把任务说清楚。</p>
 <hr>
-<h4 id="一个好任务应该包含什么">一个好任务应该包含什么？</h4>
+<h3 id="一个好任务应该包含什么">一个好任务应该包含什么？</h3>
 <p>更好的方式，是把任务拆成几个关键信息：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>目标</td>
+<td>你最终想完成什么</td>
+<td>做一个宠物零食网站首页</td>
+</tr>
+<tr>
+<td>背景</td>
+<td>任务发生在什么场景里</td>
+<td>面向新手宠物主人，风格要温暖可爱</td>
+</tr>
+<tr>
+<td>限制</td>
+<td>哪些事情不能做</td>
+<td>不要修改现有购物车逻辑</td>
+</tr>
+<tr>
+<td>输出格式</td>
+<td>最后要交付什么</td>
+<td>输出修改方案、代码变更说明、测试结果</td>
+</tr>
+<tr>
+<td>验收标准</td>
+<td>怎么判断任务完成</td>
+<td>页面能正常打开，商品卡片能筛选</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>这几个信息越清楚，Agent 就越不容易乱猜。</p>
 <hr>
-<h4 id="怎么给-agent-下任务">怎么给 Agent 下任务</h4>
-<figure class="book-figure"><img src="assets/images/image%204.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
+<h3 id="怎么给-agent-下任务">怎么给 Agent 下任务</h3>
+<figure class="book-figure"><img src="图片和附件/image%2019.png" alt="Agent 橙皮书配图" loading="lazy"><figcaption>Agent 橙皮书配图</figcaption></figure>
 <hr>
-<h4 id="指挥-agent-的基本公式">指挥 Agent 的基本公式</h4>
+<h3 id="指挥-agent-的基本公式">指挥 Agent 的基本公式</h3>
 <p>可以记住这个公式：</p>
 <blockquote><p>目标 + 背景 + 限制 + 输出格式 + 验收标准</p></blockquote>
 <p>也可以直接套用下面这个模板：</p>
@@ -932,10 +2409,10 @@ Agent 修改代码
 【怎么判断这件事已经完成】</code></pre>
 <p>不过现在的 Agent 基本上都有计划模式了，可以在我们正式执行项目的时候，先用计划模式，把每个步骤和需求和 AI 对齐</p>
 <p>比如 Codex 中的计划模式，启用过后 Codex 会先生成一份执行计划：</p>
-<figure class="book-figure"><img src="assets/images/image%2023.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
-<figure class="book-figure"><img src="assets/images/image%201.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure class="book-figure"><img src="图片和附件/image%206.png" alt="图片展示了Codex在设计科技风互动个人主页任务中启用计划模式后的界面。界面中显示了当前项目状态、文件和文件夹、目标等信息，还列出了浏览器、电邮等操作选项。图片中红色框突出显示了“计划模式 开启计划模式”字样。该图片与上下文紧密相关，上下文提到现在的Agent基本上都有计划模式，可在正式执行项目时先用计划模式，此图直观呈现了计划模式启用后的界面情况，帮助理解计划模式在任务执行中的应用。" loading="lazy"><figcaption>图片展示了Codex在设计科技风互动个人主页任务中启用计划模式后的界面。界面中显示了当前项目状态、文件和文件夹、目标等信息，还列出了浏览器、电邮等操作选项。图片中红色框突出显示了“计划模式 开启计划模式”字样。该图片与上下文紧密相关，上下文提到现在的Agent基本上都有计划模式，可在正式执行项目时先用计划模式，此图直观呈现了计划模式启用后的界面情况，帮助理解计划模式在任务执行中的应用。</figcaption></figure>
+<figure class="book-figure"><img src="图片和附件/image%2013.png" alt="这张图片是Codex启用计划模式后生成的执行计划界面，针对“设计一个以AI创作者/工具博主为定位的科技风个人主页”任务，明确了整体核心需求、定位与风格要求，还呈现出“是否实施此计划”的交互选项，包含“实施此计划”和“请告知Codex如何调整”两个反馈选项，能辅助用户核对计划细节后推进执行。" loading="lazy"><figcaption>这张图片是Codex启用计划模式后生成的执行计划界面，针对“设计一个以AI创作者/工具博主为定位的科技风个人主页”任务，明确了整体核心需求、定位与风格要求，还呈现出“是否实施此计划”的交互选项，包含“实施此计划”和“请告知Codex如何调整”两个反馈选项，能辅助用户核对计划细节后推进执行。</figcaption></figure>
 <hr>
-<h3 id="agent-标准工作流">Agent 标准工作流</h3>
+<h2 id="agent-标准工作流">Agent 标准工作流</h2>
 <p>很多人使用 Agent 时，最容易犯的错误就是：</p>
 <p>一上来就让 Agent 开始写、开始改、开始执行。</p>
 <p>比如：</p>
@@ -944,17 +2421,124 @@ Agent 修改代码
 你看着改，做得更好一点。</p></blockquote>
 <p>这些说法的问题在于：Agent 还没有真正理解背景，就已经开始行动了。</p>
 <p>如果它没有先读项目、理解需求、确认目标，就很容易出现这些情况：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>没看清项目结构</td>
+<td>改错文件</td>
+</tr>
+<tr>
+<td>没理解需求边界</td>
+<td>做了很多不需要的功能</td>
+</tr>
+<tr>
+<td>没确认目标</td>
+<td>方向越做越偏</td>
+</tr>
+<tr>
+<td>一次改太多</td>
+<td>出问题后很难回滚</td>
+</tr>
+<tr>
+<td>没有检查结果</td>
+<td>表面完成，实际有 bug</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>所以，使用 Agent 的关键不是“让它马上干活”，而是让它按照一套稳定流程工作。</p>
 <hr>
-<h4 id="agent-标准工作流是什么">Agent 标准工作流是什么？</h4>
+<h3 id="agent-标准工作流是什么">Agent 标准工作流是什么？</h3>
 <p>推荐的 Agent 标准工作流是：</p>
 <blockquote><p>读背景 → 定目标 → 拆任务 → 小步执行 → 检查结果 → 验收复盘</p></blockquote>
 <p>这套流程的目的很简单：<br>
 <strong>先让 Agent 理解，再让 Agent 执行，最后让人来验收。</strong></p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>要做什么</th>
+<th>为什么重要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>读背景</td>
+<td>先让 Agent 理解项目、文件、需求</td>
+<td>避免一上来就乱改</td>
+</tr>
+<tr>
+<td>定目标</td>
+<td>明确这次任务到底要完成什么</td>
+<td>防止越做越偏</td>
+</tr>
+<tr>
+<td>拆任务</td>
+<td>把大任务拆成几个小步骤</td>
+<td>降低出错概率</td>
+</tr>
+<tr>
+<td>小步执行</td>
+<td>一次只改一小部分</td>
+<td>方便检查和回滚</td>
+</tr>
+<tr>
+<td>检查结果</td>
+<td>跑测试、看页面、看 diff</td>
+<td>防止表面完成，实际有 bug</td>
+</tr>
+<tr>
+<td>验收复盘</td>
+<td>总结做了什么、还剩什么</td>
+<td>方便下一次继续做</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
-<h4 id="第一步读背景">第一步：读背景</h4>
+<h3 id="第一步读背景">第一步：读背景</h3>
 <p>在开始任务之前，先让 Agent 读背景。</p>
 <p>背景可以包括：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>背景类型</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>项目背景</td>
+<td>这是一个宠物零食电商网站</td>
+</tr>
+<tr>
+<td>文件背景</td>
+<td>当前主要页面在 src/pages/Home.tsx</td>
+</tr>
+<tr>
+<td>业务背景</td>
+<td>目标用户是第一次养宠物的新手</td>
+</tr>
+<tr>
+<td>技术背景</td>
+<td>项目使用 React + Tailwind CSS</td>
+</tr>
+<tr>
+<td>需求背景</td>
+<td>这次只改首页，不动购物车和支付功能</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>这一步的重点是：<br>
 <strong>不要让 Agent 一上来就修改代码。</strong></p>
 <p>可以这样说：</p>
@@ -969,7 +2553,7 @@ Agent 修改代码
 <p>简单来说：</p>
 <p><strong>先让 Agent 看清楚地图，再让它开始走路。</strong></p>
 <hr>
-<h4 id="第二步定目标">第二步：定目标</h4>
+<h3 id="第二步定目标">第二步：定目标</h3>
 <p>读完背景后，要明确这次任务的目标。</p>
 <p>目标不能太模糊。</p>
 <p>不推荐这样说：</p>
@@ -977,12 +2561,80 @@ Agent 修改代码
 <p>更推荐这样说：</p>
 <blockquote><p>请优化首页的商品展示区域，让用户更容易看到商品分类、价格和购买按钮。不要改动购物车逻辑。</p></blockquote>
 <p>一个清楚的目标，最好包含这几部分：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>要完成什么</td>
+<td>优化首页商品展示区域</td>
+</tr>
+<tr>
+<td>影响哪里</td>
+<td>只改首页商品卡片和分类区域</td>
+</tr>
+<tr>
+<td>不影响哪里</td>
+<td>不修改购物车、支付、登录逻辑</td>
+</tr>
+<tr>
+<td>最终效果</td>
+<td>商品信息更清晰，用户更容易点击购买</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>目标越清楚，Agent 越不容易自由发挥。</strong></p>
 <hr>
-<h4 id="第三步拆任务">第三步：拆任务</h4>
+<h3 id="第三步拆任务">第三步：拆任务</h3>
 <p>如果任务比较大，不要让 Agent 一次性全部完成。</p>
 <p>比如“做一个宠物零食网站”，可以拆成：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>小任务</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一步</td>
+<td>搭建首页结构</td>
+</tr>
+<tr>
+<td>第二步</td>
+<td>添加商品分类</td>
+</tr>
+<tr>
+<td>第三步</td>
+<td>添加商品卡片</td>
+</tr>
+<tr>
+<td>第四步</td>
+<td>增加筛选功能</td>
+</tr>
+<tr>
+<td>第五步</td>
+<td>增加购物车功能</td>
+</tr>
+<tr>
+<td>第六步</td>
+<td>做页面样式优化</td>
+</tr>
+<tr>
+<td>第七步</td>
+<td>检查和测试</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>拆任务的好处是：</p>
 <p>每一步都更容易检查，也更容易发现问题。</p>
 <p>可以这样要求 Agent：</p>
@@ -996,31 +2648,49 @@ Agent 修改代码
 <p>简单来说：</p>
 <p><strong>不要让 Agent 一口气跑完整场马拉松，先让它一段一段跑。</strong></p>
 <hr>
-<h4 id="第四步小步执行">第四步：小步执行</h4>
+<h3 id="第四步小步执行">第四步：小步执行</h3>
 <p>拆完任务后，就可以让 Agent 开始执行。</p>
 <p>但执行时要记住一个原则：</p>
 <blockquote><p>一次只改一小部分。</p></blockquote>
 <p>比如，不要同时让 Agent：</p>
 <ul>
 <li>改首页</li>
-</ul>
-<ul>
 <li>加购物车</li>
-</ul>
-<ul>
 <li>接支付</li>
-</ul>
-<ul>
 <li>改样式</li>
-</ul>
-<ul>
 <li>重构代码</li>
-</ul>
-<ul>
 <li>写文档</li>
 </ul>
 <p>这样很容易出问题。</p>
 <p>更好的方式是：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>执行方式</th>
+<th>推荐程度</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一次完成全部功能</td>
+<td>不推荐</td>
+<td>改动太大，难检查</td>
+</tr>
+<tr>
+<td>一次只完成一个小功能</td>
+<td>推荐</td>
+<td>容易验证，容易回滚</td>
+</tr>
+<tr>
+<td>每完成一步就总结</td>
+<td>推荐</td>
+<td>方便人类掌控方向</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>可以这样说：</p>
 <pre><code class="language-plain-text">请先只完成第一步，不要继续做后面的步骤。
 
@@ -1032,10 +2702,46 @@ Agent 修改代码
 <p>简单来说：</p>
 <p><strong>Agent 可以跑得很快，但人要控制节奏。</strong></p>
 <hr>
-<h4 id="第五步检查结果">第五步：检查结果</h4>
+<h3 id="第五步检查结果">第五步：检查结果</h3>
 <p>Agent 执行完以后，不要马上相信它已经完成了。</p>
 <p>一定要检查结果。</p>
 <p>常见检查方式包括：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>检查方式</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>看 diff</td>
+<td>确认它到底改了什么</td>
+</tr>
+<tr>
+<td>跑测试</td>
+<td>检查功能有没有坏</td>
+</tr>
+<tr>
+<td>启动项目</td>
+<td>看页面能不能正常打开</td>
+</tr>
+<tr>
+<td>手动体验</td>
+<td>检查交互是否正常</td>
+</tr>
+<tr>
+<td>看报错</td>
+<td>确认终端和浏览器有没有错误</td>
+</tr>
+<tr>
+<td>对照需求</td>
+<td>判断是否真的完成目标</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>很多时候，Agent 会说“已完成”，但实际项目可能还存在问题。</p>
 <p>所以，检查结果是非常重要的一步。</p>
 <p>可以这样要求：</p>
@@ -1051,10 +2757,42 @@ Agent 修改代码
 <p><strong>Agent 说完成，不等于真的完成。</strong><br>
 <strong>一定要看结果，而不是只看它的回复。</strong></p>
 <hr>
-<h4 id="第六步验收复盘">第六步：验收复盘</h4>
+<h3 id="第六步验收复盘">第六步：验收复盘</h3>
 <p>最后一步是验收复盘。</p>
 <p>这一步不是为了“写总结”，而是为了让下一次任务更顺利。</p>
 <p>复盘时可以让 Agent 输出：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>内容</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本次完成了什么</td>
+<td>确认交付结果</td>
+</tr>
+<tr>
+<td>修改了哪些文件</td>
+<td>方便后续追踪</td>
+</tr>
+<tr>
+<td>解决了哪些问题</td>
+<td>记录任务价值</td>
+</tr>
+<tr>
+<td>还有哪些遗留问题</td>
+<td>方便继续推进</td>
+</tr>
+<tr>
+<td>下一步建议</td>
+<td>帮你规划后续任务</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>可以这样说：</p>
 <pre><code class="language-plain-text">请对本次任务做一个复盘。
 
@@ -1068,7 +2806,7 @@ Agent 修改代码
 <p>简单来说：</p>
 <p><strong>复盘不是形式主义，而是给下一次 Agent 执行任务留下路标。</strong></p>
 <hr>
-<h4 id="一个完整的-agent-工作流模板">一个完整的 Agent 工作流模板</h4>
+<h3 id="一个完整的-agent-工作流模板">一个完整的 Agent 工作流模板</h3>
 <p>可以直接复制下面这段：</p>
 <pre><code class="language-plain-text">请按照标准工作流完成这个任务。
 
@@ -1093,14 +2831,14 @@ Agent 修改代码
 第六步：验收复盘
 任务完成后，请总结已完成内容、修改文件、测试结果、遗留问题和下一步建议。</code></pre>
 <hr>
-<h4 id="简单来说">简单来说</h4>
+<h3 id="简单来说">简单来说</h3>
 <p>Agent 最怕“放飞式执行”。</p>
 <p>越是复杂任务，越要让它按流程走。</p>
 <p>你负责定方向、控节奏、做验收；</p>
 <p>Agent 负责读资料、拆任务、执行和总结。</p>
 <p>真正好用的 Agent，不是靠一句话“神奇完成”，</p>
 <p>而是靠一套清楚、稳定、可检查的工作流跑出来的。</p>
-<h3 id="agent-prompt-模板库">Agent Prompt 模板库</h3>
+<h2 id="agent-prompt-模板库">Agent Prompt 模板库</h2>
 <p>前面我们讲了如何正确指挥 Agent，也讲了 Agent 标准工作流。</p>
 <p>但对很多新手来说，真正开始使用时，还是会卡在一个问题上：</p>
 <blockquote><p>我到底该怎么开口？</p></blockquote>
@@ -1108,16 +2846,96 @@ Agent 修改代码
 <p>所以这一章的作用，就是把常见任务整理成一套 Prompt 模板。</p>
 <p>读者不用每次重新想怎么问，直接复制、替换关键词，就能开始使用。</p>
 <hr>
-<h4 id="为什么需要-prompt-模板">为什么需要 Prompt 模板？</h4>
+<h3 id="为什么需要-prompt-模板">为什么需要 Prompt 模板？</h3>
 <p>Agent 的能力很强，但前提是你要给它一个清楚的任务入口。</p>
 <p>如果每次都临时写 Prompt，很容易出现这些问题：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>任务说得太模糊</td>
+<td>Agent 自己脑补</td>
+</tr>
+<tr>
+<td>没有限制范围</td>
+<td>Agent 乱改文件</td>
+</tr>
+<tr>
+<td>没有要求先读项目</td>
+<td>Agent 一上来就动手</td>
+</tr>
+<tr>
+<td>没有输出格式</td>
+<td>最后结果不好检查</td>
+</tr>
+<tr>
+<td>没有验收标准</td>
+<td>不知道任务算不算完成</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>Prompt 模板的价值，就是把这些容易漏掉的内容提前写进去。</p>
 <p>简单来说：</p>
 <p><strong>模板不是限制 Agent，而是给 Agent 一条更清楚的跑道。</strong></p>
 <hr>
-<h4 id="常见-prompt-使用场景">常见 Prompt 使用场景</h4>
+<h3 id="常见-prompt-使用场景">常见 Prompt 使用场景</h3>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>使用场景</th>
+<th>Prompt 作用</th>
+<th>适合什么时候用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>读项目</td>
+<td>让 Agent 先理解项目，不要急着改</td>
+<td>第一次打开项目时</td>
+</tr>
+<tr>
+<td>加功能</td>
+<td>让 Agent 按步骤新增功能</td>
+<td>想增加页面、按钮、筛选、接口时</td>
+</tr>
+<tr>
+<td>修 bug</td>
+<td>让 Agent 先定位原因，再修改</td>
+<td>页面报错、功能异常、测试失败时</td>
+</tr>
+<tr>
+<td>重构代码</td>
+<td>让 Agent 保持功能不变，只优化结构</td>
+<td>代码太乱、重复太多时</td>
+</tr>
+<tr>
+<td>写文档</td>
+<td>让 Agent 根据项目生成说明文档</td>
+<td>项目要交付、开源、发给别人时</td>
+</tr>
+<tr>
+<td>提交代码</td>
+<td>让 Agent 总结修改内容，生成 commit 信息</td>
+<td>功能完成后准备保存代码时</td>
+</tr>
+<tr>
+<td>复盘任务</td>
+<td>让 Agent 总结本次任务过程和问题</td>
+<td>一个任务做完后</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
-<h4 id="模板一读项目-prompt">模板一：读项目 Prompt</h4>
+<h3 id="模板一读项目-prompt">模板一：读项目 Prompt</h3>
 <p>这个模板适合在开始任何任务之前使用。</p>
 <p>它的作用是：<br>
 <strong>先让 Agent 看懂项目，不要一上来就改代码。</strong></p>
@@ -1135,10 +2953,38 @@ Agent 修改代码
 
 请先只做分析，不要执行修改。</code></pre>
 <p>适合场景：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>为什么适合</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一次打开项目</td>
+<td>先了解项目结构</td>
+</tr>
+<tr>
+<td>接手别人代码</td>
+<td>避免乱改</td>
+</tr>
+<tr>
+<td>准备加功能</td>
+<td>先判断会影响哪些文件</td>
+</tr>
+<tr>
+<td>准备修 bug</td>
+<td>先找相关模块</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>先让 Agent 读项目，再让它做项目。</strong></p>
 <hr>
-<h4 id="模板二加功能-prompt">模板二：加功能 Prompt</h4>
+<h3 id="模板二加功能-prompt">模板二：加功能 Prompt</h3>
 <p>这个模板适合新增功能，比如加筛选、加购物车、加页面、加按钮。</p>
 <p>它的作用是：<br>
 <strong>让 Agent 按步骤加功能，而不是一次性乱改。</strong></p>
@@ -1168,10 +3014,38 @@ Agent 修改代码
 3. 如何测试这个功能
 4. 是否还有需要人工检查的地方</code></pre>
 <p>适合场景：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新增页面</td>
+<td>增加商品详情页</td>
+</tr>
+<tr>
+<td>新增交互</td>
+<td>增加商品筛选</td>
+</tr>
+<tr>
+<td>新增组件</td>
+<td>增加顶部导航栏</td>
+</tr>
+<tr>
+<td>新增功能</td>
+<td>增加购物车数量统计</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>加功能不是越快越好，而是越稳越好。</strong></p>
 <hr>
-<h4 id="模板三修-bug-prompt">模板三：修 bug Prompt</h4>
+<h3 id="模板三修-bug-prompt">模板三：修 bug Prompt</h3>
 <p>这个模板适合页面报错、按钮无反应、功能失效、测试失败等情况。</p>
 <p>它的作用是：<br>
 <strong>让 Agent 先找原因，再动手修。</strong></p>
@@ -1205,10 +3079,42 @@ Agent 修改代码
 
 等我确认后，再开始修改。</code></pre>
 <p>适合场景：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>页面报错</td>
+<td>控制台出现错误</td>
+</tr>
+<tr>
+<td>按钮无反应</td>
+<td>点击购物车按钮没有变化</td>
+</tr>
+<tr>
+<td>数据不显示</td>
+<td>商品列表为空</td>
+</tr>
+<tr>
+<td>构建失败</td>
+<td>npm run build 报错</td>
+</tr>
+<tr>
+<td>测试失败</td>
+<td>单元测试不通过</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>修 bug 不要先动刀，先找到伤口在哪里。</strong></p>
 <hr>
-<h4 id="模板四重构代码-prompt">模板四：重构代码 Prompt</h4>
+<h3 id="模板四重构代码-prompt">模板四：重构代码 Prompt</h3>
 <p>这个模板适合代码变乱、重复太多、文件太长、逻辑不好维护的时候。</p>
 <p>它的作用是：<br>
 <strong>让 Agent 优化结构，但不改变原有功能。</strong></p>
@@ -1236,10 +3142,38 @@ Agent 修改代码
 
 等我确认后，再开始重构。</code></pre>
 <p>适合场景：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文件太长</td>
+<td>一个页面几百行代码</td>
+</tr>
+<tr>
+<td>重复代码多</td>
+<td>多个商品卡片写了重复结构</td>
+</tr>
+<tr>
+<td>组件混乱</td>
+<td>页面逻辑和样式混在一起</td>
+</tr>
+<tr>
+<td>可维护性差</td>
+<td>后续加功能很难改</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>重构不是重写，重点是功能不变，结构更清楚。</strong></p>
 <hr>
-<h4 id="模板五写文档-prompt">模板五：写文档 Prompt</h4>
+<h3 id="模板五写文档-prompt">模板五：写文档 Prompt</h3>
 <p>这个模板适合生成 README、项目说明、使用教程、部署说明。</p>
 <p>它的作用是：<br>
 <strong>让 Agent 根据项目内容生成别人看得懂的文档。</strong></p>
@@ -1266,10 +3200,38 @@ Agent 修改代码
 3. 不要写没有依据的内容
 4. 如果有不确定的地方，请标注“需要确认”</code></pre>
 <p>适合场景：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>项目交付</td>
+<td>给别人说明项目怎么用</td>
+</tr>
+<tr>
+<td>GitHub 开源</td>
+<td>生成 README</td>
+</tr>
+<tr>
+<td>团队协作</td>
+<td>让新人快速看懂项目</td>
+</tr>
+<tr>
+<td>部署上线</td>
+<td>写部署说明</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>文档不是装饰品，而是项目的说明书。</strong></p>
 <hr>
-<h4 id="模板六提交代码-prompt">模板六：提交代码 Prompt</h4>
+<h3 id="模板六提交代码-prompt">模板六：提交代码 Prompt</h3>
 <p>这个模板适合功能完成后，让 Agent 帮你总结改动并生成 commit 信息。</p>
 <p>它的作用是：<br>
 <strong>把本次修改保存成一条清楚的记录。</strong></p>
@@ -1293,10 +3255,38 @@ commit message 请提供 3 个版本：
 注意：
 不要自动提交代码，只需要生成建议。</code></pre>
 <p>适合场景：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>为什么适合</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>功能完成后</td>
+<td>记录本次修改</td>
+</tr>
+<tr>
+<td>修 bug 后</td>
+<td>说明修复内容</td>
+</tr>
+<tr>
+<td>重构后</td>
+<td>说明结构变化</td>
+</tr>
+<tr>
+<td>准备上传 GitHub</td>
+<td>让提交记录更清楚</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>commit 就像存档点，写清楚以后才好回头找。</strong></p>
 <hr>
-<h4 id="模板七复盘任务-prompt">模板七：复盘任务 Prompt</h4>
+<h3 id="模板七复盘任务-prompt">模板七：复盘任务 Prompt</h3>
 <p>这个模板适合一个任务完成后使用。</p>
 <p>它的作用是：<br>
 <strong>让 Agent 总结这次做了什么、哪里有风险、下一步该做什么。</strong></p>
@@ -1320,10 +3310,38 @@ commit message 请提供 3 个版本：
 3. 不确定的地方请明确标注
 4. 用简单清楚的语言说明</code></pre>
 <p>适合场景：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一个功能完成后</td>
+<td>总结实现过程</td>
+</tr>
+<tr>
+<td>一轮修改结束后</td>
+<td>记录变更内容</td>
+</tr>
+<tr>
+<td>准备继续下一个任务</td>
+<td>给下一次任务留下上下文</td>
+</tr>
+<tr>
+<td>任务出现问题后</td>
+<td>分析为什么出错</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>复盘就是给下一次任务留路标。</strong></p>
 <hr>
-<h4 id="通用万能-prompt">通用万能 Prompt</h4>
+<h3 id="通用万能-prompt">通用万能 Prompt</h3>
 <p>如果你不知道该用哪个模板，可以先用这个通用版本：</p>
 <pre><code class="language-plain-text">请帮我完成下面这个任务：
 
@@ -1350,7 +3368,7 @@ commit message 请提供 3 个版本：
 <p>简单来说：</p>
 <p><strong>不会写 Prompt 的时候，就先让 Agent：读懂、复述、拆解、再执行。</strong></p>
 <hr>
-<h4 id="简单来说_1">简单来说</h4>
+<h3 id="简单来说_1">简单来说</h3>
 <p>模板的作用，就是把“会用 Agent 的经验”提前写好。</p>
 <p>新手不用每次重新想怎么问，直接套用就能开始。</p>
 <p>等你越来越熟练之后，就可以根据不同任务改模板。</p>
@@ -1358,7 +3376,7 @@ commit message 请提供 3 个版本：
 <p><strong>不要随口一句话就让 Agent 开干。</strong><br>
 <strong>先用模板把任务说清楚，再让 Agent 去执行。</strong></p>
 <hr>
-<h3 id="agent-使用中的常见错误">Agent 使用中的常见错误</h3>
+<h2 id="agent-使用中的常见错误">Agent 使用中的常见错误</h2>
 <p>很多人第一次使用 Agent 时，会觉得它不稳定：</p>
 <blockquote><p>为什么它改了我没让它改的地方？<br>
 为什么它写了一堆我不需要的功能？<br>
@@ -1371,9 +3389,52 @@ commit message 请提供 3 个版本：
 <p>你说得模糊，它就会自己猜；</p>
 <p>你完全放手，它就可能越跑越远。</p>
 <hr>
-<h4 id="常见错误总览">常见错误总览</h4>
+<h3 id="常见错误总览">常见错误总览</h3>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>错误做法</th>
+<th>可能结果</th>
+<th>正确做法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>任务太模糊</td>
+<td>Agent 自己脑补需求</td>
+<td>写清楚目标和范围</td>
+</tr>
+<tr>
+<td>一次要求太多</td>
+<td>改动过大，容易出错</td>
+<td>拆成多个小任务</td>
+</tr>
+<tr>
+<td>不给背景</td>
+<td>Agent 不理解项目结构</td>
+<td>先让它读项目</td>
+</tr>
+<tr>
+<td>不设限制</td>
+<td>Agent 可能误删、乱改</td>
+<td>明确哪些文件不能动</td>
+</tr>
+<tr>
+<td>不检查结果</td>
+<td>表面完成，实际有问题</td>
+<td>看 diff、跑测试、人工验收</td>
+</tr>
+<tr>
+<td>完全放手</td>
+<td>方向容易失控</td>
+<td>人负责判断，Agent 负责执行</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
-<h4 id="错误一任务太模糊">错误一：任务太模糊</h4>
+<h3 id="错误一任务太模糊">错误一：任务太模糊</h3>
 <p>很多人会这样指挥 Agent：</p>
 <blockquote><p>帮我优化一下。<br>
 帮我改得好看一点。<br>
@@ -1381,6 +3442,34 @@ commit message 请提供 3 个版本：
 帮我把这个项目完善一下。</p></blockquote>
 <p>这些话对人来说可能能理解，但对 Agent 来说太宽泛。</p>
 <p>因为它不知道：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>不清楚的地方</th>
+<th>Agent 可能怎么猜</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>优化什么</td>
+<td>代码、样式、性能、结构都可能改</td>
+</tr>
+<tr>
+<td>好看是什么风格</td>
+<td>极简、科技、电商、可爱都可能做</td>
+</tr>
+<tr>
+<td>网站做到什么程度</td>
+<td>首页、完整商城、后台系统都可能生成</td>
+</tr>
+<tr>
+<td>完善到什么范围</td>
+<td>可能新增一堆你不需要的功能</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>所以，任务越模糊，Agent 越容易自己脑补。</p>
 <p>更好的说法是：</p>
 <pre><code class="language-plain-text">请帮我优化首页的商品展示区域。
@@ -1398,13 +3487,45 @@ commit message 请提供 3 个版本：
 <p>简单来说：</p>
 <p><strong>不要说“帮我优化一下”，要说“优化哪里、优化成什么样、不能动哪里”。</strong></p>
 <hr>
-<h4 id="错误二一次要求太多">错误二：一次要求太多</h4>
+<h3 id="错误二一次要求太多">错误二：一次要求太多</h3>
 <p>还有一种常见错误，是一次性把所有需求都丢给 Agent。</p>
 <p>比如：</p>
 <blockquote><p>帮我做一个宠物零食网站，要有首页、商品分类、筛选、购物车、登录、支付、后台管理、订单系统，还要部署上线。</p></blockquote>
 <p>这类任务太大，Agent 很容易同时修改很多文件。</p>
 <p>一旦出问题，你很难知道到底是哪一步出了错。</p>
 <p>更好的方式，是把大任务拆成小任务：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>大任务</th>
+<th>拆分后的小任务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>做宠物零食网站</td>
+<td>先做首页结构</td>
+</tr>
+<tr>
+<td>增加完整商城功能</td>
+<td>先做商品卡片</td>
+</tr>
+<tr>
+<td>增加购买流程</td>
+<td>先做购物车，不做支付</td>
+</tr>
+<tr>
+<td>增加后台管理</td>
+<td>先做商品数据管理</td>
+</tr>
+<tr>
+<td>部署上线</td>
+<td>先本地跑通，再部署</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>可以这样说：</p>
 <pre><code class="language-plain-text">请不要一次性完成全部功能。
 
@@ -1419,11 +3540,43 @@ commit message 请提供 3 个版本：
 <p><strong>任务越大，越要拆小。</strong><br>
 <strong>不要让 Agent 一口气改完整个项目。</strong></p>
 <hr>
-<h4 id="错误三不给背景">错误三：不给背景</h4>
+<h3 id="错误三不给背景">错误三：不给背景</h3>
 <p>如果你不给 Agent 背景，它就只能根据当前看到的信息猜。</p>
 <p>比如你说：</p>
 <blockquote><p>帮我修复商品筛选功能。</p></blockquote>
 <p>但你没有告诉它：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>背景信息</th>
+<th>为什么重要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>商品数据在哪里</td>
+<td>决定它要看哪个文件</td>
+</tr>
+<tr>
+<td>筛选逻辑在哪里</td>
+<td>决定它要改哪个模块</td>
+</tr>
+<tr>
+<td>当前报错是什么</td>
+<td>决定它怎么定位问题</td>
+</tr>
+<tr>
+<td>期望结果是什么</td>
+<td>决定它修到什么程度</td>
+</tr>
+<tr>
+<td>哪些功能不能动</td>
+<td>防止它误改其他逻辑</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>更好的做法是，先让 Agent 读背景：</p>
 <pre><code class="language-plain-text">请先阅读当前项目中和商品筛选相关的文件，不要修改代码。
 
@@ -1436,9 +3589,37 @@ commit message 请提供 3 个版本：
 <p>简单来说：</p>
 <p><strong>不给背景就让 Agent 干活，就像不给地图就让人开车。</strong></p>
 <hr>
-<h4 id="错误四不设限制">错误四：不设限制</h4>
+<h3 id="错误四不设限制">错误四：不设限制</h3>
 <p>Agent 很容易为了完成目标，顺手做一些你没要求的事情。</p>
 <p>比如你只是想改一个按钮样式，它可能顺手：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>你原本想做</th>
+<th>Agent 可能多做</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>改按钮颜色</td>
+<td>改了整个主题色</td>
+</tr>
+<tr>
+<td>修复一个 bug</td>
+<td>顺手重构了相关模块</td>
+</tr>
+<tr>
+<td>增加一个筛选</td>
+<td>改了商品数据结构</td>
+</tr>
+<tr>
+<td>优化首页</td>
+<td>新增了登录和支付入口</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>这就是没有设限制带来的问题。</p>
 <p>你需要提前告诉它：哪些不能动，哪些不要做。</p>
 <p>可以这样说：</p>
@@ -1456,10 +3637,46 @@ commit message 请提供 3 个版本：
 <p>简单来说：</p>
 <p><strong>Agent 不是只需要知道“做什么”，还需要知道“不能做什么”。</strong></p>
 <hr>
-<h4 id="错误五不检查结果">错误五：不检查结果</h4>
+<h3 id="错误五不检查结果">错误五：不检查结果</h3>
 <p>很多人看到 Agent 回复“已完成”，就以为真的完成了。</p>
 <p>但 Agent 的回复只能说明它认为自己完成了，不代表结果一定正确。</p>
 <p>你还需要检查：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>检查项</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>看 diff</td>
+<td>确认到底改了什么</td>
+</tr>
+<tr>
+<td>跑测试</td>
+<td>确认功能有没有坏</td>
+</tr>
+<tr>
+<td>启动项目</td>
+<td>确认页面能不能打开</td>
+</tr>
+<tr>
+<td>手动点击</td>
+<td>确认交互是否正常</td>
+</tr>
+<tr>
+<td>看控制台</td>
+<td>确认有没有报错</td>
+</tr>
+<tr>
+<td>对照需求</td>
+<td>确认是否真的完成目标</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>可以这样要求 Agent：</p>
 <pre><code class="language-plain-text">请检查刚才的修改结果。
 
@@ -1474,7 +3691,7 @@ commit message 请提供 3 个版本：
 <p><strong>Agent 说完成，不等于任务真的完成。</strong><br>
 <strong>一定要看结果，而不是只看回复。</strong></p>
 <hr>
-<h4 id="错误六完全放手">错误六：完全放手</h4>
+<h3 id="错误六完全放手">错误六：完全放手</h3>
 <p>很多人会把 Agent 当成“自动驾驶”，直接说：</p>
 <blockquote><p>你看着办。<br>
 你觉得怎么好就怎么改。<br>
@@ -1482,12 +3699,36 @@ commit message 请提供 3 个版本：
 <p>这类说法最危险。</p>
 <p>因为 Agent 会很努力地完成任务，但它不一定知道你的真实偏好、业务目标和风险底线。</p>
 <p>人和 Agent 的分工应该是：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>角色</th>
+<th>负责什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>人</td>
+<td>定目标、给背景、设限制、做判断、验收结果</td>
+</tr>
+<tr>
+<td>Agent</td>
+<td>读资料、拆任务、执行修改、总结结果</td>
+</tr>
+<tr>
+<td>人</td>
+<td>决定要不要继续、要不要回滚、要不要上线</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>Agent 可以帮你执行，但不能替你承担最终判断。</p>
 <p>简单来说：</p>
 <p><strong>Agent 是执行者，不是项目负责人。</strong><br>
 <strong>方向盘还是要握在人手里。</strong></p>
 <hr>
-<h4 id="更稳妥的使用方式">更稳妥的使用方式</h4>
+<h3 id="更稳妥的使用方式">更稳妥的使用方式</h3>
 <p>如果你担心 Agent 乱改，可以在每次任务前加上这段：</p>
 <pre><code class="language-plain-text">请按照以下规则执行：
 
@@ -1502,11 +3743,47 @@ commit message 请提供 3 个版本：
 <p>简单来说：</p>
 <p><strong>不是不让 Agent 发挥，而是让它在安全范围内发挥。</strong></p>
 <hr>
-<h4 id="使用-agent-前的检查清单">使用 Agent 前的检查清单</h4>
+<h3 id="使用-agent-前的检查清单">使用 Agent 前的检查清单</h3>
 <p>每次让 Agent 开始任务前，可以先问自己 6 个问题：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>检查问题</th>
+<th>目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>我有没有说清楚目标？</td>
+<td>防止 Agent 自己脑补</td>
+</tr>
+<tr>
+<td>我有没有提供背景？</td>
+<td>防止 Agent 看不懂项目</td>
+</tr>
+<tr>
+<td>我有没有说明限制？</td>
+<td>防止误删、乱改</td>
+</tr>
+<tr>
+<td>我有没有拆小任务？</td>
+<td>防止一次改太多</td>
+</tr>
+<tr>
+<td>我有没有要求输出格式？</td>
+<td>方便检查结果</td>
+</tr>
+<tr>
+<td>我有没有验收标准？</td>
+<td>判断任务是否完成</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>如果这 6 个问题都说清楚了，Agent 出错的概率就会明显降低。</p>
 <hr>
-<h4 id="简单来说_2">简单来说</h4>
+<h3 id="简单来说_2">简单来说</h3>
 <p>Agent 出错，很多时候不是因为它不会做，</p>
 <p>而是因为人没有把任务边界、流程和验收标准讲清楚。</p>
 <p>不要把 Agent 当成许愿池。</p>
@@ -1518,13 +3795,13 @@ commit message 请提供 3 个版本：
 <p>用得好的 Agent，不是“随便一句话就能搞定一切”。</p>
 <p>而是你给它清楚的目标、背景、限制和流程，它再帮你高效完成任务。</p>
 <hr>
-<h2 id="第四篇agent-实战案例">第四篇：Agent 实战案例</h2>
+<h1 id="第四篇agent-实战案例">第四篇：Agent 实战案例</h1>
 <p>前面几章讲了 Agent 是什么、怎么指挥 Agent、怎么用工作流控制 Agent。</p>
 <p>这一部分开始进入实战场景。</p>
 <p>也就是说，不再只讲“Agent 能做什么”，而是直接看：</p>
 <blockquote><p>Agent 如何帮你整理资料？<br>
 Agent 如何帮你做每日复盘？</p></blockquote>
-<h3 id="资料整理-agent">资料整理 Agent</h3>
+<h2 id="资料整理-agent">资料整理 Agent</h2>
 <p>很多时候，我们不是没有资料，而是资料太多。</p>
 <p>一篇文章收藏了，但一直没看完。</p>
 <p>一个 PDF 下载了，但不知道重点在哪。</p>
@@ -1534,51 +3811,135 @@ Agent 如何帮你做每日复盘？</p></blockquote>
 <p>这时候，资料整理 Agent 就很有用。</p>
 <p>它的作用不是简单地“帮你保存资料”，而是把一堆杂乱的信息整理成你能看懂、能查找、能继续使用的内容。</p>
 <hr>
-<h4 id="为什么需要资料整理-agent">为什么需要资料整理 Agent？</h4>
+<h3 id="为什么需要资料整理-agent">为什么需要资料整理 Agent？</h3>
 <p>很多人做学习、写作、调研、项目分析时，都会遇到同一个问题：</p>
 <blockquote><p>资料越来越多，但脑子越来越乱。</p></blockquote>
 <p>资料多本来是一件好事，但如果没有整理，就会变成负担。</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>资料类型</th>
+<th>常见问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文章</td>
+<td>太长，看完记不住重点</td>
+</tr>
+<tr>
+<td>PDF</td>
+<td>页数太多，不知道从哪里看</td>
+</tr>
+<tr>
+<td>链接</td>
+<td>收藏很多，但没有整理</td>
+</tr>
+<tr>
+<td>会议记录</td>
+<td>内容很散，不知道结论是什么</td>
+</tr>
+<tr>
+<td>调研资料</td>
+<td>信息重复，重点不清楚</td>
+</tr>
+<tr>
+<td>视频字幕</td>
+<td>内容很多，但很难快速提炼观点</td>
+</tr>
+<tr>
+<td>聊天记录</td>
+<td>信息碎片化，后续不好查找</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>资料整理 Agent 的价值，就是帮你把这些内容重新组织起来。</p>
 <p>简单来说：</p>
 <p><strong>资料本身不等于知识。</strong><br>
 <strong>被整理过、能查找、能复用的资料，才真正有价值。</strong></p>
 <hr>
-<h4 id="如何配置资料整理-agent">如何配置资料整理 Agent ？</h4>
+<h3 id="如何配置资料整理-agent">如何配置资料整理 Agent ？</h3>
 <p>免责声明：这个只是我本人在使用的方法，不代表官方或者最好方法</p>
-<h5 id="配置前提">配置前提</h5>
+<h4 id="配置前提">配置前提</h4>
 <p>在配置资料整理 Agent 之前，我们需要准备以下软件</p>
-<h6 id="agent-reach">Agent Reach</h6>
+<h5 id="agent-reach">Agent Reach</h5>
 <p>Github下载地址：https://github.com/Panniantong/Agent-Reach</p>
 <p>给你的 AI Agent 一键装上互联网能力，有了这个 Skill 能让你的 Agent 拥有访问各个平台的能力</p>
 <p>安装好 Agent Reach 后还需要进一步配置，以推特为例子：</p>
 <p>直接输入：</p>
 <pre><code class="language-plain-text">/agent-reach 帮我配 Twitter</code></pre>
-<figure class="book-figure"><img src="assets/images/image.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
-<h6 id="obsidian">Obsidian</h6>
+<figure class="book-figure"><img src="图片和附件/image%2023.png" alt="图片展示了Agent Reach配置Twitter的相关内容。Codex先读取了agent - reach的说明，确认其对Twitter/X的配置路径和检查命令，然后按流程配置。接着使用agent - reach的Twitter/X配置流程，要求先运行agent - reach doctor --json查看当前Twitter激活后端，再按social文档处理登录态。图片与上下文紧密相关，是配置资料整理Agent中使用Agent Reach技能时的具体操作步骤说明。" loading="lazy"><figcaption>图片展示了Agent Reach配置Twitter的相关内容。Codex先读取了agent - reach的说明，确认其对Twitter/X的配置路径和检查命令，然后按流程配置。接着使用agent - reach的Twitter/X配置流程，要求先运行agent - reach doctor --json查看当前Twitter激活后端，再按social文档处理登录态。图片与上下文紧密相关，是配置资料整理Agent中使用Agent Reach技能时的具体操作步骤说明。</figcaption></figure>
+<h5 id="obsidian">Obsidian</h5>
 <p>官网下载地址：https://obsidian.md/zh/</p>
 <p>给 Agent 创建一个管理仓库，可以存放各种各样的资料</p>
 <p>想进一步了解的Obsidian优化配置的可以参考这篇文章：https://x.com/Vinkyu567/status/2073399058535002336</p>
-<h6 id="obsidian-web-clipper">Obsidian Web Clipper</h6>
+<h5 id="obsidian-web-clipper">Obsidian Web Clipper</h5>
 <p>Chrome 的一个插件，可以截取任何界面的文字、图片、视频，一键导入 Obsidian 仓库当中</p>
-<figure class="book-figure"><img src="assets/images/image%2028.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure class="book-figure"><img src="图片和附件/image%2016.png" alt="图片展示了Chrome浏览器扩展程序商店中“Obsidian Web Clipper”的搜索结果页面。搜索框内输入“Obsidian Web Clipper”，上方搜索结果中以红色框突出显示了该插件。页面下方有热门类别、您可能会喜欢等板块，以及排行榜等区域。该图片与文档中介绍Obsidian Web Clipper的内容相关，直观呈现了在浏览器扩展程序商店中搜索该插件的场景，辅助说明其为Chrome插件，可截取界面文字、图片、视频并导入Obsidian仓库的功能。" loading="lazy"><figcaption>图片展示了Chrome浏览器扩展程序商店中“Obsidian Web Clipper”的搜索结果页面。搜索框内输入“Obsidian Web Clipper”，上方搜索结果中以红色框突出显示了该插件。页面下方有热门类别、您可能会喜欢等板块，以及排行榜等区域。该图片与文档中介绍Obsidian Web Clipper的内容相关，直观呈现了在浏览器扩展程序商店中搜索该插件的场景，辅助说明其为Chrome插件，可截取界面文字、图片、视频并导入Obsidian仓库的功能。</figcaption></figure>
 <hr>
-<h5 id="正式使用">正式使用</h5>
+<h4 id="正式使用">正式使用</h4>
 <p>在配置前提准备完毕过后，可以开始真正的操作了</p>
-<h6 id="推特资料">推特资料</h6>
+<h5 id="推特资料">推特资料</h5>
 <p>直接告诉 Codex：[]里面的内容可以替换成自己想要的</p>
 <pre><code class="language-plain-text">我在推特上发现了ID是 [@Vinkyu567] 博主，然后你帮我浏览他最近30天写过的文章，并且挑选综合质量最高的3篇文章，然后用Obsidian Web Clipper 剪切下来，存放到[D:\12076\Desktop\vink-vault\推特高曝光文件]里面，注意要新建文件夹保存，取名为它推特的名字</code></pre>
-<figure class="book-figure"><img src="assets/images/image%2017.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure class="book-figure"><img src="图片和附件/image%2020.png" alt="这张图片的内容是一篇名为“一篇文章带你理解所有AI专业名词”的文章界面，页面顶部展示了“微极AI曝光文件”相关介绍，配有卡通人物、西瓜等装饰元素，还对AI相关的Skill进行了图示说明。正文部分围绕AI领域的名词展开，先介绍了文中会涉及LLM、Token、Context等各类AI相关概念，开篇点明文章将带领读者理解这些名词背后的意义，随后开始讲解最底层的东西LLM，解释其全称及主流大模型的基础。" loading="lazy"><figcaption>这张图片的内容是一篇名为“一篇文章带你理解所有AI专业名词”的文章界面，页面顶部展示了“微极AI曝光文件”相关介绍，配有卡通人物、西瓜等装饰元素，还对AI相关的Skill进行了图示说明。正文部分围绕AI领域的名词展开，先介绍了文中会涉及LLM、Token、Context等各类AI相关概念，开篇点明文章将带领读者理解这些名词背后的意义，随后开始讲解最底层的东西LLM，解释其全称及主流大模型的基础。</figcaption></figure>
 <p>也可以直接使用我配置好了的skill：https://github.com/Vink567/twitter-clipper-vink</p>
-<h6 id="整理总结资料">整理总结资料</h6>
+<h5 id="整理总结资料">整理总结资料</h5>
 <p>直接告诉 Codex：</p>
 <pre><code class="language-plain-text">帮我总结推特高曝光文件里面的文件，然后给我写一篇关于 AI 文章的选题</code></pre>
-<figure class="book-figure"><img src="assets/images/image%206.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
-<h4 id="常见资料整理场景">常见资料整理场景</h4>
+<figure class="book-figure"><img src="图片和附件/image%2027.png" alt="图片为一篇关于AI知识库的文档内容。标题为“别再把AI知识库做成资料坟场：真正有用的是‘能被AI调用的工作系统’”，强调AI真正需要的是一套能被Codex读取、复用、执行、验证的知识工作流。目标读者为刚开始用Obsidian、Codex、ChatGPT做个人知识库的AI小白。图片中还提到现有高曝光文件里有3条强素材线，分别是Obsidian知识库怎么搭、Codex记忆怎么分层、Skill如何把经验变成可复用能力，这三个点合在一起，就是一篇适合X Article的AI实操长文。" loading="lazy"><figcaption>图片为一篇关于AI知识库的文档内容。标题为“别再把AI知识库做成资料坟场：真正有用的是‘能被AI调用的工作系统’”，强调AI真正需要的是一套能被Codex读取、复用、执行、验证的知识工作流。目标读者为刚开始用Obsidian、Codex、ChatGPT做个人知识库的AI小白。图片中还提到现有高曝光文件里有3条强素材线，分别是Obsidian知识库怎么搭、Codex记忆怎么分层、Skill如何把经验变成可复用能力，这三个点合在一起，就是一篇适合X Article的AI实操长文。</figcaption></figure>
+<h3 id="常见资料整理场景">常见资料整理场景</h3>
 <p>资料整理 Agent 可以用在很多地方。</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>Agent 可以怎么帮</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>读文章</td>
+<td>总结核心观点、提炼金句、拆解结构</td>
+</tr>
+<tr>
+<td>读 PDF</td>
+<td>按章节总结、找重点、提取结论</td>
+</tr>
+<tr>
+<td>整理链接</td>
+<td>给收藏链接分类、总结用途</td>
+</tr>
+<tr>
+<td>整理会议记录</td>
+<td>提炼结论、任务分工、待办事项</td>
+</tr>
+<tr>
+<td>整理调研资料</td>
+<td>去重、归类、做对比表</td>
+</tr>
+<tr>
+<td>整理学习资料</td>
+<td>生成学习笔记、概念解释、复习清单</td>
+</tr>
+<tr>
+<td>整理访谈内容</td>
+<td>提炼用户痛点、需求、典型表达</td>
+</tr>
+<tr>
+<td>整理竞品资料</td>
+<td>对比功能、价格、定位、优缺点</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>凡是“信息很多，但重点不清楚”的地方，都适合用资料整理 Agent。</strong></p>
 <hr>
-<h4 id="资料整理-agent-的使用场景">资料整理 Agent 的使用场景</h4>
+<h3 id="资料整理-agent-的使用场景">资料整理 Agent 的使用场景</h3>
 <p><strong>收集资料是第一步，总结只是第二步，真正重要的是让资料为你的目标服务</strong></p>
 <p>可以对 Codex 说：</p>
 <pre><code class="language-plain-text">请帮我整理仓库里面的推特资料
@@ -1602,9 +3963,45 @@ Agent 如何帮你做每日复盘？</p></blockquote>
 3. 如果资料里没有提到，请不要自己编
 4. 不确定的地方请标注“需要确认”</code></pre>
 <hr>
-<h4 id="使用资料整理-agent-的注意事项">使用资料整理 Agent 的注意事项</h4>
+<h3 id="使用资料整理-agent-的注意事项">使用资料整理 Agent 的注意事项</h3>
 <p>资料整理 Agent 很有用，但也不能完全放手。</p>
 <p>尤其是涉及数据、引用、政策、价格、医学、法律、金融等内容时，一定要自己核对来源。</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>注意事项</th>
+<th>为什么重要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>不要让 Agent 编资料</td>
+<td>防止出现不存在的信息</td>
+</tr>
+<tr>
+<td>重要数据要回看原文</td>
+<td>防止数字被总结错</td>
+</tr>
+<tr>
+<td>引用内容要确认出处</td>
+<td>防止误引、断章取义</td>
+</tr>
+<tr>
+<td>不确定内容要标注</td>
+<td>防止把猜测当事实</td>
+</tr>
+<tr>
+<td>多来源资料要对比</td>
+<td>防止只看单一观点</td>
+</tr>
+<tr>
+<td>最终判断由人负责</td>
+<td>Agent 负责整理，人负责决策</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>可以给 Agent 加一条规则：</p>
 <pre><code class="language-plain-text">请严格区分“原文明确提到的内容”和“你的推测”。
 
@@ -1615,7 +4012,7 @@ Agent 如何帮你做每日复盘？</p></blockquote>
 <p>简单来说：</p>
 <p><strong>Agent 可以帮你读资料，但不能替你验证资料。</strong></p>
 <hr>
-<h4 id="总结一下_1">总结一下</h4>
+<h3 id="总结一下_1">总结一下</h3>
 <p>资料整理 Agent 就像一个会读资料的助理。</p>
 <p>它不仅仅是替你收藏资料，</p>
 <p>而是帮你把资料变成能用的知识。</p>
@@ -1627,7 +4024,7 @@ Agent 如何帮你做每日复盘？</p></blockquote>
 <p>真正好的资料整理，不是“看过就算”，</p>
 <p>而是把资料变成下一步可以使用的内容。</p>
 <hr>
-<h3 id="自动复盘-agent">自动复盘 Agent</h3>
+<h2 id="自动复盘-agent">自动复盘 Agent</h2>
 <p>很多人每天都在忙。</p>
 <p>写文章、做项目、学工具、改代码、开会、查资料、处理消息。</p>
 <p>一天结束后，好像做了很多事，但如果没有记录，很快就会忘记：</p>
@@ -1640,9 +4037,49 @@ Agent 如何帮你做每日复盘？</p></blockquote>
 <p>自动复盘 Agent 的作用，就是帮你把每天的工作、学习和项目进展整理成清楚的记录。</p>
 <p>它不会替你努力，但可以帮你看清自己做到了哪里，下一步该往哪走。</p>
 <hr>
-<h4 id="为什么需要自动复盘-agent">为什么需要自动复盘 Agent？</h4>
+<h3 id="为什么需要自动复盘-agent">为什么需要自动复盘 Agent？</h3>
 <p>很多人不是没有行动，而是没有复盘。</p>
 <p>每天做了很多事情，但没有形成记录，最后就会出现这些问题：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>做了很多事但记不清</td>
+<td>不知道自己进展到哪里</td>
+</tr>
+<tr>
+<td>任务一直堆积</td>
+<td>分不清优先级</td>
+</tr>
+<tr>
+<td>问题反复出现</td>
+<td>没有总结原因</td>
+</tr>
+<tr>
+<td>下一步不明确</td>
+<td>第二天不知道先做什么</td>
+</tr>
+<tr>
+<td>项目推进混乱</td>
+<td>缺少持续记录</td>
+</tr>
+<tr>
+<td>学了很多工具</td>
+<td>但没有形成自己的方法</td>
+</tr>
+<tr>
+<td>内容做了很多</td>
+<td>但不知道哪些方向有效</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>复盘的意义，不是写一篇漂亮总结。</p>
 <p>而是把一天的零散行动整理成：</p>
 <blockquote><p>完成了什么 → 遇到什么问题 → 为什么卡住 → 明天先做什么</p></blockquote>
@@ -1650,34 +4087,82 @@ Agent 如何帮你做每日复盘？</p></blockquote>
 <p><strong>不复盘，很多努力都会变成模糊记忆。</strong><br>
 <strong>复盘之后，行动才会变成可积累的经验。</strong></p>
 <hr>
-<h4 id="如何配置自动复盘-agent">如何配置自动复盘 Agent ？</h4>
-<h5 id="使用-codex-自动化功能">使用 Codex 自动化功能</h5>
+<h3 id="如何配置自动复盘-agent">如何配置自动复盘 Agent ？</h3>
+<h4 id="使用-codex-自动化功能">使用 Codex 自动化功能</h4>
 <p>点击通过聊天创建</p>
-<figure class="book-figure"><img src="assets/images/image%2024.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
-<h5 id="详细描述自动化内容">详细描述自动化内容</h5>
+<figure class="book-figure"><img src="图片和附件/image%2010.png" alt="图片展示了Agent界面中“已安排”任务的设置情况。左侧导航栏有“新对话”“搜索”“插件”等选项，当前选中“已安排”。右侧显示“已安排”任务，内容为“每周更新Codex 复盘档案 notes”，下次运行时间为5天后星期日21:00。右上角有“通过聊天创建”下拉菜单。该图片与上文“点击通过聊天创建”内容对应，直观呈现了通过聊天创建自动复盘Agent后，任务在Agent界面中的显示状态。" loading="lazy"><figcaption>图片展示了Agent界面中“已安排”任务的设置情况。左侧导航栏有“新对话”“搜索”“插件”等选项，当前选中“已安排”。右侧显示“已安排”任务，内容为“每周更新Codex 复盘档案 notes”，下次运行时间为5天后星期日21:00。右上角有“通过聊天创建”下拉菜单。该图片与上文“点击通过聊天创建”内容对应，直观呈现了通过聊天创建自动复盘Agent后，任务在Agent界面中的显示状态。</figcaption></figure>
+<h4 id="详细描述自动化内容">详细描述自动化内容</h4>
 <p>直接让 Codex 帮你创建自动复盘</p>
 <p>这里以我让 Codex 每周帮我整理我的操作习惯，遇到了那些坑，下次就直接绕过这些坑</p>
 <p>当然自动复盘 Agent 还有其他很多功能，比如每周总结你过去发过的文章，里面有什么那些爆点，总结你过去股票的操作记录，需要再注意点什么</p>
-<p>\&lt;xxxx\&gt;里面的内容需要根据你自身需求进行替换</p>
+<p>&lt;xxxx&gt;里面的内容需要根据你自身需求进行替换</p>
 <pre><code class="language-plain-text">我们一起来设置一个自动化任务。读取并遵循 `&lt;你的档案绝对路径&gt;` 的现有结构和规则，维护 Codex 会话复盘与个人风格档案。基于档案中“复盘状态”的最近复盘时间，增量检查可用的 Codex 会话索引、线程摘要、session 元数据、自动化 memory 和低敏来源线索，提炼新的执行经验、用户偏好、可复用规则与必要的状态更新。 
  
 只保留总结性结论、低敏来源线索和可执行规则；不要写入长对话、完整日志、隐私内容、密钥、token、cookie 或内部 reasoning。遇到中文路径或文件名时显式使用 UTF-8；如果 `rg` 不可用或被拒绝，改用 PowerShell 原生命令。将更新写回 `&lt;你的档案目录&gt;` 中的对应档案文件；若没有新增高信号内容，只更新复盘状态并简要说明无新增规则。 
  
 完成后给出本次读取范围、是否修改文件、修改摘要和未能验证的限制。</code></pre>
-<figure class="book-figure"><img src="assets/images/image%205.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
-<h5 id="设置自动化的时间">设置自动化的时间</h5>
+<figure class="book-figure"><img src="图片和附件/image%201.png" alt="图片展示的是一个对话界面，标题为“我们该做什么？”。内容是关于设置自动任务的说明，包括读取并遵循指定文件结构和规则，维护Codex会话复盘与个人风格档案，基于档案中“复盘状态”的最近复盘时间，增量检查可用的Codex会话索引、线程摘要、session元数据和低敏来源线索，提炼新的执行经验、用户偏好、可复用规则与必要的状态更新等。下方有“完全访问”按钮和“Choose project”选项。该图片与上文设置自动复盘Agent的内容相关，展示了设置任务时的具体要求。" loading="lazy"><figcaption>图片展示的是一个对话界面，标题为“我们该做什么？”。内容是关于设置自动任务的说明，包括读取并遵循指定文件结构和规则，维护Codex会话复盘与个人风格档案，基于档案中“复盘状态”的最近复盘时间，增量检查可用的Codex会话索引、线程摘要、session元数据和低敏来源线索，提炼新的执行经验、用户偏好、可复用规则与必要的状态更新等。下方有“完全访问”按钮和“Choose project”选项。该图片与上文设置自动复盘Agent的内容相关，展示了设置任务时的具体要求。</figcaption></figure>
+<h4 id="设置自动化的时间">设置自动化的时间</h4>
 <p>这里就会看到刚刚设置好的自动化任务，然后可以进一步优化，让它多久执行一次，用什么模型来执行</p>
-<figure class="book-figure"><img src="assets/images/image%202.png" alt="image.png" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure class="book-figure"><img src="图片和附件/image%207.png" alt="图片展示了Agent中已安排的自动化任务界面。左侧为项目列表，如“新对话”“已安排”等。右侧上方显示“已安排”任务，下方有“当前”任务列表，如“想做一个脚本程序，我...”等。右侧下方“状态”区域显示任务状态、下次运行时间、上次运行时间、运行环境、项目、重试次数、模型等信息，如下次运行时间为星期日21:00，运行环境为本地，模型为GPT-5.5。该图与上文设置自动化时间的内容相关，直观呈现了已安排自动化任务的界面及部分设置信息。" loading="lazy"><figcaption>图片展示了Agent中已安排的自动化任务界面。左侧为项目列表，如“新对话”“已安排”等。右侧上方显示“已安排”任务，下方有“当前”任务列表，如“想做一个脚本程序，我...”等。右侧下方“状态”区域显示任务状态、下次运行时间、上次运行时间、运行环境、项目、重试次数、模型等信息，如下次运行时间为星期日21:00，运行环境为本地，模型为GPT-5.5。该图与上文设置自动化时间的内容相关，直观呈现了已安排自动化任务的界面及部分设置信息。</figcaption></figure>
 <p>至此自动化 Agent 就已经设置完毕了</p>
 <p>简单来说：</p>
 <p><strong>自动复盘 Agent 就像一个每天帮你整理桌面的助手。</strong><br>
 <strong>它把乱七八糟的进展，整理成下一步能继续用的记录。</strong></p>
-<h4 id="自动复盘-agent-适合哪些场景">自动复盘 Agent 适合哪些场景？</h4>
+<h3 id="自动复盘-agent-适合哪些场景">自动复盘 Agent 适合哪些场景？</h3>
 <p>自动复盘 Agent 不只适合工作，也适合学习、创作、编程和项目管理。</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>使用场景</th>
+<th>示例</th>
+<th>复盘重点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>每日总结</td>
+<td>今天做了什么，明天做什么</td>
+<td>完成事项、问题、计划</td>
+</tr>
+<tr>
+<td>项目复盘</td>
+<td>一个任务完成后总结过程</td>
+<td>目标、过程、结果、风险</td>
+</tr>
+<tr>
+<td>学习复盘</td>
+<td>今天学了什么，还有哪里没懂</td>
+<td>新概念、疑问、练习方向</td>
+</tr>
+<tr>
+<td>内容创作复盘</td>
+<td>哪些选题有效，哪些要调整</td>
+<td>选题、数据、反馈、改进</td>
+</tr>
+<tr>
+<td>编程任务复盘</td>
+<td>记录改了哪些功能、还有哪些 bug</td>
+<td>文件变化、测试结果、遗留问题</td>
+</tr>
+<tr>
+<td>会议复盘</td>
+<td>会议后整理结论和行动项</td>
+<td>结论、负责人、截止时间</td>
+</tr>
+<tr>
+<td>工具使用复盘</td>
+<td>今天试了哪些 AI 工具</td>
+<td>使用效果、适合场景、问题</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>凡是需要持续推进的事情，都适合用自动复盘 Agent。</strong></p>
 <hr>
-<h4 id="正确用法给复盘一个固定结构">正确用法：给复盘一个固定结构</h4>
+<h3 id="正确用法给复盘一个固定结构">正确用法：给复盘一个固定结构</h3>
 <p>可以这样用：</p>
 <pre><code class="language-plain-text">请帮我做一次复盘。
 
@@ -1707,13 +4192,61 @@ Agent 如何帮你做每日复盘？</p></blockquote>
 <p><strong>复盘不是写感想，</strong><br>
 <strong>而是把过去的行动整理成下一步的计划。</strong></p>
 <hr>
-<h4 id="自动复盘-agent-的常见错误">自动复盘 Agent 的常见错误</h4>
+<h3 id="自动复盘-agent-的常见错误">自动复盘 Agent 的常见错误</h3>
 <p>使用自动复盘 Agent 时，也要避免一些错误。</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>错误做法</th>
+<th>可能结果</th>
+<th>正确做法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>只说“帮我总结”</td>
+<td>输出太泛</td>
+<td>给固定结构</td>
+</tr>
+<tr>
+<td>只记录完成事项</td>
+<td>看不到问题</td>
+<td>同时记录问题和原因</td>
+</tr>
+<tr>
+<td>只写明日计划</td>
+<td>没有复盘今天</td>
+<td>先总结，再计划</td>
+</tr>
+<tr>
+<td>计划太空</td>
+<td>第二天仍然不知道做什么</td>
+<td>写具体动作</td>
+</tr>
+<tr>
+<td>不区分优先级</td>
+<td>什么都想做</td>
+<td>只选 3 件最重要的</td>
+</tr>
+<tr>
+<td>不记录风险</td>
+<td>问题反复出现</td>
+<td>标注卡点和风险</td>
+</tr>
+<tr>
+<td>不持续保存</td>
+<td>复盘无法积累</td>
+<td>用 Markdown 保存到文档</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>复盘不是把今天包装得很好看，</strong><br>
 <strong>而是诚实记录进展、问题和下一步。</strong></p>
 <hr>
-<h4 id="简单来说_3">简单来说</h4>
+<h3 id="简单来说_3">简单来说</h3>
 <p>自动复盘 Agent 就像一个每天帮你整理桌面的助手。</p>
 <p>它不会替你努力，</p>
 <p>但可以帮你看清自己做到了哪里，下一步该往哪走。</p>
@@ -1726,7 +4259,7 @@ Agent 如何帮你做每日复盘？</p></blockquote>
 <p>难的是知道自己到底进步在哪里，卡在哪里，下一步该走哪里。</p>
 <p>自动复盘 Agent 做的，就是帮你把这些事情看清楚。</p>
 <hr>
-<h2 id="第五篇agent-风险与进阶">第五篇：Agent 风险与进阶</h2>
+<h1 id="第五篇agent-风险与进阶">第五篇：Agent 风险与进阶</h1>
 <p>前面几部分，我们已经讲了 Agent 是什么、怎么指挥 Agent、怎么用 Agent 完成真实任务。</p>
 <p>但真正长期使用 Agent，不能只看它“能做什么”，还要看：</p>
 <blockquote><p>它可能会出什么错？<br>
@@ -1736,7 +4269,7 @@ Agent 如何帮你做每日复盘？</p></blockquote>
 <p>Agent 越强，越不能完全放手。</p>
 <p>因为它不只是回答问题，还可能修改文件、调用工具、处理资料、执行流程。</p>
 <p>所以这一部分会从风险、防护、验收、Skill 和学习路线几个角度，帮助读者真正把 Agent 用稳。</p>
-<h3 id="agent-的风险与防护">Agent 的风险与防护</h3>
+<h2 id="agent-的风险与防护">Agent 的风险与防护</h2>
 <p>Agent 很强，但它不是绝对可靠。</p>
 <p>它可以帮你总结资料、写文章、改代码、读 GitHub、生成 PPT 大纲、做复盘。</p>
 <p>但能力越强，风险也越需要重视。</p>
@@ -1752,15 +4285,90 @@ Agent 如何帮你做每日复盘？</p></blockquote>
 <p><strong>Agent 不是不能信，而是不能盲信。</strong><br>
 <strong>越是能执行的 Agent，越要给它边界。</strong></p>
 <hr>
-<h4 id="常见风险总览">常见风险总览</h4>
+<h3 id="常见风险总览">常见风险总览</h3>
 <p>Agent 常见风险包括这些：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>风险</th>
+<th>表现</th>
+<th>防护方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>幻觉</td>
+<td>编造不存在的信息、链接、数据</td>
+<td>要求标注来源，不确定就写“需要确认”</td>
+</tr>
+<tr>
+<td>误删</td>
+<td>删除重要文件、覆盖原有内容</td>
+<td>限制修改范围，先看 diff</td>
+</tr>
+<tr>
+<td>权限过大</td>
+<td>能访问太多文件或工具</td>
+<td>最小权限原则，只给必要权限</td>
+</tr>
+<tr>
+<td>隐私泄露</td>
+<td>把敏感信息发给外部工具</td>
+<td>不上传密码、密钥、身份证、客户资料</td>
+</tr>
+<tr>
+<td>任务跑偏</td>
+<td>做了没要求的功能</td>
+<td>写清楚目标、限制和验收标准</td>
+</tr>
+<tr>
+<td>自动化失控</td>
+<td>定时任务反复执行错误操作</td>
+<td>设置人工确认和停止条件</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>这些风险不代表 Agent 不能用。</p>
 <p>它们真正提醒我们的是：</p>
 <p><strong>Agent 需要管理，而不是放养。</strong></p>
 <hr>
-<h4 id="风险一幻觉">风险一：幻觉</h4>
+<h3 id="风险一幻觉">风险一：幻觉</h3>
 <p>幻觉是指 Agent 编造不存在的信息。</p>
 <p>比如：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>可能出现的问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>总结资料</td>
+<td>把原文没说的内容写成结论</td>
+</tr>
+<tr>
+<td>查资料</td>
+<td>编造不存在的链接或数据</td>
+</tr>
+<tr>
+<td>写文章</td>
+<td>写出看起来合理但不准确的事实</td>
+</tr>
+<tr>
+<td>分析项目</td>
+<td>把项目没有的功能说成已经存在</td>
+</tr>
+<tr>
+<td>引用观点</td>
+<td>编造作者、论文、来源或案例</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>幻觉最危险的地方在于：</p>
 <p><strong>它看起来很像真的。</strong></p>
 <p>尤其是 Agent 语气很确定的时候，用户很容易直接相信。</p>
@@ -1779,9 +4387,41 @@ Agent 如何帮你做每日复盘？</p></blockquote>
 <p><strong>Agent 可以帮你整理信息，但不能替你验证信息。</strong><br>
 <strong>重要事实一定要回到原文或来源检查。</strong></p>
 <hr>
-<h4 id="风险二误删和误改">风险二：误删和误改</h4>
+<h3 id="风险二误删和误改">风险二：误删和误改</h3>
 <p>在 AI 编程、文档处理、项目修改中，Agent 可能会误删或误改内容。</p>
 <p>比如：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>你原本想做</th>
+<th>Agent 可能误操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>修改一个按钮样式</td>
+<td>顺手改了整个页面布局</td>
+</tr>
+<tr>
+<td>修一个 bug</td>
+<td>重构了大段无关代码</td>
+</tr>
+<tr>
+<td>删除一段无用代码</td>
+<td>删除了仍然被使用的逻辑</td>
+</tr>
+<tr>
+<td>优化文档结构</td>
+<td>覆盖了原来的重要内容</td>
+</tr>
+<tr>
+<td>调整配置</td>
+<td>改坏了启动或部署流程</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>误删最常见的原因，是任务边界没有说清楚。</p>
 <p>所以每次让 Agent 修改文件前，都要加限制：</p>
 <pre><code class="language-plain-text">请注意：
@@ -1793,15 +4433,119 @@ Agent 如何帮你做每日复盘？</p></blockquote>
 5. 如果你认为必须删除或重写某些内容，请先说明原因，等我确认后再执行
 6. 修改完成后，请列出所有被修改、删除、新增的文件</code></pre>
 <p>对于代码项目，还要养成看 diff 的习惯。</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>检查项</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>改了哪些文件</td>
+<td>判断是否超出范围</td>
+</tr>
+<tr>
+<td>删除了哪些内容</td>
+<td>防止误删核心逻辑</td>
+</tr>
+<tr>
+<td>新增了哪些内容</td>
+<td>防止引入不必要复杂度</td>
+</tr>
+<tr>
+<td>是否修改配置文件</td>
+<td>防止影响启动和部署</td>
+</tr>
+<tr>
+<td>是否改动无关模块</td>
+<td>防止任务跑偏</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>Agent 能改文件，就必须看改动记录。</strong><br>
 <strong>不看 diff，就像装修完不验收。</strong></p>
 <hr>
-<h4 id="风险三权限过大">风险三：权限过大</h4>
+<h3 id="风险三权限过大">风险三：权限过大</h3>
 <p>Agent 如果拥有太多权限，就可能带来更大风险。</p>
 <p>比如它可以访问：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>权限类型</th>
+<th>潜在风险</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文件权限</td>
+<td>读取或修改不相关文件</td>
+</tr>
+<tr>
+<td>终端权限</td>
+<td>执行错误命令</td>
+</tr>
+<tr>
+<td>浏览器权限</td>
+<td>访问不该访问的页面</td>
+</tr>
+<tr>
+<td>邮件权限</td>
+<td>误读、误发、误删邮件</td>
+</tr>
+<tr>
+<td>日历权限</td>
+<td>创建或修改错误日程</td>
+</tr>
+<tr>
+<td>GitHub 权限</td>
+<td>修改仓库、提交代码、创建 PR</td>
+</tr>
+<tr>
+<td>自动化权限</td>
+<td>定期执行错误任务</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>权限越大，越不能随便交出去。</p>
 <p>推荐使用“最小权限原则”。</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>原则</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>只给必要权限</td>
+<td>任务需要什么，就给什么</td>
+</tr>
+<tr>
+<td>只给必要范围</td>
+<td>只允许访问相关文件或目录</td>
+</tr>
+<tr>
+<td>重要操作要确认</td>
+<td>删除、发送、提交、部署前要人工确认</td>
+</tr>
+<tr>
+<td>敏感操作不自动化</td>
+<td>涉及钱、账号、隐私、生产环境要谨慎</td>
+</tr>
+<tr>
+<td>定期检查权限</td>
+<td>不用的授权及时关闭</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>可以这样要求 Agent：</p>
 <pre><code class="language-plain-text">这次任务请遵守最小权限原则。
 
@@ -1814,11 +4558,83 @@ Agent 如何帮你做每日复盘？</p></blockquote>
 <p><strong>不要因为 Agent 很方便，就把所有钥匙都交给它。</strong><br>
 <strong>任务需要哪把钥匙，就只给哪把钥匙。</strong></p>
 <hr>
-<h4 id="风险四隐私泄露">风险四：隐私泄露</h4>
+<h3 id="风险四隐私泄露">风险四：隐私泄露</h3>
 <p>隐私泄露是使用 Agent 时非常需要注意的问题。</p>
 <p>尤其是你把资料、截图、代码、客户信息、聊天记录交给 Agent 处理时。</p>
 <p>不要随便上传这些内容：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>敏感信息</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>账号密码</td>
+<td>登录密码、后台账号</td>
+</tr>
+<tr>
+<td>API Key</td>
+<td>OpenAI Key、支付接口 Key、云服务密钥</td>
+</tr>
+<tr>
+<td>身份信息</td>
+<td>身份证、护照、手机号、住址</td>
+</tr>
+<tr>
+<td>财务信息</td>
+<td>银行卡、账单、合同金额</td>
+</tr>
+<tr>
+<td>客户资料</td>
+<td>客户名单、联系方式、聊天记录</td>
+</tr>
+<tr>
+<td>公司机密</td>
+<td>内部文档、未公开方案、商业计划</td>
+</tr>
+<tr>
+<td>私人聊天</td>
+<td>未经允许的聊天截图和邮件内容</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>如果必须让 Agent 处理敏感资料，建议先脱敏。</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>原始信息</th>
+<th>脱敏方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>张三，手机号 138xxxx</td>
+<td>用户 A，手机号已隐藏</td>
+</tr>
+<tr>
+<td>某客户公司名称</td>
+<td>客户公司 A</td>
+</tr>
+<tr>
+<td>API Key</td>
+<td>[API_KEY_HIDDEN]</td>
+</tr>
+<tr>
+<td>身份证号码</td>
+<td>[ID_HIDDEN]</td>
+</tr>
+<tr>
+<td>合同金额</td>
+<td>用区间或占位符代替</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>可以这样提醒 Agent：</p>
 <pre><code class="language-plain-text">请在处理下面内容时注意隐私保护。
 
@@ -1831,11 +4647,75 @@ Agent 如何帮你做每日复盘？</p></blockquote>
 <p><strong>能不给 Agent 的敏感信息，就不要给。</strong><br>
 <strong>必须给的时候，先脱敏。</strong></p>
 <hr>
-<h4 id="风险五任务跑偏">风险五：任务跑偏</h4>
+<h3 id="风险五任务跑偏">风险五：任务跑偏</h3>
 <p>任务跑偏是最常见的问题之一。</p>
 <p>你让 Agent 做 A，它做着做着变成了 A+B+C。</p>
 <p>比如：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>你的需求</th>
+<th>Agent 跑偏后的结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>优化首页</td>
+<td>顺手改了全站风格</td>
+</tr>
+<tr>
+<td>写一篇短文</td>
+<td>写成了长篇报告</td>
+</tr>
+<tr>
+<td>修一个 bug</td>
+<td>重构了整个模块</td>
+</tr>
+<tr>
+<td>总结一篇文章</td>
+<td>加了很多原文没有的观点</td>
+</tr>
+<tr>
+<td>做一个 PPT 大纲</td>
+<td>直接开始写完整 PPT 内容</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>任务跑偏的原因通常是：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>原因</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>目标不清楚</td>
+<td>Agent 不知道最终要什么</td>
+</tr>
+<tr>
+<td>限制不明确</td>
+<td>Agent 不知道哪些不能做</td>
+</tr>
+<tr>
+<td>输出格式没说</td>
+<td>Agent 不知道结果应该长什么样</td>
+</tr>
+<tr>
+<td>一次任务太大</td>
+<td>Agent 自己拆分时方向偏了</td>
+</tr>
+<tr>
+<td>没有中途检查</td>
+<td>跑偏后没有及时发现</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>防止跑偏的关键，是提前写清楚边界：</p>
 <pre><code class="language-plain-text">请严格按照下面范围执行。
 
@@ -1862,11 +4742,79 @@ Agent 如何帮你做每日复盘？</p></blockquote>
 <p><strong>Agent 不是不会努力，而是有时候太努力。</strong><br>
 <strong>你要告诉它：做到哪里就停。</strong></p>
 <hr>
-<h4 id="风险六自动化失控">风险六：自动化失控</h4>
+<h3 id="风险六自动化失控">风险六：自动化失控</h3>
 <p>自动化 Agent 很方便，但也有风险。</p>
 <p>比如每日总结、定时检查、自动整理资料、自动运行任务。</p>
 <p>如果没有设置好边界，可能出现：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>自动化风险</th>
+<th>表现</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>反复执行错误任务</td>
+<td>每天都输出错误总结</td>
+</tr>
+<tr>
+<td>频率过高</td>
+<td>打扰太多，信息过载</td>
+</tr>
+<tr>
+<td>条件不清楚</td>
+<td>不该提醒的时候也提醒</td>
+</tr>
+<tr>
+<td>权限过大</td>
+<td>自动修改、删除、发送内容</td>
+</tr>
+<tr>
+<td>没有停止条件</td>
+<td>任务已经结束还继续运行</td>
+</tr>
+<tr>
+<td>缺少人工确认</td>
+<td>高风险动作被自动执行</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>自动化任务尤其要注意：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>防护方式</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>明确触发条件</td>
+<td>什么时候执行</td>
+</tr>
+<tr>
+<td>明确停止条件</td>
+<td>什么情况下不再执行</td>
+</tr>
+<tr>
+<td>限制操作范围</td>
+<td>只总结、提醒，不自动删除或发送</td>
+</tr>
+<tr>
+<td>高风险操作人工确认</td>
+<td>涉及发送、删除、付款、提交都要确认</td>
+</tr>
+<tr>
+<td>定期检查自动化任务</td>
+<td>看是否还需要继续运行</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>可以这样写自动化规则：</p>
 <pre><code class="language-plain-text">请按照以下规则执行自动化任务：
 
@@ -1879,14 +4827,86 @@ Agent 如何帮你做每日复盘？</p></blockquote>
 <p><strong>自动化的目标是省心，不是失控。</strong><br>
 <strong>越是自动执行，越要提前设置边界。</strong></p>
 <hr>
-<h4 id="使用-agent-前的风险检查清单">使用 Agent 前的风险检查清单</h4>
+<h3 id="使用-agent-前的风险检查清单">使用 Agent 前的风险检查清单</h3>
 <p>每次让 Agent 执行任务前，可以先问自己这些问题：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>检查问题</th>
+<th>目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>我有没有说清楚目标？</td>
+<td>防止任务跑偏</td>
+</tr>
+<tr>
+<td>我有没有说明哪些不能做？</td>
+<td>防止乱改、乱删</td>
+</tr>
+<tr>
+<td>我有没有限制权限范围？</td>
+<td>防止访问过多内容</td>
+</tr>
+<tr>
+<td>我有没有隐藏敏感信息？</td>
+<td>防止隐私泄露</td>
+</tr>
+<tr>
+<td>我有没有要求标注不确定内容？</td>
+<td>防止幻觉</td>
+</tr>
+<tr>
+<td>我有没有要求输出修改记录？</td>
+<td>方便验收</td>
+</tr>
+<tr>
+<td>我有没有设置人工确认点？</td>
+<td>防止高风险操作自动执行</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>如果是代码任务，还要额外检查：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>检查项</th>
+<th>目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>是否先读项目</td>
+<td>防止直接乱改</td>
+</tr>
+<tr>
+<td>是否拆成小任务</td>
+<td>防止一次改太多</td>
+</tr>
+<tr>
+<td>是否看 diff</td>
+<td>防止误删误改</td>
+</tr>
+<tr>
+<td>是否跑测试 / 构建</td>
+<td>防止功能坏掉</td>
+</tr>
+<tr>
+<td>是否人工验收</td>
+<td>防止表面完成</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>不是每次都要写很复杂，</strong><br>
 <strong>但每次都要有风险意识。</strong></p>
 <hr>
-<h4 id="一个通用防护-prompt">一个通用防护 Prompt</h4>
+<h3 id="一个通用防护-prompt">一个通用防护 Prompt</h3>
 <p>可以把下面这段加到高风险任务前面：</p>
 <pre><code class="language-plain-text">请在执行本任务时遵守以下安全规则：
 
@@ -1903,8 +4923,44 @@ Agent 如何帮你做每日复盘？</p></blockquote>
 
 请先确认你理解这些规则，再开始任务。</code></pre>
 <p>适合用于：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>任务类型</th>
+<th>为什么适合</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI 编程</td>
+<td>防止误删、误改、乱执行命令</td>
+</tr>
+<tr>
+<td>资料整理</td>
+<td>防止幻觉和错误引用</td>
+</tr>
+<tr>
+<td>写作</td>
+<td>防止编造事实</td>
+</tr>
+<tr>
+<td>GitHub 解读</td>
+<td>防止乱猜项目功能</td>
+</tr>
+<tr>
+<td>自动化任务</td>
+<td>防止反复执行错误操作</td>
+</tr>
+<tr>
+<td>隐私资料处理</td>
+<td>防止泄露敏感信息</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
-<h4 id="总结一下_2">总结一下</h4>
+<h3 id="总结一下_2">总结一下</h3>
 <p>Agent 不是不能信，而是不能盲信。</p>
 <p>越是能执行的 Agent，越要给它边界。</p>
 <p>它可以帮你：</p>
@@ -1916,7 +4972,7 @@ Agent 如何帮你做每日复盘？</p></blockquote>
 <p>而是让它在清楚的范围内工作。</p>
 <p><strong>让 Agent 做执行者，</strong><br>
 <strong>让人来做负责人。</strong></p>
-<h3 id="如何验收-agent-的结果">如何验收 Agent 的结果</h3>
+<h2 id="如何验收-agent-的结果">如何验收 Agent 的结果</h2>
 <p>很多人使用 Agent 时，看到它说：</p>
 <blockquote><p>已完成。<br>
 已修改。<br>
@@ -1930,23 +4986,170 @@ Agent 如何帮你做每日复盘？</p></blockquote>
 <p>尤其是 Agent 不只是回答问题，而是可能帮你写文章、总结资料、修改代码、解读 GitHub、生成 PPT 大纲，甚至执行自动化任务。</p>
 <p>所以，使用 Agent 的最后一步，不是“看它回复了什么”，而是“检查它交付了什么”。</p>
 <hr>
-<h4 id="为什么一定要验收">为什么一定要验收？</h4>
+<h3 id="为什么一定要验收">为什么一定要验收？</h3>
 <p>Agent 很擅长执行任务，但它不是最终负责人。</p>
 <p>它可能会：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>表现</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>看起来完成了</td>
+<td>但实际没有达到目标</td>
+</tr>
+<tr>
+<td>表面很完整</td>
+<td>但里面有错误信息</td>
+</tr>
+<tr>
+<td>语气很确定</td>
+<td>但内容可能是猜的</td>
+</tr>
+<tr>
+<td>代码能生成</td>
+<td>但项目不一定能运行</td>
+</tr>
+<tr>
+<td>总结很顺</td>
+<td>但可能漏掉原文重点</td>
+</tr>
+<tr>
+<td>页面很好看</td>
+<td>但逻辑不一定清楚</td>
+</tr>
+<tr>
+<td>自动化能运行</td>
+<td>但频率、权限、结果可能不对</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>验收的意义不是挑毛病，而是确认三件事：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>验收问题</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>它有没有完成目标？</td>
+<td>判断任务是否达标</td>
+</tr>
+<tr>
+<td>它有没有引入新问题？</td>
+<td>防止改出副作用</td>
+</tr>
+<tr>
+<td>它有没有超出边界？</td>
+<td>防止乱改、乱写、乱执行</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>Agent 负责执行，人负责验收。</strong><br>
 <strong>没有验收，就不算真正完成。</strong></p>
 <hr>
-<h4 id="不同任务的验收方式">不同任务的验收方式</h4>
+<h3 id="不同任务的验收方式">不同任务的验收方式</h3>
 <p>不同类型的 Agent 任务，需要不同的验收方式。</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>任务类型</th>
+<th>怎么验收</th>
+<th>重点看什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文章</td>
+<td>看观点是否准确、结构是否清楚、有没有 AI 味</td>
+<td>观点、结构、表达</td>
+</tr>
+<tr>
+<td>资料总结</td>
+<td>对照原文，检查有没有漏掉重点或编造内容</td>
+<td>准确性、完整性、来源</td>
+</tr>
+<tr>
+<td>代码修改</td>
+<td>看 diff、跑测试、启动项目、手动点击</td>
+<td>功能、报错、改动范围</td>
+</tr>
+<tr>
+<td>GitHub 解读</td>
+<td>对照 README、目录、issues 检查是否准确</td>
+<td>项目定位、技术栈、启动方式</td>
+</tr>
+<tr>
+<td>PPT / 图文</td>
+<td>看页面逻辑、标题、文案、配图是否统一</td>
+<td>页面结构、视觉一致性</td>
+</tr>
+<tr>
+<td>自动化任务</td>
+<td>检查执行结果、频率、权限和异常情况</td>
+<td>是否误触发、是否越权</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>验收不是只有一个标准，而是要根据任务类型来检查。</p>
 <p>简单来说：</p>
 <p><strong>文章要验内容，代码要验运行，资料要验来源，自动化要验边界。</strong></p>
 <hr>
-<h4 id="验收一文章结果">验收一：文章结果</h4>
+<h3 id="验收一文章结果">验收一：文章结果</h3>
 <p>如果 Agent 帮你写文章、改文案、生成推文、小红书笔记或公众号内容，不能只看“写得顺不顺”。</p>
 <p>还要检查：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>检查项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>观点是否准确</td>
+<td>有没有偏离你的核心判断</td>
+</tr>
+<tr>
+<td>结构是否清楚</td>
+<td>开头、正文、结尾是否顺畅</td>
+</tr>
+<tr>
+<td>是否有事实错误</td>
+<td>有没有编造案例、数据、来源</td>
+</tr>
+<tr>
+<td>是否像人话</td>
+<td>有没有太浓的 AI 味</td>
+</tr>
+<tr>
+<td>是否符合平台</td>
+<td>推特、小红书、公众号风格不同</td>
+</tr>
+<tr>
+<td>是否有废话</td>
+<td>有没有重复、空泛、套话</td>
+</tr>
+<tr>
+<td>是否有个人表达</td>
+<td>有没有保留你的观点和语气</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>可以这样让 Agent 自查：</p>
 <pre><code class="language-plain-text">请帮我检查这篇文章。
 
@@ -1971,10 +5174,78 @@ Agent 如何帮你做每日复盘？</p></blockquote>
 <p><strong>文章不是写完就发。</strong><br>
 <strong>先看观点，再看结构，最后看语气。</strong></p>
 <hr>
-<h4 id="验收二资料总结">验收二：资料总结</h4>
+<h3 id="验收二资料总结">验收二：资料总结</h3>
 <p>如果 Agent 帮你总结文章、PDF、链接、会议记录或调研资料，最重要的是检查它有没有“编”。</p>
 <p>资料总结常见问题包括：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>表现</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>漏掉重点</td>
+<td>原文重要内容没总结出来</td>
+</tr>
+<tr>
+<td>过度概括</td>
+<td>把复杂内容压得太简单</td>
+</tr>
+<tr>
+<td>加入推测</td>
+<td>把自己猜的内容写成事实</td>
+</tr>
+<tr>
+<td>来源不清楚</td>
+<td>不知道结论来自哪里</td>
+</tr>
+<tr>
+<td>数据错误</td>
+<td>数字、时间、比例总结错</td>
+</tr>
+<tr>
+<td>断章取义</td>
+<td>把原文意思总结偏了</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>验收资料总结时，可以这样做：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>验收方式</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>对照原文</td>
+<td>检查是否准确</td>
+</tr>
+<tr>
+<td>检查数字和日期</td>
+<td>防止关键信息错</td>
+</tr>
+<tr>
+<td>要求标注来源</td>
+<td>知道结论从哪里来</td>
+</tr>
+<tr>
+<td>区分事实和推测</td>
+<td>防止把猜测当事实</td>
+</tr>
+<tr>
+<td>看遗漏问题</td>
+<td>检查有没有重要内容没提</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>可以让 Agent 输出自查表：</p>
 <pre><code class="language-plain-text">请帮我检查这份资料总结是否可靠。
 
@@ -1991,10 +5262,50 @@ Agent 如何帮你做每日复盘？</p></blockquote>
 <p><strong>资料总结最怕“看起来很清楚，但其实不是原文意思”。</strong><br>
 <strong>重要结论一定要回到原文检查。</strong></p>
 <hr>
-<h4 id="验收三代码修改">验收三：代码修改</h4>
+<h3 id="验收三代码修改">验收三：代码修改</h3>
 <p>如果 Agent 帮你修改代码，验收就更重要。</p>
 <p>因为代码不是“看起来对”就行，而是要能运行、能测试、能维护。</p>
 <p>代码验收至少要看这些：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>检查项</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>看 diff</td>
+<td>确认它到底改了什么</td>
+</tr>
+<tr>
+<td>跑测试</td>
+<td>检查已有功能有没有坏</td>
+</tr>
+<tr>
+<td>跑构建</td>
+<td>确认项目能不能正常 build</td>
+</tr>
+<tr>
+<td>启动项目</td>
+<td>看页面或服务能不能打开</td>
+</tr>
+<tr>
+<td>手动点击</td>
+<td>检查交互是否正常</td>
+</tr>
+<tr>
+<td>看控制台</td>
+<td>检查有没有报错</td>
+</tr>
+<tr>
+<td>看改动范围</td>
+<td>确认有没有乱改无关文件</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>可以让 Agent 先总结 diff：</p>
 <pre><code class="language-plain-text">请总结本次代码修改的 diff。
 
@@ -2024,13 +5335,81 @@ Agent 如何帮你做每日复盘？</p></blockquote>
 4. 报错原因可能是什么
 5. 是否还有需要人工验收的地方</code></pre>
 <p>最后你自己手动验收：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>人工验收项</th>
+<th>检查方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>页面能否打开</td>
+<td>本地启动后访问页面</td>
+</tr>
+<tr>
+<td>功能是否正常</td>
+<td>手动点击按钮、筛选、表单</td>
+</tr>
+<tr>
+<td>样式是否符合预期</td>
+<td>看桌面端和手机端</td>
+</tr>
+<tr>
+<td>是否破坏旧功能</td>
+<td>检查相关页面</td>
+</tr>
+<tr>
+<td>是否符合原始需求</td>
+<td>对照任务目标逐条确认</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>代码验收不能只听 Agent 说“修好了”。</strong><br>
 <strong>要看 diff、跑测试、启动项目、自己点一遍。</strong></p>
 <hr>
-<h4 id="验收四github-解读">验收四：GitHub 解读</h4>
+<h3 id="验收四github-解读">验收四：GitHub 解读</h3>
 <p>如果 Agent 帮你解读 GitHub 项目，也要检查它有没有乱猜。</p>
 <p>GitHub 解读常见问题包括：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>表现</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>项目定位说错</td>
+<td>没看清 README</td>
+</tr>
+<tr>
+<td>技术栈判断错</td>
+<td>把依赖或框架说错</td>
+</tr>
+<tr>
+<td>启动命令猜错</td>
+<td>写了项目里没有的命令</td>
+</tr>
+<tr>
+<td>核心目录误判</td>
+<td>把不重要的文件当核心</td>
+</tr>
+<tr>
+<td>维护状态误判</td>
+<td>没看 issues、PR、releases</td>
+</tr>
+<tr>
+<td>贡献方式说错</td>
+<td>忽略 CONTRIBUTING 或项目规则</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>可以这样让 Agent 验收自己的解读：</p>
 <pre><code class="language-plain-text">请检查你对这个 GitHub 项目的解读是否有依据。
 
@@ -2044,13 +5423,89 @@ Agent 如何帮你做每日复盘？</p></blockquote>
 6. 哪些内容只是推测，不能当成事实
 7. 如果我是新手，应该优先核对哪些信息</code></pre>
 <p>GitHub 解读的验收重点是：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>验收项</th>
+<th>看哪里</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>项目是做什么的</td>
+<td>README</td>
+</tr>
+<tr>
+<td>怎么安装运行</td>
+<td>README、package.json、Dockerfile</td>
+</tr>
+<tr>
+<td>用了什么技术</td>
+<td>package.json、requirements、pyproject、配置文件</td>
+</tr>
+<tr>
+<td>核心代码在哪里</td>
+<td>src、app、packages、examples</td>
+</tr>
+<tr>
+<td>是否还在维护</td>
+<td>issues、PR、releases、commits</td>
+</tr>
+<tr>
+<td>是否能使用</td>
+<td>文档、license、安装门槛</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>GitHub 解读不是听 Agent 讲故事，</strong><br>
 <strong>而是让它每个判断都能指回项目文件。</strong></p>
 <hr>
-<h4 id="验收五ppt-图文结果">验收五：PPT / 图文结果</h4>
+<h3 id="验收五ppt-图文结果">验收五：PPT / 图文结果</h3>
 <p>如果 Agent 帮你生成 PPT 大纲、图文脚本、页面标题、配图描述，验收重点不是“字多不多”，而是页面是否适合展示。</p>
 <p>检查这些内容：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>检查项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>页面逻辑是否顺</td>
+<td>封面、问题、解释、案例、总结是否连贯</td>
+</tr>
+<tr>
+<td>每页是否只有一个重点</td>
+<td>防止信息堆太多</td>
+</tr>
+<tr>
+<td>标题是否清楚</td>
+<td>读者一眼知道这一页讲什么</td>
+</tr>
+<tr>
+<td>文案是否够短</td>
+<td>不要把文章整段塞进页面</td>
+</tr>
+<tr>
+<td>配图是否相关</td>
+<td>图要服务内容，不要只是好看</td>
+</tr>
+<tr>
+<td>风格是否统一</td>
+<td>配色、版式、语气一致</td>
+</tr>
+<tr>
+<td>是否适合平台</td>
+<td>PPT、推特长图、小红书图文要求不同</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>可以这样让 Agent 自查：</p>
 <pre><code class="language-plain-text">请帮我验收这组 PPT / 图文方案。
 
@@ -2070,11 +5525,51 @@ Agent 如何帮你做每日复盘？</p></blockquote>
 <p><strong>PPT / 图文不是内容越多越好，</strong><br>
 <strong>而是每一页都要清楚、有重点、能被快速理解。</strong></p>
 <hr>
-<h4 id="验收六自动化任务">验收六：自动化任务</h4>
+<h3 id="验收六自动化任务">验收六：自动化任务</h3>
 <p>自动化 Agent 的验收尤其重要。</p>
 <p>因为自动化任务不是只执行一次，而是会反复运行。</p>
 <p>如果设置错了，它可能每天都在重复输出错误结果，或者频繁打扰你。</p>
 <p>自动化任务要检查：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>检查项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>执行频率是否合适</td>
+<td>是否太频繁或太少</td>
+</tr>
+<tr>
+<td>触发条件是否清楚</td>
+<td>什么时候提醒，什么时候不提醒</td>
+</tr>
+<tr>
+<td>输出内容是否有用</td>
+<td>是否真的帮你减少工作</td>
+</tr>
+<tr>
+<td>权限是否过大</td>
+<td>是否能访问或修改不必要内容</td>
+</tr>
+<tr>
+<td>是否有停止条件</td>
+<td>任务结束后是否会继续运行</td>
+</tr>
+<tr>
+<td>是否需要人工确认</td>
+<td>高风险动作不能自动执行</td>
+</tr>
+<tr>
+<td>是否产生噪音</td>
+<td>是否每天发很多无用提醒</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>可以这样设置验收规则：</p>
 <pre><code class="language-plain-text">请帮我检查这个自动化任务是否设置合理。
 
@@ -2092,8 +5587,52 @@ Agent 如何帮你做每日复盘？</p></blockquote>
 <p><strong>自动化不是越多越好。</strong><br>
 <strong>好的自动化应该减少负担，而不是制造新的打扰。</strong></p>
 <hr>
-<h4 id="通用验收清单">通用验收清单</h4>
+<h3 id="通用验收清单">通用验收清单</h3>
 <p>不管是什么任务，都可以用下面这张清单来检查。</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>验收问题</th>
+<th>检查目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>是否完成了最初目标？</td>
+<td>判断任务有没有达标</td>
+</tr>
+<tr>
+<td>是否超出了任务范围？</td>
+<td>防止乱改、乱写、乱执行</td>
+</tr>
+<tr>
+<td>是否有不确定内容？</td>
+<td>防止把猜测当事实</td>
+</tr>
+<tr>
+<td>是否引入新问题？</td>
+<td>防止副作用</td>
+</tr>
+<tr>
+<td>是否有遗漏内容？</td>
+<td>防止重要信息没处理</td>
+</tr>
+<tr>
+<td>是否输出了修改记录？</td>
+<td>方便追踪</td>
+</tr>
+<tr>
+<td>是否需要人工复查？</td>
+<td>明确人要检查什么</td>
+</tr>
+<tr>
+<td>是否可以继续下一步？</td>
+<td>判断任务是否收尾</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>可以直接让 Agent 按这个清单自查：</p>
 <pre><code class="language-plain-text">请按照验收清单检查本次任务结果。
 
@@ -2115,14 +5654,50 @@ Agent 如何帮你做每日复盘？</p></blockquote>
 3. 不确定的地方标注“需要确认”
 4. 用表格输出</code></pre>
 <hr>
-<h4 id="人和-agent-的分工">人和 Agent 的分工</h4>
+<h3 id="人和-agent-的分工">人和 Agent 的分工</h3>
 <p>验收的核心，是把人和 Agent 的责任分清楚。</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>角色</th>
+<th>负责什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agent</td>
+<td>执行任务、整理内容、修改代码、输出结果</td>
+</tr>
+<tr>
+<td>Agent</td>
+<td>自查问题、总结改动、提示风险</td>
+</tr>
+<tr>
+<td>人</td>
+<td>判断目标是否达成</td>
+</tr>
+<tr>
+<td>人</td>
+<td>检查结果是否准确</td>
+</tr>
+<tr>
+<td>人</td>
+<td>决定是否采用、发布、提交、上线</td>
+</tr>
+<tr>
+<td>人</td>
+<td>对最终结果负责</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>Agent 可以提高效率，但不能替人承担责任。</p>
 <p>简单来说：</p>
 <p><strong>Agent 可以帮你做很多事，</strong><br>
 <strong>但最后点头的人，还是你。</strong></p>
 <hr>
-<h4 id="一个完整的验收-prompt">一个完整的验收 Prompt</h4>
+<h3 id="一个完整的验收-prompt">一个完整的验收 Prompt</h3>
 <p>可以直接复制下面这段：</p>
 <pre><code class="language-plain-text">请你作为我的 Agent 结果验收助手，帮我检查本次任务结果。
 
@@ -2170,7 +5745,7 @@ Agent 输出结果：
 4. 不确定的地方标注“需要确认”
 5. 最后给出结论：通过 / 需要小改 / 需要重做</code></pre>
 <hr>
-<h4 id="总结一下_3">总结一下</h4>
+<h3 id="总结一下_3">总结一下</h3>
 <p>Agent 说完成，不等于真的完成。</p>
 <p>真正的完成，需要经过验收。</p>
 <p>文章要看观点和表达。</p>
@@ -2184,9 +5759,45 @@ Agent 输出结果：
 <p>没有验收，就不算真正完成。</p>
 <p>用 Agent 做事，最稳的方式不是完全相信它，</p>
 <p>而是让它先完成任务，再让人确认结果。</p>
-<h3 id="如何把好用流程沉淀成-skill">如何把好用流程沉淀成 Skill</h3>
+<h2 id="如何把好用流程沉淀成-skill">如何把好用流程沉淀成 Skill</h2>
 <p>很多任务不是只做一次，而是会反复做。</p>
 <p>比如：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>重复任务</th>
+<th>可以沉淀成什么 Skill</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>每次都要总结文章</td>
+<td>资料整理 Skill</td>
+</tr>
+<tr>
+<td>每次都要写推文</td>
+<td>推特写作 Skill</td>
+</tr>
+<tr>
+<td>每次都要做小红书图文</td>
+<td>小红书图文 Skill</td>
+</tr>
+<tr>
+<td>每次都要读 GitHub 项目</td>
+<td>GitHub 解读 Skill</td>
+</tr>
+<tr>
+<td>每次都要修 bug</td>
+<td>Bug 修复 Skill</td>
+</tr>
+<tr>
+<td>每天都要复盘</td>
+<td>自动复盘 Skill</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>如果每次都重新写 Prompt，就会很麻烦。</p>
 <p>你每次都要重新告诉 Agent：</p>
 <blockquote><p>先做什么，后做什么。<br>
@@ -2201,7 +5812,7 @@ Agent 输出结果：
 <p><strong>Prompt 是一次性的指令，</strong><br>
 <strong>Skill 是可以反复使用的流程。</strong></p>
 <hr>
-<h4 id="为什么需要-skill">为什么需要 Skill？</h4>
+<h3 id="为什么需要-skill">为什么需要 Skill？</h3>
 <p>普通 Prompt 更像临时下达的一次任务。</p>
 <p>比如：</p>
 <blockquote><p>帮我总结这篇文章。<br>
@@ -2211,6 +5822,42 @@ Agent 输出结果：
 <p>这些都可以用，但问题是：</p>
 <p>每次都要重新说明要求。</p>
 <p>比如你总结文章时，可能每次都希望它输出：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>固定要求</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一句话总结</td>
+<td>快速知道文章讲什么</td>
+</tr>
+<tr>
+<td>核心观点</td>
+<td>提炼主要内容</td>
+</tr>
+<tr>
+<td>结构拆解</td>
+<td>看文章怎么组织</td>
+</tr>
+<tr>
+<td>可引用表达</td>
+<td>方便写作使用</td>
+</tr>
+<tr>
+<td>延伸选题</td>
+<td>继续生成内容</td>
+</tr>
+<tr>
+<td>需要确认的问题</td>
+<td>防止编造和误读</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>如果每次都手动写一遍，就很浪费时间。</p>
 <p>Skill 的作用，就是把这些固定流程提前写好。</p>
 <p>下次你只需要说：</p>
@@ -2219,34 +5866,347 @@ Agent 输出结果：
 <p>简单来说：</p>
 <p><strong>Skill 就像把你常用的工作方法，保存成一个按钮。</strong></p>
 <hr>
-<h4 id="prompt-和-skill-的区别">Prompt 和 Skill 的区别</h4>
+<h3 id="prompt-和-skill-的区别">Prompt 和 Skill 的区别</h3>
 <p>Prompt 和 Skill 都是用来指挥 Agent 的，但它们的定位不一样。</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>Prompt</th>
+<th>Skill</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>使用方式</td>
+<td>临时输入一次</td>
+<td>长期反复使用</td>
+</tr>
+<tr>
+<td>适合任务</td>
+<td>偶尔做一次的任务</td>
+<td>经常重复的任务</td>
+</tr>
+<tr>
+<td>内容重点</td>
+<td>这次要做什么</td>
+<td>每次都要怎么做</td>
+</tr>
+<tr>
+<td>稳定性</td>
+<td>容易每次写得不一样</td>
+<td>流程更固定</td>
+</tr>
+<tr>
+<td>复用性</td>
+<td>低</td>
+<td>高</td>
+</tr>
+<tr>
+<td>适合人群</td>
+<td>新手入门</td>
+<td>进阶使用</td>
+</tr>
+<tr>
+<td>简单来说</td>
+<td>一次性说明</td>
+<td>固定工作流</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>比如：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>Prompt 写法</th>
+<th>Skill 写法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>总结文章</td>
+<td>帮我总结这篇文章</td>
+<td>每次都按“摘要、观点、结构、引用、选题”输出</td>
+</tr>
+<tr>
+<td>写推文</td>
+<td>帮我写一条推文</td>
+<td>每次都按“选题、观点、钩子、正文、标签”生成</td>
+</tr>
+<tr>
+<td>修 bug</td>
+<td>帮我修这个 bug</td>
+<td>每次都按“定位、分析、方案、修改、测试、复盘”执行</td>
+</tr>
+<tr>
+<td>GitHub 解读</td>
+<td>帮我看懂这个项目</td>
+<td>每次都按“README、目录、技术栈、启动、核心代码”分析</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>Prompt 解决一次任务，</strong><br>
 <strong>Skill 解决一类任务。</strong></p>
 <hr>
-<h4 id="什么样的任务适合做成-skill">什么样的任务适合做成 Skill？</h4>
+<h3 id="什么样的任务适合做成-skill">什么样的任务适合做成 Skill？</h3>
 <p>不是所有任务都需要做成 Skill。</p>
 <p>适合沉淀成 Skill 的任务，通常有三个特点：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>特点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>经常重复</td>
+<td>每周、每天、每个项目都会遇到</td>
+</tr>
+<tr>
+<td>流程固定</td>
+<td>每次步骤差不多</td>
+</tr>
+<tr>
+<td>输出格式稳定</td>
+<td>每次都希望得到类似结构</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>比如这些任务很适合做成 Skill：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>任务</th>
+<th>为什么适合</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文章总结</td>
+<td>每次都需要摘要、观点、结构、引用</td>
+</tr>
+<tr>
+<td>推文写作</td>
+<td>每次都需要标题、正文、标签、互动句</td>
+</tr>
+<tr>
+<td>小红书图文</td>
+<td>每次都需要封面、正文、标签、配图描述</td>
+</tr>
+<tr>
+<td>GitHub 解读</td>
+<td>每次都要看 README、目录、技术栈、启动方式</td>
+</tr>
+<tr>
+<td>Bug 修复</td>
+<td>每次都要定位原因、提出方案、修改、测试</td>
+</tr>
+<tr>
+<td>每日复盘</td>
+<td>每天都要整理完成、问题、计划</td>
+</tr>
+<tr>
+<td>PPT 大纲</td>
+<td>每次都要拆页、标题、文案、配图建议</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>不太适合做成 Skill 的任务：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>任务</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一次性的简单问题</td>
+<td>没必要沉淀</td>
+</tr>
+<tr>
+<td>变化很大的创意任务</td>
+<td>固定流程可能限制发挥</td>
+</tr>
+<tr>
+<td>还没跑通的方法</td>
+<td>先不要急着固化</td>
+</tr>
+<tr>
+<td>自己还没想清楚的任务</td>
+<td>先用 Prompt 多试几次</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>重复三次以上、流程差不多的任务，就可以考虑做成 Skill。</strong></p>
 <hr>
-<h4 id="一个-skill-应该包含什么">一个 Skill 应该包含什么？</h4>
+<h3 id="一个-skill-应该包含什么">一个 Skill 应该包含什么？</h3>
 <p>一个好用的 Skill，不是只写一句“帮我做某事”。</p>
 <p>它应该包含一套完整规则。</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>模块</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Skill 名称</td>
+<td>说明这个 Skill 是做什么的</td>
+</tr>
+<tr>
+<td>使用场景</td>
+<td>说明什么时候使用</td>
+</tr>
+<tr>
+<td>输入内容</td>
+<td>说明用户需要提供什么</td>
+</tr>
+<tr>
+<td>执行流程</td>
+<td>说明 Agent 先做什么、后做什么</td>
+</tr>
+<tr>
+<td>输出格式</td>
+<td>说明最终结果长什么样</td>
+</tr>
+<tr>
+<td>风险提醒</td>
+<td>说明哪些地方不能乱来</td>
+</tr>
+<tr>
+<td>验收标准</td>
+<td>说明怎么判断结果是否合格</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>比如一个“资料整理 Skill”，可以这样设计：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>模块</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Skill 名称</td>
+<td>资料整理 Skill</td>
+</tr>
+<tr>
+<td>使用场景</td>
+<td>整理文章、PDF、链接、会议记录</td>
+</tr>
+<tr>
+<td>输入内容</td>
+<td>原文、链接、资料、目标</td>
+</tr>
+<tr>
+<td>执行流程</td>
+<td>先读内容，再提炼观点，再整理成表格</td>
+</tr>
+<tr>
+<td>输出格式</td>
+<td>摘要、核心观点、结构、引用、行动建议</td>
+</tr>
+<tr>
+<td>风险提醒</td>
+<td>不要编造原文没有的信息</td>
+</tr>
+<tr>
+<td>验收标准</td>
+<td>重点清楚、来源明确、不确定内容有标注</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>一个 Skill，本质上就是一份写给 Agent 的工作说明书。</strong></p>
 <hr>
-<h4 id="从-prompt-到-skill-的-4-个步骤">从 Prompt 到 Skill 的 4 个步骤</h4>
+<h3 id="从-prompt-到-skill-的-4-个步骤">从 Prompt 到 Skill 的 4 个步骤</h3>
 <p>把一个 Prompt 变成 Skill，可以按下面 4 步来。</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>要做什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一步</td>
+<td>找到重复任务</td>
+</tr>
+<tr>
+<td>第二步</td>
+<td>总结固定流程</td>
+</tr>
+<tr>
+<td>第三步</td>
+<td>固定输出格式</td>
+</tr>
+<tr>
+<td>第四步</td>
+<td>加上风险和验收规则</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
-<h4 id="第一步找到重复任务">第一步：找到重复任务</h4>
+<h3 id="第一步找到重复任务">第一步：找到重复任务</h3>
 <p>先观察自己平时经常让 Agent 做什么。</p>
 <p>可以问自己：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>我每周都会让 Agent 做什么？</td>
+<td>找高频任务</td>
+</tr>
+<tr>
+<td>哪些 Prompt 我反复复制？</td>
+<td>找可复用模板</td>
+</tr>
+<tr>
+<td>哪些任务每次输出格式差不多？</td>
+<td>找稳定流程</td>
+</tr>
+<tr>
+<td>哪些任务最容易跑偏？</td>
+<td>适合加规则</td>
+</tr>
+<tr>
+<td>哪些任务最能节省时间？</td>
+<td>优先沉淀</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>比如你发现自己经常做这些事：</p>
 <blockquote><p>总结文章。<br>
 写推文。<br>
@@ -2258,17 +6218,57 @@ Agent 输出结果：
 <p><strong>先不要急着写 Skill，</strong><br>
 <strong>先找出你真正反复做的任务。</strong></p>
 <hr>
-<h4 id="第二步总结固定流程">第二步：总结固定流程</h4>
+<h3 id="第二步总结固定流程">第二步：总结固定流程</h3>
 <p>找到重复任务后，就要总结每次都应该怎么做。</p>
 <p>比如“写推文”这个任务，不能只写：</p>
 <blockquote><p>帮我写推文。</p></blockquote>
 <p>而应该拆成流程：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一步</td>
+<td>理解主题</td>
+</tr>
+<tr>
+<td>第二步</td>
+<td>提炼核心观点</td>
+</tr>
+<tr>
+<td>第三步</td>
+<td>找传播角度</td>
+</tr>
+<tr>
+<td>第四步</td>
+<td>写 3 个标题版本</td>
+</tr>
+<tr>
+<td>第五步</td>
+<td>写正文</td>
+</tr>
+<tr>
+<td>第六步</td>
+<td>降低 AI 味</td>
+</tr>
+<tr>
+<td>第七步</td>
+<td>生成标签和互动句</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>这套流程固定下来后，就可以变成 Skill 的执行流程。</p>
 <p>简单来说：</p>
 <p><strong>Skill 的核心，不是告诉 Agent 做什么，</strong><br>
 <strong>而是告诉它每次都按什么步骤做。</strong></p>
 <hr>
-<h4 id="第三步固定输出格式">第三步：固定输出格式</h4>
+<h3 id="第三步固定输出格式">第三步：固定输出格式</h3>
 <p>很多 Agent 结果不好用，不是因为它不会做，而是输出格式不稳定。</p>
 <p>有时候输出一大段话，</p>
 <p>有时候输出表格，</p>
@@ -2304,9 +6304,45 @@ Agent 输出结果：
 <p><strong>流程决定 Agent 怎么做，</strong><br>
 <strong>输出格式决定结果好不好用。</strong></p>
 <hr>
-<h4 id="第四步加上风险和验收规则">第四步：加上风险和验收规则</h4>
+<h3 id="第四步加上风险和验收规则">第四步：加上风险和验收规则</h3>
 <p>Skill 不能只写“怎么做”，还要写“不能怎么做”。</p>
 <p>尤其是代码、资料、写作、自动化任务，都需要风险规则。</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>Skill 类型</th>
+<th>风险规则</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>资料整理 Skill</td>
+<td>不要编造原文没有的信息</td>
+</tr>
+<tr>
+<td>写作 Skill</td>
+<td>不要编造数据、案例和来源</td>
+</tr>
+<tr>
+<td>编程 Skill</td>
+<td>不要乱改文件，不要删除已有功能</td>
+</tr>
+<tr>
+<td>GitHub 解读 Skill</td>
+<td>不要猜测项目功能，要说明依据</td>
+</tr>
+<tr>
+<td>PPT / 图文 Skill</td>
+<td>不要把长文直接塞进页面</td>
+</tr>
+<tr>
+<td>自动复盘 Skill</td>
+<td>不要夸大完成情况，不要编造进展</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>可以加一段通用规则：</p>
 <pre><code class="language-plain-text">执行本 Skill 时，请遵守以下规则：
 
@@ -2321,7 +6357,7 @@ Agent 输出结果：
 <p><strong>好 Skill 不只是提高效率，</strong><br>
 <strong>还要降低出错概率。</strong></p>
 <hr>
-<h4 id="skill-示例一资料整理-skill">Skill 示例一：资料整理 Skill</h4>
+<h3 id="skill-示例一资料整理-skill">Skill 示例一：资料整理 Skill</h3>
 <pre><code class="language-plain-text">Skill 名称：资料整理 Skill
 
 使用场景：
@@ -2357,10 +6393,82 @@ Agent 输出结果：
 3. 重要内容尽量用表格输出
 4. 不要只输出一段摘要</code></pre>
 <p>适合场景：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>用法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>看长文章</td>
+<td>快速提炼重点</td>
+</tr>
+<tr>
+<td>看 PDF</td>
+<td>按章节整理</td>
+</tr>
+<tr>
+<td>整理会议记录</td>
+<td>提取结论和待办</td>
+</tr>
+<tr>
+<td>做调研</td>
+<td>多资料对比</td>
+</tr>
+<tr>
+<td>写文章前</td>
+<td>把资料变成素材库</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
-<h4 id="如何判断一个-skill-是否好用">如何判断一个 Skill 是否好用？</h4>
+<h3 id="如何判断一个-skill-是否好用">如何判断一个 Skill 是否好用？</h3>
 <p>一个 Skill 做完以后，不是写完就结束，还要看它是否真的好用。</p>
 <p>可以从这几个维度判断：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>判断维度</th>
+<th>检查问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>清楚</td>
+<td>Agent 是否知道什么时候使用</td>
+</tr>
+<tr>
+<td>稳定</td>
+<td>每次输出是否格式一致</td>
+</tr>
+<tr>
+<td>可复用</td>
+<td>换一个类似任务还能不能用</td>
+</tr>
+<tr>
+<td>有边界</td>
+<td>是否写清楚不能做什么</td>
+</tr>
+<tr>
+<td>可验收</td>
+<td>是否有检查标准</td>
+</tr>
+<tr>
+<td>省时间</td>
+<td>是否比每次重写 Prompt 更方便</td>
+</tr>
+<tr>
+<td>可迭代</td>
+<td>使用后能不能继续优化</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>可以用这个验收 Prompt：</p>
 <pre><code class="language-plain-text">请帮我检查这个 Skill 是否好用。
 
@@ -2380,15 +6488,51 @@ Agent 输出结果：
 <p><strong>Skill 也需要迭代。</strong><br>
 <strong>第一次写出来只是初版，用几次之后才会越来越顺手。</strong></p>
 <hr>
-<h4 id="从个人-prompt-库到-skill-库">从个人 Prompt 库到 Skill 库</h4>
+<h3 id="从个人-prompt-库到-skill-库">从个人 Prompt 库到 Skill 库</h3>
 <p>当你有多个 Skill 后，就可以建立自己的 Skill 库。</p>
 <p>比如：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>Skill 分类</th>
+<th>具体 Skill</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>资料类</td>
+<td>资料整理 Skill、PDF 总结 Skill、会议纪要 Skill</td>
+</tr>
+<tr>
+<td>写作类</td>
+<td>推特写作 Skill、小红书 Skill、公众号文章 Skill</td>
+</tr>
+<tr>
+<td>编程类</td>
+<td>读项目 Skill、Bug 修复 Skill、部署检查 Skill</td>
+</tr>
+<tr>
+<td>GitHub 类</td>
+<td>GitHub 解读 Skill、开源项目对比 Skill</td>
+</tr>
+<tr>
+<td>图文类</td>
+<td>PPT 大纲 Skill、配图描述 Skill、封面文案 Skill</td>
+</tr>
+<tr>
+<td>复盘类</td>
+<td>每日复盘 Skill、项目复盘 Skill、学习复盘 Skill</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>这样以后你就不是“每次重新问 AI”，而是逐渐形成自己的 Agent 工作系统。</p>
 <p>简单来说：</p>
 <p><strong>一个 Prompt 解决一次问题，</strong><br>
 <strong>一套 Skill 库解决一类工作。</strong></p>
 <hr>
-<h4 id="总结一下_4">总结一下</h4>
+<h3 id="总结一下_4">总结一下</h3>
 <p>Prompt 是一次性的指令，</p>
 <p>Skill 是可以反复使用的流程。</p>
 <p>当一个任务你做了一次、两次、三次，</p>
@@ -2406,7 +6550,7 @@ Agent 输出结果：
 <strong>一个 Skill，是一套方法。</strong><br>
 <strong>一套 Skill 库，就是你的 Agent 工作系统。</strong></p>
 <hr>
-<h3 id="普通人的-agent-学习路线图">普通人的 Agent 学习路线图</h3>
+<h2 id="普通人的-agent-学习路线图">普通人的 Agent 学习路线图</h2>
 <p>学习 Agent 不需要一上来就学很复杂的东西。</p>
 <p>很多人刚接触 Agent，会被各种概念吓到：</p>
 <blockquote><p>Agent、Prompt、工作流、工具调用、MCP、Skill、自动化、GitHub、AI 编程……</p></blockquote>
@@ -2415,12 +6559,80 @@ Agent 输出结果：
 <blockquote><p>先会用，再用稳，最后把好用的方法沉淀下来。</p></blockquote>
 <p>也就是说，不要从概念开始学，而是从真实任务开始学。</p>
 <p>比如：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>真实任务</th>
+<th>可以练习什么能力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>总结一篇文章</td>
+<td>练习资料整理</td>
+</tr>
+<tr>
+<td>写一个大纲</td>
+<td>练习写作协作</td>
+</tr>
+<tr>
+<td>做一次复盘</td>
+<td>练习结构化总结</td>
+</tr>
+<tr>
+<td>看懂一个 GitHub 项目</td>
+<td>练习项目解读</td>
+</tr>
+<tr>
+<td>做一个网页</td>
+<td>练习 AI 编程</td>
+</tr>
+<tr>
+<td>把文章拆成图文</td>
+<td>练习内容视觉化</td>
+</tr>
+<tr>
+<td>固定一个流程</td>
+<td>练习 Skill 沉淀</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>普通人学 Agent，不是背概念，</strong><br>
 <strong>而是先让 Agent 帮你完成一个个真实任务。</strong></p>
 <hr>
-<h4 id="agent-学习路线可以分成三个阶段">Agent 学习路线可以分成三个阶段</h4>
+<h3 id="agent-学习路线可以分成三个阶段">Agent 学习路线可以分成三个阶段</h3>
 <p>普通人学习 Agent，可以分成三个阶段：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>学习重点</th>
+<th>目标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7 天入门</td>
+<td>学会指挥 Agent，完成简单任务</td>
+<td>会用 Agent 整理资料、写大纲、做总结</td>
+</tr>
+<tr>
+<td>30 天进阶</td>
+<td>学会工作流和实战案例</td>
+<td>会用 Agent 写作、编程、看 GitHub、做图文</td>
+</tr>
+<tr>
+<td>长期进阶</td>
+<td>学会 Skill、自动化和项目化使用</td>
+<td>把 Agent 变成自己的长期工作系统</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>这三个阶段不是考试，也不是固定标准。</p>
 <p>它更像一条路线图：</p>
 <blockquote><p>第一阶段：知道 Agent 怎么用。<br>
@@ -2429,26 +6641,196 @@ Agent 输出结果：
 <p>简单来说：</p>
 <p><strong>7 天学会用，30 天学会做事，长期学会沉淀。</strong></p>
 <hr>
-<h4 id="第一阶段7-天入门">第一阶段：7 天入门</h4>
+<h3 id="第一阶段7-天入门">第一阶段：7 天入门</h3>
 <p>7 天入门的目标，不是成为专家，而是先把 Agent 用起来。</p>
 <p>重点是学会三件事：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>能力</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>会下任务</td>
+<td>能说清楚目标、背景、限制</td>
+</tr>
+<tr>
+<td>会看结果</td>
+<td>不盲信 Agent 的输出</td>
+</tr>
+<tr>
+<td>会做简单任务</td>
+<td>能整理资料、写大纲、做复盘</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>7 天可以这样安排：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>天数</th>
+<th>任务</th>
+<th>练习重点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第 1 天</td>
+<td>理解 Agent 和 ChatGPT 的区别</td>
+<td>知道 Agent 不是只聊天，而是能完成任务</td>
+</tr>
+<tr>
+<td>第 2 天</td>
+<td>学会写清楚目标、背景、限制</td>
+<td>学会正确下任务</td>
+</tr>
+<tr>
+<td>第 3 天</td>
+<td>用 Agent 总结一篇文章</td>
+<td>练习资料整理</td>
+</tr>
+<tr>
+<td>第 4 天</td>
+<td>用 Agent 写一个内容大纲</td>
+<td>练习写作辅助</td>
+</tr>
+<tr>
+<td>第 5 天</td>
+<td>用 Agent 做一次资料整理</td>
+<td>练习结构化输出</td>
+</tr>
+<tr>
+<td>第 6 天</td>
+<td>用 Agent 做一次任务复盘</td>
+<td>练习总结和下一步计划</td>
+</tr>
+<tr>
+<td>第 7 天</td>
+<td>总结自己的常用 Prompt 模板</td>
+<td>把好用提示词保存下来</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>7 天结束后，你至少应该能做到：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>能力</th>
+<th>达成标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>会描述任务</td>
+<td>能写清楚目标、背景、限制和输出格式</td>
+</tr>
+<tr>
+<td>会使用模板</td>
+<td>能套用资料整理、写作、复盘模板</td>
+</tr>
+<tr>
+<td>会判断结果</td>
+<td>知道不能直接相信 Agent 说“完成了”</td>
+</tr>
+<tr>
+<td>会保存经验</td>
+<td>能把好用的 Prompt 存下来</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>7 天入门，不是学完所有 Agent 知识，</strong><br>
 <strong>而是让你从“不会开口”变成“能让 Agent 做简单任务”。</strong></p>
 <hr>
-<h4 id="第-1-天理解-agent-和-chatgpt-的区别">第 1 天：理解 Agent 和 ChatGPT 的区别</h4>
+<h3 id="第-1-天理解-agent-和-chatgpt-的区别">第 1 天：理解 Agent 和 ChatGPT 的区别</h3>
 <p>第一天先搞清楚一个核心问题：</p>
 <blockquote><p>Agent 和普通 ChatGPT 有什么不同？</p></blockquote>
 <p>可以简单理解：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>ChatGPT</th>
+<th>Agent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>更像什么</td>
+<td>聊天助手</td>
+<td>任务执行助手</td>
+</tr>
+<tr>
+<td>主要能力</td>
+<td>回答问题、解释概念</td>
+<td>理解目标、拆解任务、调用工具、执行操作</td>
+</tr>
+<tr>
+<td>使用方式</td>
+<td>问一句，答一句</td>
+<td>给目标，按流程完成</td>
+</tr>
+<tr>
+<td>输出结果</td>
+<td>答案、建议、文本</td>
+<td>任务结果、文件修改、总结、操作记录</td>
+</tr>
+<tr>
+<td>风险</td>
+<td>回答可能不准确</td>
+<td>可能误改、误删、跑偏</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>第一天不需要学太深，只要记住：</p>
 <p><strong>ChatGPT 更像“帮你找答案”，</strong><br>
 <strong>Agent 更像“帮你完成任务”。</strong></p>
 <hr>
-<h4 id="第-2-天学会写清楚任务">第 2 天：学会写清楚任务</h4>
+<h3 id="第-2-天学会写清楚任务">第 2 天：学会写清楚任务</h3>
 <p>第二天重点练习：如何正确指挥 Agent。</p>
 <p>一个好任务，最好包含五个要素：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>目标</td>
+<td>你想完成什么</td>
+</tr>
+<tr>
+<td>背景</td>
+<td>这个任务发生在什么场景</td>
+</tr>
+<tr>
+<td>限制</td>
+<td>哪些不能做</td>
+</tr>
+<tr>
+<td>输出格式</td>
+<td>最后要交付什么</td>
+</tr>
+<tr>
+<td>验收标准</td>
+<td>怎么判断完成</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>可以用这个模板：</p>
 <pre><code class="language-plain-text">请帮我完成【具体任务】。
 
@@ -2469,7 +6851,7 @@ Agent 输出结果：
 <p>简单来说：</p>
 <p><strong>学 Agent 的第一步，就是学会把任务说清楚。</strong></p>
 <hr>
-<h4 id="第-3-天用-agent-总结一篇文章">第 3 天：用 Agent 总结一篇文章</h4>
+<h3 id="第-3-天用-agent-总结一篇文章">第 3 天：用 Agent 总结一篇文章</h3>
 <p>第三天开始做第一个实战任务：总结文章。</p>
 <p>不要只说：</p>
 <blockquote><p>帮我总结一下。</p></blockquote>
@@ -2491,10 +6873,38 @@ Agent 输出结果：
 3. 不确定内容标注“需要确认”
 4. 尽量用表格输出</code></pre>
 <p>这一天重点练习：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>练习点</th>
+<th>目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>结构化总结</td>
+<td>不要只要一段摘要</td>
+</tr>
+<tr>
+<td>提取重点</td>
+<td>找到真正有用的信息</td>
+</tr>
+<tr>
+<td>标注不确定</td>
+<td>防止 Agent 编造</td>
+</tr>
+<tr>
+<td>生成下一步</td>
+<td>把资料变成可继续使用的内容</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>总结文章，是普通人最容易上手的 Agent 任务。</strong></p>
 <hr>
-<h4 id="第-4-天用-agent-写一个内容大纲">第 4 天：用 Agent 写一个内容大纲</h4>
+<h3 id="第-4-天用-agent-写一个内容大纲">第 4 天：用 Agent 写一个内容大纲</h3>
 <p>第四天练习写作辅助。</p>
 <p>不要直接让 Agent 写全文，而是先让它做大纲。</p>
 <pre><code class="language-plain-text">我想写一篇关于【主题】的内容。
@@ -2518,11 +6928,39 @@ Agent 输出结果：
 5. 适合加入的案例
 6. 哪些地方容易写空</code></pre>
 <p>这一天重点练习：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>练习点</th>
+<th>目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>先大纲后正文</td>
+<td>防止一上来写散</td>
+</tr>
+<tr>
+<td>给读者背景</td>
+<td>让内容更贴近目标人群</td>
+</tr>
+<tr>
+<td>提供个人观点</td>
+<td>防止文章没有判断</td>
+</tr>
+<tr>
+<td>检查结构</td>
+<td>看文章是否有逻辑</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>写作 Agent 不是上来写全文，</strong><br>
 <strong>而是先帮你搭好文章骨架。</strong></p>
 <hr>
-<h4 id="第-5-天用-agent-做一次资料整理">第 5 天：用 Agent 做一次资料整理</h4>
+<h3 id="第-5-天用-agent-做一次资料整理">第 5 天：用 Agent 做一次资料整理</h3>
 <p>第五天可以把多份资料交给 Agent 整理。</p>
 <p>比如几篇文章、几个链接、一段会议记录、一堆笔记。</p>
 <p>可以这样说：</p>
@@ -2547,11 +6985,39 @@ Agent 输出结果：
 3. 不确定内容标注“需要确认”
 4. 尽量用表格输出</code></pre>
 <p>这一天重点练习：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>练习点</th>
+<th>目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>多资料对比</td>
+<td>从“堆资料”变成“看差异”</td>
+</tr>
+<tr>
+<td>信息去重</td>
+<td>找到重复观点和关键观点</td>
+</tr>
+<tr>
+<td>发现冲突</td>
+<td>不盲信单一资料</td>
+</tr>
+<tr>
+<td>形成行动</td>
+<td>看完资料知道下一步做什么</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>资料整理的目标不是收藏更多，</strong><br>
 <strong>而是把资料变成能用的知识。</strong></p>
 <hr>
-<h4 id="第-6-天用-agent-做一次任务复盘">第 6 天：用 Agent 做一次任务复盘</h4>
+<h3 id="第-6-天用-agent-做一次任务复盘">第 6 天：用 Agent 做一次任务复盘</h3>
 <p>第六天练习自动复盘。</p>
 <p>你可以把一天做过的事情随便写下来，让 Agent 帮你整理。</p>
 <pre><code class="language-plain-text">请帮我整理今天的任务复盘。
@@ -2581,13 +7047,77 @@ Agent 输出结果：
 2. 明日计划要具体
 3. 用表格输出优先级</code></pre>
 <p>这一天重点练习：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>练习点</th>
+<th>目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>总结完成</td>
+<td>看清楚今天做了什么</td>
+</tr>
+<tr>
+<td>分析问题</td>
+<td>找出卡住原因</td>
+</tr>
+<tr>
+<td>排优先级</td>
+<td>明天知道先做什么</td>
+</tr>
+<tr>
+<td>持续记录</td>
+<td>让进展可以积累</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>复盘不是写流水账，</strong><br>
 <strong>而是把今天变成明天的起点。</strong></p>
 <hr>
-<h4 id="第-7-天整理自己的-prompt-模板">第 7 天：整理自己的 Prompt 模板</h4>
+<h3 id="第-7-天整理自己的-prompt-模板">第 7 天：整理自己的 Prompt 模板</h3>
 <p>第七天不要急着学新东西，而是整理前 6 天用过的 Prompt。</p>
 <p>可以整理成一个小模板库：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>模板名称</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>任务说明模板</td>
+<td>用来给 Agent 下任务</td>
+</tr>
+<tr>
+<td>文章总结模板</td>
+<td>用来总结文章</td>
+</tr>
+<tr>
+<td>写作大纲模板</td>
+<td>用来搭文章结构</td>
+</tr>
+<tr>
+<td>资料整理模板</td>
+<td>用来整理多份资料</td>
+</tr>
+<tr>
+<td>复盘模板</td>
+<td>用来做每日总结</td>
+</tr>
+<tr>
+<td>验收模板</td>
+<td>用来检查 Agent 结果</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>可以让 Agent 帮你整理：</p>
 <pre><code class="language-plain-text">请帮我把最近使用过的 Prompt 整理成一个模板库。
 
@@ -2607,110 +7137,691 @@ Agent 输出结果：
 <p><strong>第 7 天的重点，不是多学一个技巧，</strong><br>
 <strong>而是把前面学到的东西保存下来。</strong></p>
 <hr>
-<h4 id="第二阶段30-天进阶">第二阶段：30 天进阶</h4>
+<h3 id="第二阶段30-天进阶">第二阶段：30 天进阶</h3>
 <p>30 天进阶的目标，是从“会用 Agent 做简单任务”，升级到“能用 Agent 完成真实工作”。</p>
 <p>这一阶段可以围绕 6 个方向练习：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>方向</th>
+<th>练习任务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>资料整理</td>
+<td>整理文章、PDF、链接</td>
+</tr>
+<tr>
+<td>写作</td>
+<td>选题、大纲、标题、正文、发布文案</td>
+</tr>
+<tr>
+<td>编程</td>
+<td>做网页、修 bug、改项目</td>
+</tr>
+<tr>
+<td>GitHub</td>
+<td>看懂一个开源项目</td>
+</tr>
+<tr>
+<td>图文</td>
+<td>把文章拆成 PPT 或长图</td>
+</tr>
+<tr>
+<td>复盘</td>
+<td>建立每日总结习惯</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>可以把 30 天分成 4 周：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>周期</th>
+<th>主题</th>
+<th>目标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第 1 周</td>
+<td>资料整理 + 写作</td>
+<td>会把资料变成内容</td>
+</tr>
+<tr>
+<td>第 2 周</td>
+<td>AI 编程 + GitHub</td>
+<td>会用 Agent 读项目、做网页、看仓库</td>
+</tr>
+<tr>
+<td>第 3 周</td>
+<td>PPT / 图文 + 发布</td>
+<td>会把内容变成展示页面</td>
+</tr>
+<tr>
+<td>第 4 周</td>
+<td>复盘 + 模板沉淀</td>
+<td>建立自己的 Prompt 模板库</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>30 天进阶，不是每天学一个概念，</strong><br>
 <strong>而是每周完成一类真实任务。</strong></p>
 <hr>
-<h4 id="第-1-周资料整理-写作">第 1 周：资料整理 + 写作</h4>
+<h3 id="第-1-周资料整理-写作">第 1 周：资料整理 + 写作</h3>
 <p>第一周重点练习：</p>
 <blockquote><p>把资料变成内容。</p></blockquote>
 <p>你可以做这些任务：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>任务</th>
+<th>练习目标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>总结 3 篇文章</td>
+<td>提炼核心观点</td>
+</tr>
+<tr>
+<td>整理 1 份 PDF</td>
+<td>按章节提取重点</td>
+</tr>
+<tr>
+<td>对比 3 个链接</td>
+<td>做结构化对比</td>
+</tr>
+<tr>
+<td>生成 10 个选题</td>
+<td>练习选题能力</td>
+</tr>
+<tr>
+<td>写 1 篇文章大纲</td>
+<td>练习内容结构</td>
+</tr>
+<tr>
+<td>修改 1 段正文</td>
+<td>练习降 AI 味</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>这一周结束后，你应该能做到：</p>
 <p><strong>给 Agent 一堆资料，它能帮你整理成选题、大纲和正文素材。</strong></p>
 <hr>
-<h4 id="第-2-周ai-编程-github">第 2 周：AI 编程 + GitHub</h4>
+<h3 id="第-2-周ai-编程-github">第 2 周：AI 编程 + GitHub</h3>
 <p>第二周重点练习：</p>
 <blockquote><p>用 Agent 看懂项目，完成简单编程任务。</p></blockquote>
 <p>你可以做这些任务：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>任务</th>
+<th>练习目标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>看懂一个 GitHub 项目</td>
+<td>理解 README、目录、技术栈</td>
+</tr>
+<tr>
+<td>本地运行一个项目</td>
+<td>找启动命令和依赖</td>
+</tr>
+<tr>
+<td>做一个简单网页</td>
+<td>练习页面结构和样式</td>
+</tr>
+<tr>
+<td>修一个小 bug</td>
+<td>练习定位问题</td>
+</tr>
+<tr>
+<td>看一次 diff</td>
+<td>学会检查改动</td>
+</tr>
+<tr>
+<td>写一份 README</td>
+<td>练习项目文档</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>这一周要特别记住：</p>
 <blockquote><p>不要一上来让 Agent 改项目。<br>
 先读项目，再拆任务，再小步修改。</p></blockquote>
 <p>简单来说：</p>
 <p><strong>AI 编程 Agent 可以动手，但你要用流程管住它。</strong></p>
 <hr>
-<h4 id="第-3-周ppt-图文-发布">第 3 周：PPT / 图文 + 发布</h4>
+<h3 id="第-3-周ppt-图文-发布">第 3 周：PPT / 图文 + 发布</h3>
 <p>第三周重点练习：</p>
 <blockquote><p>把内容变成可展示的页面。</p></blockquote>
 <p>你可以做这些任务：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>任务</th>
+<th>练习目标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>把一篇文章拆成 6 页图文</td>
+<td>练习内容拆页</td>
+</tr>
+<tr>
+<td>生成一组 PPT 大纲</td>
+<td>练习页面逻辑</td>
+</tr>
+<tr>
+<td>写每页标题</td>
+<td>练习短句表达</td>
+</tr>
+<tr>
+<td>生成配图描述</td>
+<td>练习视觉提示词</td>
+</tr>
+<tr>
+<td>做一张封面图提示词</td>
+<td>练习封面钩子</td>
+</tr>
+<tr>
+<td>生成发布文案</td>
+<td>练习平台适配</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>这一周结束后，你应该能做到：</p>
 <p><strong>给 Agent 一篇文章，它可以帮你拆成 PPT、长图、封面和发布文案。</strong></p>
 <hr>
-<h4 id="第-4-周复盘-模板沉淀">第 4 周：复盘 + 模板沉淀</h4>
+<h3 id="第-4-周复盘-模板沉淀">第 4 周：复盘 + 模板沉淀</h3>
 <p>第四周重点练习：</p>
 <blockquote><p>把用过的方法保存下来。</p></blockquote>
 <p>你可以做这些任务：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>任务</th>
+<th>练习目标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>连续 7 天做每日复盘</td>
+<td>建立记录习惯</td>
+</tr>
+<tr>
+<td>整理自己的高频任务</td>
+<td>找出重复流程</td>
+</tr>
+<tr>
+<td>保存 5 个常用 Prompt</td>
+<td>建立模板库</td>
+</tr>
+<tr>
+<td>把 1 个 Prompt 改成 Skill</td>
+<td>开始流程沉淀</td>
+</tr>
+<tr>
+<td>做一次月度复盘</td>
+<td>总结 30 天收获</td>
+</tr>
+<tr>
+<td>规划下一个真实项目</td>
+<td>进入长期进阶</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>30 天最后一周，重点不是继续堆技巧，</strong><br>
 <strong>而是把好用的方法沉淀下来。</strong></p>
 <hr>
-<h4 id="第三阶段长期进阶">第三阶段：长期进阶</h4>
+<h3 id="第三阶段长期进阶">第三阶段：长期进阶</h3>
 <p>长期进阶的目标，是把 Agent 从一个“工具”，变成你的“工作系统”。</p>
 <p>这个阶段要关注：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>进阶方向</th>
+<th>目标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prompt 模板库</td>
+<td>把常用任务变成模板</td>
+</tr>
+<tr>
+<td>Skill</td>
+<td>把稳定流程变成可复用技能</td>
+</tr>
+<tr>
+<td>自动化</td>
+<td>让重复任务定期执行</td>
+</tr>
+<tr>
+<td>项目化</td>
+<td>用 Agent 持续推进真实项目</td>
+</tr>
+<tr>
+<td>团队协作</td>
+<td>让 Agent 参与文档、代码、复盘和协作流程</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>长期进阶不是学更多概念，而是形成自己的工作流。</p>
 <p>比如：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>工作系统</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>写作系统</td>
+<td>选题、资料整理、大纲、正文、发布、复盘</td>
+</tr>
+<tr>
+<td>编程系统</td>
+<td>读项目、拆任务、改代码、测试、提交、复盘</td>
+</tr>
+<tr>
+<td>学习系统</td>
+<td>学习资料、概念解释、练习任务、复习清单</td>
+</tr>
+<tr>
+<td>内容系统</td>
+<td>文章、推文、图文、PPT、封面、发布计划</td>
+</tr>
+<tr>
+<td>项目系统</td>
+<td>目标、任务、进度、风险、复盘、下一步</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>长期进阶的重点，不是问 Agent 更多问题，</strong><br>
 <strong>而是让 Agent 参与到你的长期工作流程里。</strong></p>
 <hr>
-<h4 id="长期进阶一建立-prompt-模板库">长期进阶一：建立 Prompt 模板库</h4>
+<h3 id="长期进阶一建立-prompt-模板库">长期进阶一：建立 Prompt 模板库</h3>
 <p>当你经常使用 Agent 时，最好建立自己的 Prompt 模板库。</p>
 <p>可以按场景分类：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>模板</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>资料类</td>
+<td>文章总结、PDF 整理、多资料对比</td>
+</tr>
+<tr>
+<td>写作类</td>
+<td>选题、大纲、标题、正文修改、发布文案</td>
+</tr>
+<tr>
+<td>编程类</td>
+<td>读项目、加功能、修 bug、部署检查</td>
+</tr>
+<tr>
+<td>GitHub 类</td>
+<td>项目解读、技术栈判断、启动方式分析</td>
+</tr>
+<tr>
+<td>图文类</td>
+<td>PPT 大纲、页面文案、配图描述</td>
+</tr>
+<tr>
+<td>复盘类</td>
+<td>每日复盘、项目复盘、学习复盘</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>模板库就是你自己的 Agent 工具箱。</strong></p>
 <hr>
-<h4 id="长期进阶二把模板升级成-skill">长期进阶二：把模板升级成 Skill</h4>
+<h3 id="长期进阶二把模板升级成-skill">长期进阶二：把模板升级成 Skill</h3>
 <p>当某个模板反复使用，并且流程稳定，就可以升级成 Skill。</p>
 <p>比如：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>模板</th>
+<th>升级后的 Skill</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文章总结模板</td>
+<td>资料整理 Skill</td>
+</tr>
+<tr>
+<td>推文模板</td>
+<td>推特写作 Skill</td>
+</tr>
+<tr>
+<td>图文拆页模板</td>
+<td>PPT / 图文 Skill</td>
+</tr>
+<tr>
+<td>GitHub 项目分析模板</td>
+<td>GitHub 解读 Skill</td>
+</tr>
+<tr>
+<td>Bug 修复模板</td>
+<td>Bug 修复 Skill</td>
+</tr>
+<tr>
+<td>每日总结模板</td>
+<td>自动复盘 Skill</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>Skill 的核心是：</p>
 <blockquote><p>固定使用场景、固定执行流程、固定输出格式、固定风险规则。</p></blockquote>
 <p>简单来说：</p>
 <p><strong>模板是常用提示词，</strong><br>
 <strong>Skill 是固定工作流程。</strong></p>
 <hr>
-<h4 id="长期进阶三使用自动化">长期进阶三：使用自动化</h4>
+<h3 id="长期进阶三使用自动化">长期进阶三：使用自动化</h3>
 <p>当你有一些重复任务时，可以考虑自动化。</p>
 <p>比如：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>自动化任务</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>每天做一次复盘</td>
+<td>建立持续记录</td>
+</tr>
+<tr>
+<td>每周总结内容选题</td>
+<td>帮你保持创作节奏</td>
+</tr>
+<tr>
+<td>定期整理资料</td>
+<td>防止信息堆积</td>
+</tr>
+<tr>
+<td>定期检查项目进展</td>
+<td>防止任务中断</td>
+</tr>
+<tr>
+<td>定期提醒复查风险</td>
+<td>防止问题拖太久</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>但自动化一定要注意边界：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>注意事项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>不要频率太高</td>
+<td>防止打扰</td>
+</tr>
+<tr>
+<td>不要权限过大</td>
+<td>防止误操作</td>
+</tr>
+<tr>
+<td>高风险动作要确认</td>
+<td>不要自动删除、发送、提交</td>
+</tr>
+<tr>
+<td>没有变化就不提醒</td>
+<td>防止信息噪音</td>
+</tr>
+<tr>
+<td>定期检查是否还需要</td>
+<td>不用的自动化要关闭</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>自动化不是越多越好，</strong><br>
 <strong>而是让重复任务更稳定、更省心。</strong></p>
 <hr>
-<h4 id="长期进阶四项目化使用-agent">长期进阶四：项目化使用 Agent</h4>
+<h3 id="长期进阶四项目化使用-agent">长期进阶四：项目化使用 Agent</h3>
 <p>真正掌握 Agent，不是只用它完成小任务，而是用它持续推进真实项目。</p>
 <p>比如：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>Agent 可以参与什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>写一本电子书</td>
+<td>大纲、章节、配图、复盘</td>
+</tr>
+<tr>
+<td>做一个网站</td>
+<td>需求、页面、代码、部署</td>
+</tr>
+<tr>
+<td>运营一个账号</td>
+<td>选题、写作、图文、发布复盘</td>
+</tr>
+<tr>
+<td>学一门技能</td>
+<td>资料整理、练习计划、复习清单</td>
+</tr>
+<tr>
+<td>做一个开源项目</td>
+<td>README、issues、代码修改、PR</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>项目化使用 Agent 时，要建立固定流程：</p>
 <blockquote><p>定目标 → 拆任务 → 执行 → 验收 → 复盘 → 更新下一步</p></blockquote>
 <p>简单来说：</p>
 <p><strong>Agent 最有价值的地方，不是帮你完成一个小问题，</strong><br>
 <strong>而是持续参与一个真实项目。</strong></p>
 <hr>
-<h4 id="长期进阶五团队协作">长期进阶五：团队协作</h4>
+<h3 id="长期进阶五团队协作">长期进阶五：团队协作</h3>
 <p>如果是团队使用 Agent，还可以让它参与协作流程。</p>
 <p>比如：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>协作场景</th>
+<th>Agent 可以做什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文档协作</td>
+<td>整理会议记录、生成说明文档</td>
+</tr>
+<tr>
+<td>代码协作</td>
+<td>读项目、写 PR 说明、总结 diff</td>
+</tr>
+<tr>
+<td>产品协作</td>
+<td>整理需求、拆任务、写验收标准</td>
+</tr>
+<tr>
+<td>内容协作</td>
+<td>生成选题、拆大纲、做发布计划</td>
+</tr>
+<tr>
+<td>复盘协作</td>
+<td>总结项目进展和风险</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>但团队使用 Agent 时，更要注意：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>注意事项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>统一模板</td>
+<td>避免每个人输出格式不同</td>
+</tr>
+<tr>
+<td>统一权限</td>
+<td>防止越权访问资料</td>
+</tr>
+<tr>
+<td>统一验收</td>
+<td>明确谁负责最终判断</td>
+</tr>
+<tr>
+<td>统一记录</td>
+<td>重要结果要保存</td>
+</tr>
+<tr>
+<td>统一风险规则</td>
+<td>防止泄露隐私或误操作</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>个人用 Agent 提效率，</strong><br>
 <strong>团队用 Agent 要靠规则和流程。</strong></p>
 <hr>
-<h4 id="普通人学习-agent-的常见误区">普通人学习 Agent 的常见误区</h4>
+<h3 id="普通人学习-agent-的常见误区">普通人学习 Agent 的常见误区</h3>
 <p>学习 Agent 时，很多人容易走偏。</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>误区</th>
+<th>问题</th>
+<th>更好的方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一上来学很多概念</td>
+<td>学完还是不会用</td>
+<td>先从真实任务开始</td>
+</tr>
+<tr>
+<td>只收藏 Prompt</td>
+<td>不知道怎么执行</td>
+<td>亲手跑一遍任务</td>
+</tr>
+<tr>
+<td>完全相信结果</td>
+<td>容易被错误误导</td>
+<td>一定要验收</td>
+</tr>
+<tr>
+<td>一次让 Agent 做太多</td>
+<td>容易跑偏</td>
+<td>拆成小任务</td>
+</tr>
+<tr>
+<td>只追新工具</td>
+<td>工具换来换去</td>
+<td>先建立自己的工作流</td>
+</tr>
+<tr>
+<td>不做复盘</td>
+<td>经验无法积累</td>
+<td>保存好用模板</td>
+</tr>
+<tr>
+<td>不沉淀 Skill</td>
+<td>每次从零开始</td>
+<td>把重复流程固定下来</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>普通人学 Agent，最怕一直收藏教程，</strong><br>
 <strong>但没有真正完成过一个任务。</strong></p>
 <hr>
-<h4 id="一句话路线图">一句话路线图</h4>
+<h3 id="一句话路线图">一句话路线图</h3>
 <p>可以把 Agent 学习路线记成这句话：</p>
 <blockquote><p>7 天会用，30 天用稳，长期沉淀成系统。</p></blockquote>
 <p>对应到行动就是：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>一句话目标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7 天</td>
+<td>学会给 Agent 下清楚的任务</td>
+</tr>
+<tr>
+<td>30 天</td>
+<td>学会用 Agent 完成真实工作</td>
+</tr>
+<tr>
+<td>长期</td>
+<td>把好用流程变成模板、Skill 和自动化</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>不要追求一下子成为 Agent 专家。</strong><br>
 <strong>先让 Agent 帮你完成一件真实的小事。</strong></p>
 <hr>
-<h4 id="简单来说_4">简单来说</h4>
+<h3 id="简单来说_4">简单来说</h3>
 <p>普通人学 Agent，不是学一堆概念，</p>
 <p>而是先从一个个真实任务开始。</p>
 <p>先会用，</p>
@@ -2722,7 +7833,7 @@ Agent 输出结果：
 <p>真正掌握 Agent，不是知道多少术语，</p>
 <p>而是你能不能让它稳定帮你完成任务。</p>
 <hr>
-<h3 id="第五篇总结">第五篇总结</h3>
+<h2 id="第五篇总结">第五篇总结</h2>
 <p>第五部分的重点，是让读者从“会用 Agent”，走向“用稳 Agent”。</p>
 <p>前面几章讲的是怎么使用 Agent。</p>
 <p>第五部分讲的是怎么把 Agent 用得更安全、更可靠、更长期。</p>
@@ -2733,20 +7844,117 @@ Agent 输出结果：
 流程怎么复用，<br>
 自己下一步怎么学。</p></blockquote>
 <hr>
-<h4 id="第五部分核心能力">第五部分核心能力</h4>
+<h3 id="第五部分核心能力">第五部分核心能力</h3>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>能力</th>
+<th>解决什么问题</th>
+<th>简单来说</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>风险防护</td>
+<td>防止 Agent 幻觉、误删、越权和泄露隐私</td>
+<td>给 Agent 设边界</td>
+</tr>
+<tr>
+<td>结果验收</td>
+<td>防止 Agent 表面完成，实际有问题</td>
+<td>做完之后要检查</td>
+</tr>
+<tr>
+<td>Skill 沉淀</td>
+<td>把重复任务变成可复用流程</td>
+<td>把经验保存下来</td>
+</tr>
+<tr>
+<td>学习路线</td>
+<td>让普通人知道下一步怎么学</td>
+<td>按阶段升级能力</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
-<h4 id="为什么用稳比会用更重要">为什么“用稳”比“会用”更重要？</h4>
+<h3 id="为什么用稳比会用更重要">为什么“用稳”比“会用”更重要？</h3>
 <p>会用 Agent，只是第一步。</p>
 <p>你会让它总结文章、写大纲、改代码、生成图文脚本，这当然很有用。</p>
 <p>但如果没有风险意识和验收能力，很容易出现问题。</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>只会用 Agent</th>
+<th>用稳 Agent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>看到结果就相信</td>
+<td>会检查结果</td>
+</tr>
+<tr>
+<td>任务说得很模糊</td>
+<td>会写清楚边界</td>
+</tr>
+<tr>
+<td>让 Agent 一次做很多</td>
+<td>会拆成小任务</td>
+</tr>
+<tr>
+<td>不看修改记录</td>
+<td>会看 diff 和输出说明</td>
+</tr>
+<tr>
+<td>每次重新写 Prompt</td>
+<td>会沉淀模板和 Skill</td>
+</tr>
+<tr>
+<td>工具换来换去</td>
+<td>会建立自己的工作流</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>简单来说：</p>
 <p><strong>会用，是让 Agent 开始帮你做事。</strong><br>
 <strong>用稳，是让 Agent 长期可靠地帮你做事。</strong></p>
 <hr>
-<h4 id="本部分最重要的四句话">本部分最重要的四句话</h4>
+<h3 id="本部分最重要的四句话">本部分最重要的四句话</h3>
 <p>这一部分可以记住四句话：</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>关键句</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agent 不是不能信，而是不能盲信</td>
+<td>要有风险意识</td>
+</tr>
+<tr>
+<td>Agent 说完成，不等于真的完成</td>
+<td>要做结果验收</td>
+</tr>
+<tr>
+<td>Prompt 是一次性的指令，Skill 是可复用流程</td>
+<td>要沉淀方法</td>
+</tr>
+<tr>
+<td>7 天会用，30 天用稳，长期沉淀成系统</td>
+<td>要按阶段学习</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
-<h4 id="最终总结">最终总结</h4>
+<h3 id="最终总结">最终总结</h3>
 <p>会用 Agent 只是第一步。</p>
 <p>真正重要的是：</p>
 <blockquote><p>用得稳，<br>
@@ -2765,7 +7973,7 @@ Agent 输出结果：
 <p>然后总结经验，形成模板。</p>
 <p>再把模板升级成 Skill。</p>
 <p>最后慢慢形成自己的 Agent 工作系统。</p>
-<h2 id="附录">附录</h2>
+<h1 id="附录">附录</h1>
       </article>
     </section>
   </main>

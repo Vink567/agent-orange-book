@@ -1,461 +1,355 @@
 #!/usr/bin/env python3
-"""Build Agent橙皮书.md into a PDF with an Agent 橙皮书 cover page."""
+"""Build a PDF edition with a full first-page cover image."""
 
 from __future__ import annotations
 
+import argparse
 import html
-import re
+import subprocess
+import sys
+import tempfile
 from pathlib import Path
 
-from reportlab.lib import colors
-from reportlab.lib.enums import TA_CENTER, TA_LEFT
-from reportlab.lib.pagesizes import A4
-from reportlab.lib.styles import ParagraphStyle
-from reportlab.lib.units import cm, mm
-from reportlab.pdfbase import pdfmetrics
-from reportlab.pdfbase.ttfonts import TTFont
-from reportlab.platypus import (
-    HRFlowable,
-    Image,
-    PageBreak,
-    Paragraph,
-    Preformatted,
-    SimpleDocTemplate,
-    Spacer,
-    Table,
-    TableStyle,
-)
+from pypdf import PdfReader, PdfWriter
 
-ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_MARKDOWN = ROOT / "Agent橙皮书.md"
-DEFAULT_OUTPUT = ROOT / "Agent橙皮书.pdf"
+from build_site import DEFAULT_MARKDOWN, ROOT, metadata_from_markdown, render_markdown
 
-PAGE_WIDTH, PAGE_HEIGHT = A4
-LEFT_MARGIN = 18 * mm
-RIGHT_MARGIN = 18 * mm
-TOP_MARGIN = 16 * mm
-BOTTOM_MARGIN = 16 * mm
-CONTENT_WIDTH = PAGE_WIDTH - LEFT_MARGIN - RIGHT_MARGIN
+DEFAULT_COVER = ROOT / "\u56fe\u7247\u548c\u9644\u4ef6" / "agent-orange-book-cover.png"
+DEFAULT_OUTPUT = ROOT / "Agent\u6a59\u76ae\u4e66.pdf"
 
 
-def register_fonts() -> tuple[str, str]:
-    regular_candidates = [
-        Path(r"C:\Windows\Fonts\NotoSansSC-VF.ttf"),
-        Path(r"C:\Windows\Fonts\msyh.ttc"),
-        Path(r"C:\Windows\Fonts\simsun.ttc"),
+def browser_path() -> Path:
+    candidates = [
+        Path("C:/Program Files/Google/Chrome/Application/chrome.exe"),
+        Path("C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"),
+        Path("C:/Program Files/Microsoft/Edge/Application/msedge.exe"),
+        Path("C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe"),
     ]
-    bold_candidates = [
-        Path(r"C:\Windows\Fonts\msyhbd.ttc"),
-        Path(r"C:\Windows\Fonts\simhei.ttf"),
-        Path(r"C:\Windows\Fonts\NotoSansSC-VF.ttf"),
-    ]
-
-    regular_name = "AgentBookRegular"
-    bold_name = "AgentBookBold"
-
-    for candidate in regular_candidates:
+    for candidate in candidates:
         if candidate.exists():
-            pdfmetrics.registerFont(TTFont(regular_name, str(candidate)))
-            break
-    else:
-        regular_name = "Helvetica"
-
-    for candidate in bold_candidates:
-        if candidate.exists():
-            pdfmetrics.registerFont(TTFont(bold_name, str(candidate)))
-            break
-    else:
-        bold_name = regular_name
-
-    return regular_name, bold_name
+            return candidate
+    raise FileNotFoundError("Chrome or Edge was not found in the usual install locations.")
 
 
-FONT_REGULAR, FONT_BOLD = register_fonts()
+def root_base_url() -> str:
+    url = ROOT.resolve().as_uri()
+    return url if url.endswith("/") else f"{url}/"
 
 
-def styles() -> dict[str, ParagraphStyle]:
-    base = ParagraphStyle(
-        "Body",
-        fontName=FONT_REGULAR,
-        fontSize=10.5,
-        leading=17,
-        textColor=colors.HexColor("#211b16"),
-        spaceAfter=7,
-        alignment=TA_LEFT,
-        wordWrap="CJK",
-    )
-    return {
-        "body": base,
-        "quote": ParagraphStyle(
-            "Quote",
-            parent=base,
-            leftIndent=8 * mm,
-            rightIndent=3 * mm,
-            borderColor=colors.HexColor("#f2660a"),
-            borderWidth=1.2,
-            borderPadding=6,
-            backColor=colors.HexColor("#fff6ee"),
-            textColor=colors.HexColor("#4c4138"),
-            spaceBefore=4,
-            spaceAfter=8,
-        ),
-        "bullet": ParagraphStyle(
-            "Bullet",
-            parent=base,
-            leftIndent=7 * mm,
-            firstLineIndent=-4 * mm,
-            spaceAfter=4,
-        ),
-        "h1": ParagraphStyle(
-            "Heading1",
-            parent=base,
-            fontName=FONT_BOLD,
-            fontSize=23,
-            leading=30,
-            textColor=colors.HexColor("#17110d"),
-            spaceBefore=10,
-            spaceAfter=12,
-            keepWithNext=True,
-        ),
-        "h2": ParagraphStyle(
-            "Heading2",
-            parent=base,
-            fontName=FONT_BOLD,
-            fontSize=17,
-            leading=23,
-            textColor=colors.HexColor("#c64e00"),
-            spaceBefore=14,
-            spaceAfter=9,
-            keepWithNext=True,
-        ),
-        "h3": ParagraphStyle(
-            "Heading3",
-            parent=base,
-            fontName=FONT_BOLD,
-            fontSize=13.5,
-            leading=19,
-            textColor=colors.HexColor("#34251a"),
-            spaceBefore=10,
-            spaceAfter=7,
-            keepWithNext=True,
-        ),
-        "h4": ParagraphStyle(
-            "Heading4",
-            parent=base,
-            fontName=FONT_BOLD,
-            fontSize=11.5,
-            leading=17,
-            textColor=colors.HexColor("#4a382a"),
-            spaceBefore=8,
-            spaceAfter=5,
-            keepWithNext=True,
-        ),
-        "code": ParagraphStyle(
-            "Code",
-            fontName="Courier",
-            fontSize=8.6,
-            leading=11.5,
-            textColor=colors.HexColor("#f7eee4"),
-            backColor=colors.HexColor("#211b16"),
-            borderPadding=8,
-            spaceBefore=4,
-            spaceAfter=9,
-        ),
-        "table_cell": ParagraphStyle(
-            "TableCell",
-            parent=base,
-            fontSize=9.2,
-            leading=13,
-            spaceAfter=0,
-        ),
-        "table_header": ParagraphStyle(
-            "TableHeader",
-            parent=base,
-            fontName=FONT_BOLD,
-            fontSize=9.4,
-            leading=13,
-            textColor=colors.HexColor("#211b16"),
-            spaceAfter=0,
-        ),
-        "cover_title": ParagraphStyle(
-            "CoverTitle",
-            fontName=FONT_BOLD,
-            fontSize=44,
-            leading=56,
-            textColor=colors.white,
-            alignment=TA_CENTER,
-            wordWrap="CJK",
-        ),
-        "cover_subtitle": ParagraphStyle(
-            "CoverSubtitle",
-            fontName=FONT_REGULAR,
-            fontSize=16,
-            leading=25,
-            textColor=colors.HexColor("#fff2e5"),
-            alignment=TA_CENTER,
-            wordWrap="CJK",
-        ),
-        "cover_note": ParagraphStyle(
-            "CoverNote",
-            fontName=FONT_REGULAR,
-            fontSize=10.5,
-            leading=16,
-            textColor=colors.HexColor("#ffe2c2"),
-            alignment=TA_CENTER,
-            wordWrap="CJK",
-        ),
-    }
+def cover_html(cover: Path) -> str:
+    return f"""<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>Agent Orange Book Cover</title>
+  <style>
+    @page {{ size: A4 portrait; margin: 0; }}
+    * {{ box-sizing: border-box; }}
+    html, body {{
+      width: 210mm;
+      height: 297mm;
+      margin: 0;
+      background: #fff8ef;
+    }}
+    body {{
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }}
+    img {{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }}
+  </style>
+</head>
+<body>
+  <img src="{cover.resolve().as_uri()}" alt="Agent Orange Book Cover">
+</body>
+</html>
+"""
 
 
-STYLES = styles()
+def body_html(markdown: str) -> str:
+    rendered, _, _ = render_markdown(markdown)
+    rendered = rendered.replace(' loading="lazy"', "")
+    meta = metadata_from_markdown(markdown)
+    title = html.escape(meta["title"])
+    description = html.escape(meta["description"])
+    return f"""<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>{title}</title>
+  <base href="{root_base_url()}">
+  <style>
+    @page {{
+      size: A4 portrait;
+      margin: 15mm 15mm 17mm;
+    }}
+
+    * {{ box-sizing: border-box; }}
+
+    html, body {{
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #171411;
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif;
+      line-height: 1.72;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }}
+
+    .pdf-meta {{
+      margin: 0 0 12mm;
+      padding-bottom: 5mm;
+      border-bottom: 1px solid #e5ded5;
+      color: #5b554d;
+      font-size: 10.5pt;
+    }}
+
+    .pdf-meta strong {{
+      color: #f2660a;
+      font-weight: 800;
+    }}
+
+    h1, h2, h3, h4, h5, h6 {{
+      color: #171411;
+      line-height: 1.32;
+      break-after: avoid;
+    }}
+
+    h1 {{
+      margin: 0 0 8mm;
+      font-size: 28pt;
+      letter-spacing: 0;
+    }}
+
+    h2 {{
+      margin: 12mm 0 4mm;
+      padding-left: 4mm;
+      border-left: 4px solid #f2660a;
+      font-size: 18pt;
+    }}
+
+    h3 {{
+      margin: 8mm 0 3mm;
+      color: #c64e00;
+      font-size: 14pt;
+    }}
+
+    h4 {{
+      margin: 6mm 0 2mm;
+      font-size: 12pt;
+    }}
+
+    p, li {{
+      color: #302b25;
+      font-size: 10.5pt;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }}
+
+    p {{
+      margin: 0 0 3.5mm;
+    }}
+
+    ul, ol {{
+      margin: 0 0 5mm;
+      padding-left: 7mm;
+    }}
+
+    li + li {{
+      margin-top: 1.5mm;
+    }}
+
+    blockquote {{
+      margin: 5mm 0;
+      padding: 4mm 5mm;
+      background: #fff7ef;
+      border-left: 4px solid #f2660a;
+      border-radius: 0 3mm 3mm 0;
+      break-inside: avoid;
+    }}
+
+    blockquote p {{
+      margin: 0;
+      color: #5b554d;
+    }}
+
+    .table-scroll {{
+      width: 100%;
+      margin: 5mm 0 7mm;
+      overflow: visible;
+    }}
+
+    table {{
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9.2pt;
+      break-inside: avoid;
+    }}
+
+    th, td {{
+      padding: 2.6mm 3mm;
+      border: 1px solid #e5ded5;
+      text-align: left;
+      vertical-align: top;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }}
+
+    th {{
+      background: #f6efe7;
+      color: #171411;
+      font-weight: 800;
+    }}
+
+    code {{
+      padding: 0.4mm 1.2mm;
+      background: #f1ede8;
+      border-radius: 1.2mm;
+      font-family: Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }}
+
+    pre {{
+      max-width: 100%;
+      margin: 5mm 0 6mm;
+      padding: 4mm;
+      overflow: hidden;
+      background: #201b17;
+      border-radius: 2mm;
+      white-space: pre-wrap;
+      break-inside: avoid;
+    }}
+
+    pre code {{
+      display: block;
+      padding: 0;
+      background: transparent;
+      color: #f7efe7;
+      font-size: 8.5pt;
+      line-height: 1.55;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }}
+
+    a {{
+      color: #c64e00;
+      font-weight: 650;
+      text-decoration-color: rgba(198, 78, 0, 0.35);
+      text-underline-offset: 2px;
+    }}
+
+    figure {{
+      margin: 7mm 0;
+      break-inside: avoid;
+    }}
+
+    img {{
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #e5ded5;
+      border-radius: 2mm;
+      display: block;
+    }}
+
+    figcaption {{
+      margin-top: 2mm;
+      color: #8a8177;
+      font-size: 8.5pt;
+      line-height: 1.55;
+    }}
+
+    hr {{
+      margin: 9mm 0;
+      border: 0;
+      border-top: 1px solid #e5ded5;
+    }}
+  </style>
+</head>
+<body>
+  <main>
+    <div class="pdf-meta"><strong>Agent 橙皮书</strong> · {description}</div>
+{rendered}
+  </main>
+</body>
+</html>
+"""
 
 
-def clean_inline(text: str) -> str:
-    text = text.strip()
-    text = re.sub(r"\\([.()[\]#*_`-])", r"\1", text)
-    text = re.sub(r"!\[[^\]]*\]\([^)]+\)", "", text)
-    text = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r"\1", text)
-    text = re.sub(r"\*\*([^*]+)\*\*", r"\1", text)
-    text = re.sub(r"__([^_]+)__", r"\1", text)
-    text = re.sub(r"`([^`]+)`", r"\1", text)
-    text = text.replace("<br>", "\n").replace("<br/>", "\n").replace("<br />", "\n")
-    return html.escape(text)
-
-
-def image_path_from_markdown(line: str) -> str | None:
-    match = re.match(r"\s*!\[[^\]]*\]\(([^)]+)\)\s*$", line)
-    return match.group(1).replace("%20", " ") if match else None
-
-
-def add_paragraph(story: list, lines: list[str], style: ParagraphStyle | None = None) -> None:
-    if not lines:
-        return
-    text = " ".join(line.strip() for line in lines if line.strip())
-    if text:
-        story.append(Paragraph(clean_inline(text), style or STYLES["body"]))
-    lines.clear()
-
-
-def scaled_image(path: Path) -> Image | None:
-    if not path.exists():
-        return None
-    image = Image(str(path))
-    max_width = CONTENT_WIDTH
-    max_height = 15 * cm
-    scale = min(max_width / image.imageWidth, max_height / image.imageHeight, 1)
-    image.drawWidth = image.imageWidth * scale
-    image.drawHeight = image.imageHeight * scale
-    image.hAlign = "CENTER"
-    return image
-
-
-def is_table_line(line: str) -> bool:
-    stripped = line.strip()
-    return stripped.startswith("|") and stripped.endswith("|") and stripped.count("|") >= 2
-
-
-def parse_table_row(line: str) -> list[str]:
-    return [cell.strip() for cell in line.strip().strip("|").split("|")]
-
-
-def is_table_separator(line: str) -> bool:
-    if not is_table_line(line):
-        return False
-    cells = parse_table_row(line)
-    return bool(cells) and all(re.fullmatch(r":?-{3,}:?", cell) for cell in cells)
-
-
-def add_table(story: list, rows: list[list[str]]) -> None:
-    if not rows:
-        return
-
-    column_count = max(len(row) for row in rows)
-    normalized_rows = [row + [""] * (column_count - len(row)) for row in rows]
-    data = []
-    for row_index, row in enumerate(normalized_rows):
-        style = STYLES["table_header"] if row_index == 0 else STYLES["table_cell"]
-        data.append([Paragraph(clean_inline(cell), style) for cell in row])
-
-    col_widths = [CONTENT_WIDTH / column_count] * column_count
-    table = Table(data, colWidths=col_widths, repeatRows=1, hAlign="LEFT")
-    table.setStyle(
-        TableStyle(
-            [
-                ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#fff1e3")),
-                ("TEXTCOLOR", (0, 0), (-1, 0), colors.HexColor("#211b16")),
-                ("GRID", (0, 0), (-1, -1), 0.5, colors.HexColor("#e6d8ca")),
-                ("VALIGN", (0, 0), (-1, -1), "TOP"),
-                ("LEFTPADDING", (0, 0), (-1, -1), 6),
-                ("RIGHTPADDING", (0, 0), (-1, -1), 6),
-                ("TOPPADDING", (0, 0), (-1, -1), 5),
-                ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
-            ]
-        )
-    )
-    story.append(table)
-    story.append(Spacer(1, 8))
-
-
-def markdown_to_flowables(markdown_path: Path) -> list:
-    story: list = []
-    paragraph_lines: list[str] = []
-    code_lines: list[str] = []
-    in_code = False
-
-    raw_lines = markdown_path.read_text(encoding="utf-8-sig").splitlines()
-    i = 0
-    while i < len(raw_lines):
-        raw_line = raw_lines[i]
-        line = raw_line.rstrip()
-
-        if line.startswith("```"):
-            if in_code:
-                story.append(Preformatted("\n".join(code_lines), STYLES["code"], dedent=0))
-                code_lines.clear()
-                in_code = False
-            else:
-                add_paragraph(story, paragraph_lines)
-                in_code = True
-            i += 1
-            continue
-
-        if in_code:
-            code_lines.append(line)
-            i += 1
-            continue
-
-        if not line.strip():
-            add_paragraph(story, paragraph_lines)
-            i += 1
-            continue
-
-        if i + 1 < len(raw_lines) and is_table_line(line) and is_table_separator(raw_lines[i + 1].rstrip()):
-            add_paragraph(story, paragraph_lines)
-            table_rows = [parse_table_row(line)]
-            i += 2
-            while i < len(raw_lines) and is_table_line(raw_lines[i].rstrip()):
-                table_rows.append(parse_table_row(raw_lines[i].rstrip()))
-                i += 1
-            add_table(story, table_rows)
-            continue
-
-        image_target = image_path_from_markdown(line)
-        if image_target:
-            add_paragraph(story, paragraph_lines)
-            image = scaled_image(markdown_path.parent / image_target)
-            if image:
-                story.append(image)
-                story.append(Spacer(1, 8))
-            i += 1
-            continue
-
-        heading = re.match(r"^(#{1,6})\s+(.+)$", line)
-        if heading:
-            add_paragraph(story, paragraph_lines)
-            level = len(heading.group(1))
-            text = clean_inline(heading.group(2))
-            style_key = "h1" if level == 1 else "h2" if level == 2 else "h3" if level == 3 else "h4"
-            if level == 1 and story:
-                story.append(PageBreak())
-            story.append(Paragraph(text, STYLES[style_key]))
-            if level == 1:
-                story.append(HRFlowable(width="100%", color=colors.HexColor("#f2660a"), thickness=1.2, spaceAfter=8))
-            i += 1
-            continue
-
-        if re.match(r"^\s*[-*]\s+", line):
-            add_paragraph(story, paragraph_lines)
-            item = re.sub(r"^\s*[-*]\s+", "", line)
-            story.append(Paragraph(f"• {clean_inline(item)}", STYLES["bullet"]))
-            i += 1
-            continue
-
-        if line.startswith(">"):
-            add_paragraph(story, paragraph_lines)
-            quote = line.lstrip("> ").strip()
-            if quote:
-                story.append(Paragraph(clean_inline(quote), STYLES["quote"]))
-            i += 1
-            continue
-
-        if re.match(r"^\s*---+\s*$", line):
-            add_paragraph(story, paragraph_lines)
-            story.append(HRFlowable(width="100%", color=colors.HexColor("#e6d8ca"), thickness=0.7, spaceBefore=6, spaceAfter=8))
-            i += 1
-            continue
-
-        paragraph_lines.append(line)
-        i += 1
-
-    if in_code and code_lines:
-        story.append(Preformatted("\n".join(code_lines), STYLES["code"], dedent=0))
-    add_paragraph(story, paragraph_lines)
-    return story
-
-
-def cover_flowables(title: str) -> list:
-    return [
-        Spacer(1, 78 * mm),
-        Paragraph(title, STYLES["cover_title"]),
-        Spacer(1, 8 * mm),
-        Paragraph("一份给普通人的 AI Agent 入门手册", STYLES["cover_subtitle"]),
-        Spacer(1, 8 * mm),
-        Paragraph("从会聊天，到会指挥。", STYLES["cover_subtitle"]),
-        Spacer(1, 86 * mm),
-        Paragraph("非官方开源指南 · 持续更新版", STYLES["cover_note"]),
-        PageBreak(),
+def print_pdf(browser: Path, source_html: Path, output_pdf: Path, user_data_dir: Path) -> None:
+    command = [
+        str(browser),
+        "--headless=new",
+        "--disable-gpu",
+        "--disable-dev-shm-usage",
+        "--no-sandbox",
+        "--allow-file-access-from-files",
+        "--run-all-compositor-stages-before-draw",
+        "--virtual-time-budget=10000",
+        f"--user-data-dir={user_data_dir}",
+        "--print-to-pdf-no-header",
+        f"--print-to-pdf={output_pdf}",
+        source_html.resolve().as_uri(),
     ]
+    subprocess.run(command, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
 
-def draw_cover(canvas, _doc) -> None:
-    canvas.saveState()
-    canvas.setFillColor(colors.HexColor("#f2660a"))
-    canvas.rect(0, 0, PAGE_WIDTH, PAGE_HEIGHT, fill=1, stroke=0)
-    canvas.setFillColor(colors.HexColor("#1e1712"))
-    canvas.rect(0, 0, PAGE_WIDTH, 72 * mm, fill=1, stroke=0)
-    canvas.setStrokeColor(colors.HexColor("#ffb36e"))
-    canvas.setLineWidth(1.4)
-    for offset in (18, 31, 44):
-        canvas.line(20 * mm, (72 + offset) * mm, PAGE_WIDTH - 20 * mm, (72 + offset) * mm)
-    canvas.setFillColor(colors.HexColor("#ffffff"))
-    canvas.circle(PAGE_WIDTH - 34 * mm, PAGE_HEIGHT - 34 * mm, 11 * mm, fill=0, stroke=1)
-    canvas.setStrokeColor(colors.HexColor("#ffd4a8"))
-    canvas.setLineWidth(2.2)
-    canvas.roundRect(18 * mm, 18 * mm, PAGE_WIDTH - 36 * mm, PAGE_HEIGHT - 36 * mm, 8 * mm, stroke=1, fill=0)
-    canvas.restoreState()
+def merge_pdfs(parts: list[Path], output_pdf: Path) -> None:
+    writer = PdfWriter()
+    for part in parts:
+        reader = PdfReader(str(part))
+        for page in reader.pages:
+            writer.add_page(page)
+    with output_pdf.open("wb") as handle:
+        writer.write(handle)
 
 
-def draw_body_page(canvas, doc) -> None:
-    canvas.saveState()
-    canvas.setFont(FONT_REGULAR, 8)
-    canvas.setFillColor(colors.HexColor("#8c7b6a"))
-    canvas.drawRightString(PAGE_WIDTH - RIGHT_MARGIN, 9 * mm, f"{doc.page}")
-    canvas.restoreState()
+def build_pdf(markdown_path: Path, cover_path: Path, output_pdf: Path) -> None:
+    if not markdown_path.exists():
+        raise FileNotFoundError(f"Markdown source not found: {markdown_path}")
+    if not cover_path.exists():
+        raise FileNotFoundError(f"Cover image not found: {cover_path}")
 
-
-def build_pdf(markdown_path: Path, output_pdf: Path, *, title: str = "Agent 橙皮书") -> None:
+    markdown = markdown_path.read_text(encoding="utf-8-sig")
+    browser = browser_path()
     output_pdf.parent.mkdir(parents=True, exist_ok=True)
-    doc = SimpleDocTemplate(
-        str(output_pdf),
-        pagesize=A4,
-        leftMargin=LEFT_MARGIN,
-        rightMargin=RIGHT_MARGIN,
-        topMargin=TOP_MARGIN,
-        bottomMargin=BOTTOM_MARGIN,
-        title=title,
-        author="Vink567",
-        subject="AI Agent 入门手册",
-    )
-    story = cover_flowables(title)
-    story.extend(markdown_to_flowables(markdown_path))
-    doc.build(story, onFirstPage=draw_cover, onLaterPages=draw_body_page)
+
+    with tempfile.TemporaryDirectory(prefix="agent-orange-book-pdf-") as tmp:
+        tmp_path = Path(tmp)
+        cover_page = tmp_path / "cover.html"
+        body_page = tmp_path / "body.html"
+        cover_pdf = tmp_path / "cover.pdf"
+        body_pdf = tmp_path / "body.pdf"
+        chrome_profile = tmp_path / "chrome-profile"
+
+        cover_page.write_text(cover_html(cover_path), encoding="utf-8", newline="\n")
+        body_page.write_text(body_html(markdown), encoding="utf-8", newline="\n")
+
+        print_pdf(browser, cover_page, cover_pdf, chrome_profile)
+        print_pdf(browser, body_page, body_pdf, chrome_profile)
+        merge_pdfs([cover_pdf, body_pdf], output_pdf)
 
 
-def main() -> None:
-    build_pdf(DEFAULT_MARKDOWN, DEFAULT_OUTPUT)
-    size_mb = DEFAULT_OUTPUT.stat().st_size / (1024 * 1024)
-    print(f"Generated {DEFAULT_OUTPUT.name} ({size_mb:.1f} MB)")
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Build the Agent orange book PDF.")
+    parser.add_argument("--markdown", type=Path, default=DEFAULT_MARKDOWN)
+    parser.add_argument("--cover", type=Path, default=DEFAULT_COVER)
+    parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
+    return parser.parse_args()
+
+
+def main() -> int:
+    args = parse_args()
+    build_pdf(args.markdown, args.cover, args.output)
+    print(args.output)
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

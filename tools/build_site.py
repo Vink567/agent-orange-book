@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """Build the Agent orange book Markdown into a static reading site."""
 
 from __future__ import annotations
@@ -12,9 +12,8 @@ from urllib.parse import quote
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_MARKDOWN = ROOT / "Agent橙皮书.md"
 DEFAULT_OUTPUT_DIR = ROOT
-PDF_NAME = "Agent橙皮书.pdf"
-GITHUB_URL = "https://github.com/Vink567/agent-orange-book"
-PAGES_URL = "https://vink567.github.io/agent-orange-book/"
+MARKDOWN_NAME = "Agent橙皮书.md"
+PAGES_URL = "https://codex.bozhouai.com/"
 
 
 @dataclass(frozen=True)
@@ -79,6 +78,7 @@ def render_inline(text: str) -> str:
 
     for index, value in enumerate(links):
         text = text.replace(f"\u0000{index}\u0000", value)
+    text = text.replace("&lt;br&gt;", "<br>")
     return text
 
 
@@ -94,7 +94,7 @@ def split_table_row(line: str) -> list[str]:
 def render_table(rows: list[str]) -> str:
     header = split_table_row(rows[0])
     body = [split_table_row(row) for row in rows[2:]]
-    out = ["<table>", "<thead>", "<tr>"]
+    out = ['<div class="table-scroll">', "<table>", "<thead>", "<tr>"]
     out.extend(f"<th>{render_inline(cell)}</th>" for cell in header)
     out.extend(["</tr>", "</thead>"])
     if body:
@@ -104,7 +104,7 @@ def render_table(rows: list[str]) -> str:
             out.extend(f"<td>{render_inline(cell)}</td>" for cell in row)
             out.append("</tr>")
         out.append("</tbody>")
-    out.append("</table>")
+    out.extend(["</table>", "</div>"])
     return "\n".join(out)
 
 
@@ -121,6 +121,10 @@ def render_markdown(markdown: str) -> tuple[str, list[Heading], str | None]:
         stripped = line.strip()
 
         if not stripped:
+            index += 1
+            continue
+
+        if stripped.startswith("<!--") and stripped.endswith("-->"):
             index += 1
             continue
 
@@ -231,17 +235,15 @@ def render_markdown(markdown: str) -> tuple[str, list[Heading], str | None]:
 
 def metadata_from_markdown(markdown: str) -> dict[str, str]:
     title_match = re.search(r"^#\s+(.+)$", markdown, re.MULTILINE)
-    version_match = re.search(r"\|\s*(v[^|]+)\|\s*([0-9-]+)\s*\|", markdown)
+    checked_match = re.search(r"最后校验[^\d]*(\d{4}-\d{2}-\d{2})", markdown)
     title = clean_inline(title_match.group(1)) if title_match else "Agent 橙皮书"
-    version = version_match.group(1).strip() if version_match else "v0.1.0"
-    checked = version_match.group(2).strip() if version_match else "2026-07-09"
     return {
         "title": title,
         "short_title": "Agent 橙皮书",
-        "description": "给普通人的 AI Agent 入门与实战指南，覆盖基础认知、标准工作流、实战案例、风险防护与学习路线。",
-        "version": version,
-        "checked": checked,
-        "scope": "认知 · 工作流 · 实战案例 · 风险验收",
+        "description": "一份给普通人的 AI Agent 入门手册，从会聊天到会指挥，帮助你理解、使用并验收 Agent。",
+        "version": "持续更新版",
+        "checked": checked_match.group(1) if checked_match else "2026-07-09",
+        "scope": "认知 · 概念 · 使用方法 · 实战案例 · 风险进阶",
     }
 
 
@@ -263,9 +265,8 @@ def build_page(markdown: str, page_name: str = "index.html") -> str:
     body_html, headings, hero_image = render_markdown(markdown)
     meta = metadata_from_markdown(markdown)
     toc_html = build_toc(headings)
-    pdf_url = quote(PDF_NAME)
-    markdown_url = quote("Agent橙皮书.md")
-    hero_src = hero_image or "assets/images/image%2016.png"
+    markdown_url = quote(MARKDOWN_NAME)
+    hero_src = hero_image or "图片和附件/image%202.png"
 
     canonical = PAGES_URL if page_name == "index.html" else f"{PAGES_URL}{page_name}"
     return f"""<!doctype html>
@@ -279,11 +280,12 @@ def build_page(markdown: str, page_name: str = "index.html") -> str:
   <meta property="og:title" content="{html.escape(meta["title"], quote=True)}">
   <meta property="og:description" content="{html.escape(meta["description"], quote=True)}">
   <meta name="theme-color" content="#f2660a">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="{canonical}">
   <link rel="stylesheet" href="assets/site.css">
   <script defer src="assets/site.js"></script>
 </head>
-<body data-pdf-url="{pdf_url}">
+<body>
   <div class="progress" aria-hidden="true"><span></span></div>
 
   <header class="topbar">
@@ -294,8 +296,7 @@ def build_page(markdown: str, page_name: str = "index.html") -> str:
     <nav class="topnav" aria-label="主导航">
       <a href="#online-book">在线阅读</a>
       <a href="#toc">目录</a>
-      <a href="{pdf_url}" data-download-link>下载 PDF</a>
-      <a href="{GITHUB_URL}">GitHub</a>
+      <a href="{markdown_url}">查看 Markdown</a>
     </nav>
   </header>
 
@@ -307,8 +308,8 @@ def build_page(markdown: str, page_name: str = "index.html") -> str:
         <p class="hero-lede">{html.escape(meta["description"])}</p>
         <div class="hero-actions" aria-label="主要操作">
           <a class="button button-primary" href="#online-book">开始阅读</a>
-          <a class="button button-secondary" href="{pdf_url}" data-download-link>下载 PDF</a>
-          <a class="button button-ghost" href="{markdown_url}">查看 Markdown</a>
+          <a class="button button-secondary" href="{markdown_url}">查看 Markdown</a>
+          <a class="button button-ghost" href="#toc">浏览目录</a>
         </div>
       </div>
       <div class="hero-side">
@@ -351,7 +352,6 @@ def build_page(markdown: str, page_name: str = "index.html") -> str:
 
 
 def build_cover() -> str:
-    pdf_url = quote(PDF_NAME)
     return f"""<!doctype html>
 <html lang="zh-CN">
 <head>
@@ -359,6 +359,7 @@ def build_cover() -> str:
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Agent 橙皮书封面</title>
   <meta name="theme-color" content="#f2660a">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
 </head>
 <body class="cover-page">
@@ -374,7 +375,7 @@ def build_cover() -> str:
       </div>
       <div class="cover-actions">
         <a class="button button-primary" href="index.html">在线阅读</a>
-        <a class="button button-secondary" href="{pdf_url}">下载 PDF</a>
+        <a class="button button-secondary" href="{quote(MARKDOWN_NAME)}">查看 Markdown</a>
       </div>
     </section>
   </main>
