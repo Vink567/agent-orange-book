@@ -28,6 +28,28 @@ class BuildPdfTest(unittest.TestCase):
             self.assertIn("Agent 橙皮书", cover_text)
             self.assertIn("正文标题", body_text)
 
+    def test_markdown_tables_render_as_pdf_tables(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            markdown_path = root / "sample.md"
+            output_pdf = root / "sample.pdf"
+            markdown_path.write_text(
+                "# 正文标题\n\n"
+                "| 版本 | 最后校验 |\n"
+                "| --- | --- |\n"
+                "| v0.1.0 | 2026-07-09 |\n",
+                encoding="utf-8",
+            )
+
+            build_pdf.build_pdf(markdown_path, output_pdf, title="Agent 橙皮书")
+
+            reader = PdfReader(output_pdf)
+            body_text = "\n".join(page.extract_text() for page in reader.pages[1:])
+
+            self.assertIn("版本", body_text)
+            self.assertIn("v0.1.0", body_text)
+            self.assertNotIn("| 版本 |", body_text)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -6,7 +6,6 @@ from __future__ import annotations
 import html
 import re
 from pathlib import Path
-from typing import Iterable
 
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_CENTER, TA_LEFT
@@ -23,6 +22,8 @@ from reportlab.platypus import (
     Preformatted,
     SimpleDocTemplate,
     Spacer,
+    Table,
+    TableStyle,
 )
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -160,6 +161,22 @@ def styles() -> dict[str, ParagraphStyle]:
             spaceBefore=4,
             spaceAfter=9,
         ),
+        "table_cell": ParagraphStyle(
+            "TableCell",
+            parent=base,
+            fontSize=9.2,
+            leading=13,
+            spaceAfter=0,
+        ),
+        "table_header": ParagraphStyle(
+            "TableHeader",
+            parent=base,
+            fontName=FONT_BOLD,
+            fontSize=9.4,
+            leading=13,
+            textColor=colors.HexColor("#211b16"),
+            spaceAfter=0,
+        ),
         "cover_title": ParagraphStyle(
             "CoverTitle",
             fontName=FONT_BOLD,
@@ -232,13 +249,63 @@ def scaled_image(path: Path) -> Image | None:
     return image
 
 
+def is_table_line(line: str) -> bool:
+    stripped = line.strip()
+    return stripped.startswith("|") and stripped.endswith("|") and stripped.count("|") >= 2
+
+
+def parse_table_row(line: str) -> list[str]:
+    return [cell.strip() for cell in line.strip().strip("|").split("|")]
+
+
+def is_table_separator(line: str) -> bool:
+    if not is_table_line(line):
+        return False
+    cells = parse_table_row(line)
+    return bool(cells) and all(re.fullmatch(r":?-{3,}:?", cell) for cell in cells)
+
+
+def add_table(story: list, rows: list[list[str]]) -> None:
+    if not rows:
+        return
+
+    column_count = max(len(row) for row in rows)
+    normalized_rows = [row + [""] * (column_count - len(row)) for row in rows]
+    data = []
+    for row_index, row in enumerate(normalized_rows):
+        style = STYLES["table_header"] if row_index == 0 else STYLES["table_cell"]
+        data.append([Paragraph(clean_inline(cell), style) for cell in row])
+
+    col_widths = [CONTENT_WIDTH / column_count] * column_count
+    table = Table(data, colWidths=col_widths, repeatRows=1, hAlign="LEFT")
+    table.setStyle(
+        TableStyle(
+            [
+                ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#fff1e3")),
+                ("TEXTCOLOR", (0, 0), (-1, 0), colors.HexColor("#211b16")),
+                ("GRID", (0, 0), (-1, -1), 0.5, colors.HexColor("#e6d8ca")),
+                ("VALIGN", (0, 0), (-1, -1), "TOP"),
+                ("LEFTPADDING", (0, 0), (-1, -1), 6),
+                ("RIGHTPADDING", (0, 0), (-1, -1), 6),
+                ("TOPPADDING", (0, 0), (-1, -1), 5),
+                ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+            ]
+        )
+    )
+    story.append(table)
+    story.append(Spacer(1, 8))
+
+
 def markdown_to_flowables(markdown_path: Path) -> list:
     story: list = []
     paragraph_lines: list[str] = []
     code_lines: list[str] = []
     in_code = False
 
-    for raw_line in markdown_path.read_text(encoding="utf-8").splitlines():
+    raw_lines = markdown_path.read_text(encoding="utf-8").splitlines()
+    i = 0
+    while i < len(raw_lines):
+        raw_line = raw_lines[i]
         line = raw_line.rstrip()
 
         if line.startswith("```"):
@@ -249,14 +316,27 @@ def markdown_to_flowables(markdown_path: Path) -> list:
             else:
                 add_paragraph(story, paragraph_lines)
                 in_code = True
+            i += 1
             continue
 
         if in_code:
             code_lines.append(line)
+            i += 1
             continue
 
         if not line.strip():
             add_paragraph(story, paragraph_lines)
+            i += 1
+            continue
+
+        if i + 1 < len(raw_lines) and is_table_line(line) and is_table_separator(raw_lines[i + 1].rstrip()):
+            add_paragraph(story, paragraph_lines)
+            table_rows = [parse_table_row(line)]
+            i += 2
+            while i < len(raw_lines) and is_table_line(raw_lines[i].rstrip()):
+                table_rows.append(parse_table_row(raw_lines[i].rstrip()))
+                i += 1
+            add_table(story, table_rows)
             continue
 
         image_target = image_path_from_markdown(line)
@@ -266,6 +346,7 @@ def markdown_to_flowables(markdown_path: Path) -> list:
             if image:
                 story.append(image)
                 story.append(Spacer(1, 8))
+            i += 1
             continue
 
         heading = re.match(r"^(#{1,6})\s+(.+)$", line)
@@ -279,12 +360,14 @@ def markdown_to_flowables(markdown_path: Path) -> list:
             story.append(Paragraph(text, STYLES[style_key]))
             if level == 1:
                 story.append(HRFlowable(width="100%", color=colors.HexColor("#f2660a"), thickness=1.2, spaceAfter=8))
+            i += 1
             continue
 
         if re.match(r"^\s*[-*]\s+", line):
             add_paragraph(story, paragraph_lines)
             item = re.sub(r"^\s*[-*]\s+", "", line)
             story.append(Paragraph(f"• {clean_inline(item)}", STYLES["bullet"]))
+            i += 1
             continue
 
         if line.startswith(">"):
@@ -292,14 +375,17 @@ def markdown_to_flowables(markdown_path: Path) -> list:
             quote = line.lstrip("> ").strip()
             if quote:
                 story.append(Paragraph(clean_inline(quote), STYLES["quote"]))
+            i += 1
             continue
 
         if re.match(r"^\s*---+\s*$", line):
             add_paragraph(story, paragraph_lines)
             story.append(HRFlowable(width="100%", color=colors.HexColor("#e6d8ca"), thickness=0.7, spaceBefore=6, spaceAfter=8))
+            i += 1
             continue
 
         paragraph_lines.append(line)
+        i += 1
 
     if in_code and code_lines:
         story.append(Preformatted("\n".join(code_lines), STYLES["code"], dedent=0))
