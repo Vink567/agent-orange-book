@@ -16,6 +16,7 @@
 ## 阅读入口
 
 - [完整 Markdown 原稿](./Agent橙皮书.md)
+- [下载 PDF](./Agent橙皮书.pdf)
 
 ## 内容包括
 
@@ -30,10 +31,20 @@
 ```text
 .
 ├── Agent橙皮书.md        # 完整 Markdown 正文
+├── Agent橙皮书.pdf       # 带封面的 PDF 版本
 ├── README.md             # 仓库说明
 ├── assets/images/        # 正文配图
+├── tools/                # PDF 构建与检查脚本
 └── .gitignore            # 本地缓存与敏感文件忽略规则
 ```
+
+## 重新生成 PDF
+
+```powershell
+python tools/build_pdf.py
+```
+
+生成的 `Agent橙皮书.pdf` 首页包含《Agent 橙皮书》封面，后续页面为正文内容。
 
 ## 说明
 
