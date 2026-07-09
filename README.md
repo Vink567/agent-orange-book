@@ -17,12 +17,6 @@
 
 - [在线阅读网页](https://vink567.github.io/agent-orange-book/)
 - [下载 PDF](./Agent橙皮书.pdf)
-- [查看 Markdown 原稿](./Agent橙皮书.md)
-- [查看完整静态页面](./index.html)
-
-## 封面
-
-![Agent 橙皮书封面](图片和附件/agent-orange-book-cover.png)
 
 ## 本地生成
 
